@@ -1,0 +1,50 @@
+using UnityEngine;
+using UnityEngine.EventSystems;
+
+public class Plot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
+{
+    [Header("Refrences")]
+    [SerializeField] private SpriteRenderer sr;
+    [SerializeField] private Color hoverColor;
+
+    private GameObject towerObj;
+    public Turret turret;
+    private Color startColor;
+
+    private void Start()
+    {
+        startColor = sr.color;
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        sr.color = hoverColor;
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        sr.color = startColor;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+
+        if (towerObj != null)
+        {
+            return;
+        }
+
+        Tower towerToBuild = BuildManager.main.GetSelectedTower();
+
+        if(towerToBuild.cost > LevelManager.main.currency)
+        {
+            Debug.Log("Can't afford");
+            return;
+        }
+
+        LevelManager.main.SpendCurrency(towerToBuild.cost);
+
+        towerObj = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+        turret = towerObj.GetComponent<Turret>();
+    }
+}

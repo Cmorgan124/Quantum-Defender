@@ -1,0 +1,47 @@
+{
+    "version": 1,
+    "name": "Inputs",
+    "maps": [
+        {
+            "name": "In Game UI",
+            "id": "f2eaf0e9-ad38-4ba5-8bd6-a928d69a5bf7",
+            "actions": [
+                {
+                    "name": "Hover Enter",
+                    "type": "Value",
+                    "id": "520ed153-f264-4d1d-a722-f2ffd7e415d3",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "b04f13e0-9ebd-4cf5-bc80-651f1f94ff3d",
+                    "path": "",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": ";Mouse",
+                    "action": "Hover Enter",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": [
+        {
+            "name": "Mouse",
+            "bindingGroup": "Mouse",
+            "devices": [
+                {
+                    "devicePath": "<Mouse>",
+                    "isOptional": false,
+                    "isOR": false
+                }
+            ]
+        }
+    ]
+}
