@@ -10,6 +10,7 @@ public class Turret : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
     [SerializeField] private TextMeshPro countText;
+    [SerializeField] private GameObject canvas;
 
     [Header("Attributes")]
     [SerializeField] private float targetingRange = 5f;
@@ -26,6 +27,8 @@ public class Turret : MonoBehaviour
     {
         BasicCount++ ; 
         countText.text =  BasicCount.ToString();
+        canvas.SetActive(false);
+        
     }
 
     //if target is in range, shoot

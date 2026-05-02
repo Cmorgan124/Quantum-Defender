@@ -9,7 +9,7 @@ public class Lives : MonoBehaviour
     //displays current lives remaing, and decreases on enemy "escape"
     void Update()
     {
-        livesText.text = "Lives remaining" + lives.ToString(); 
+        livesText.text = "Lives: " + lives.ToString(); 
     }
 
 }
