@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4003722260274829532}
   - component: {fileID: 5386253652735652942}
+  - component: {fileID: 5379037198367271798}
+  - component: {fileID: 5287532660967817196}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -58,7 +60,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 9cf38e996973a3c4f8fd4017714f4648, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -91,6 +93,42 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!114 &5379037198367271798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514062563570599252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc69858e835c0584c9c168fa6cb7e74d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UpgradeHandler
+  outline: {fileID: 2100000, guid: 9cf38e996973a3c4f8fd4017714f4648, type: 2}
+  normal: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  _renderer: {fileID: 5386253652735652942}
+--- !u!65 &5287532660967817196
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514062563570599252}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1.7033721, y: 1.7544652, z: 0.2}
+  m_Center: {x: -0.009838778, y: 0.06149471, z: 0}
 --- !u!1 &670011243102828514
 GameObject:
   m_ObjectHideFlags: 0
@@ -282,7 +320,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5659050682803018157}
   - component: {fileID: 8365863964475586911}
-  - component: {fileID: 6975198586036163877}
   m_Layer: 0
   m_Name: Basic Turret
   m_TagString: Untagged
@@ -331,18 +368,6 @@ MonoBehaviour:
   targetingRange: 3
   rotationSpeed: 400
   bps: 1
---- !u!114 &6975198586036163877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000207214545019390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc69858e835c0584c9c168fa6cb7e74d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
 --- !u!1 &1777685891495334895
 GameObject:
   m_ObjectHideFlags: 0
@@ -972,7 +997,7 @@ MeshRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1244322399
   m_SortingLayer: 1
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &8959167415978301925
