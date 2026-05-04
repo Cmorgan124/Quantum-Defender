@@ -6,15 +6,21 @@ public class UpgradeHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     [SerializeField] private Material outline;
     [SerializeField] private Material normal;
     [SerializeField] private Renderer _renderer;
+    [SerializeField] private GameObject upgradeCanvas;
+
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        Debug.Log("Hovering over: " + gameObject.name);
         _renderer.material = outline;
     }
 
     public void OnPointerExit(PointerEventData eventData)
     {
         _renderer.material = normal;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        upgradeCanvas.SetActive(true);
     }
 }
