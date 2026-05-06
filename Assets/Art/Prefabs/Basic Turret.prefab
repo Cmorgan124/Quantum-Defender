@@ -10,8 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4003722260274829532}
   - component: {fileID: 5386253652735652942}
-  - component: {fileID: 5379037198367271798}
-  - component: {fileID: 3558573888823963094}
+  - component: {fileID: 846105761791236743}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -93,23 +92,7 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &5379037198367271798
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 514062563570599252}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cc69858e835c0584c9c168fa6cb7e74d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::UpgradeHandler
-  outline: {fileID: 2100000, guid: 9cf38e996973a3c4f8fd4017714f4648, type: 2}
-  normal: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  _renderer: {fileID: 5386253652735652942}
-  upgradeCanvas: {fileID: 4593726012857984616}
---- !u!61 &3558573888823963094
+--- !u!61 &846105761791236743
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,7 +126,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.004237175, y: 0.060732484}
+  m_Offset: {x: 0.004648924, y: 0.047586292}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -153,7 +136,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.7111452, y: 1.6986008}
+  m_Size: {x: 1.6417487, y: 1.6485453}
   m_EdgeRadius: 0
 --- !u!1 &670011243102828514
 GameObject:
@@ -346,6 +329,8 @@ GameObject:
   m_Component:
   - component: {fileID: 5659050682803018157}
   - component: {fileID: 8365863964475586911}
+  - component: {fileID: 626144181422898035}
+  - component: {fileID: 1383115923222503471}
   m_Layer: 0
   m_Name: Basic Turret
   m_TagString: Untagged
@@ -389,11 +374,73 @@ MonoBehaviour:
     m_Bits: 64
   bulletPrefab: {fileID: 1145031778487384803, guid: cb32585dbbc26cc40ba7cdf915378512, type: 3}
   firingPoint: {fileID: 1175877188970533948}
-  countText: {fileID: 8959167415978301925}
-  canvas: {fileID: 4593726012857984616}
   targetingRange: 3
   rotationSpeed: 400
   bps: 1
+--- !u!61 &626144181422898035
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000207214545019390}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.0023872852, y: 0.0047745705}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.8710847, y: 0.8376622}
+  m_EdgeRadius: 0
+--- !u!114 &1383115923222503471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000207214545019390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 535f9a507dfe40a44a4d164e4e252118, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  upgradeCanvas: {fileID: 4593726012857984616}
+  canvas: {fileID: 224540953273118883}
+  maincamera: {fileID: 0}
+  outline: {fileID: -876546973899608171, guid: c42a43e760bb955488d445b4147bea53, type: 3}
+  normal: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  _renderer: {fileID: 5386253652735652942}
 --- !u!1 &1777685891495334895
 GameObject:
   m_ObjectHideFlags: 0
@@ -951,6 +998,7 @@ GameObject:
   - component: {fileID: 4929059869914191971}
   - component: {fileID: 8802451463667469107}
   - component: {fileID: 8959167415978301925}
+  - component: {fileID: 5163859850994799589}
   m_Layer: 0
   m_Name: Turret Number
   m_TagString: Untagged
@@ -1121,6 +1169,19 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 8802451463667469107}
   m_maskType: 0
+--- !u!114 &5163859850994799589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3578856608930099342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23e8a65ac64e97c40a38a8beeb077c3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  countText: {fileID: 8959167415978301925}
 --- !u!1 &4399524428275237676
 GameObject:
   m_ObjectHideFlags: 0
@@ -1262,7 +1323,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &7140398270389946346
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1272,7 +1333,7 @@ RectTransform:
   m_GameObject: {fileID: 4593726012857984616}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.06305, y: 0.075779036, z: 1.0088}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4923429455934381798}
@@ -1283,8 +1344,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 39.4932, y: 31.7399}
+  m_AnchoredPosition: {x: 809.09204, y: 452.601}
+  m_SizeDelta: {x: 1605.2001, y: 912.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &224540953273118883
 Canvas:

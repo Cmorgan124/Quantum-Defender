@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEditor;
-using TMPro;
+
 
 public class Turret : MonoBehaviour
 {
@@ -9,8 +9,8 @@ public class Turret : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
-    [SerializeField] private TextMeshPro countText;
-    [SerializeField] private GameObject canvas;
+
+
 
     [Header("Attributes")]
     [SerializeField] private float targetingRange = 5f;
@@ -20,16 +20,10 @@ public class Turret : MonoBehaviour
     private Transform target;
     private float timeUntilFire;
 
-    public static int BasicCount = 0;
+   
     
 
-    private void Start()
-    {
-        BasicCount++ ; 
-        countText.text =  BasicCount.ToString();
-        canvas.SetActive(false);
-        
-    }
+
 
     //if target is in range, shoot
     private void Update()

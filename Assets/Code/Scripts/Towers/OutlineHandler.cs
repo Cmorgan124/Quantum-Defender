@@ -6,7 +6,7 @@ public class UpgradeHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitH
     [SerializeField] private Material outline;
     [SerializeField] private Material normal;
     [SerializeField] private Renderer _renderer;
-    [SerializeField] private GameObject upgradeCanvas;
+
 
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -19,8 +19,4 @@ public class UpgradeHandler : MonoBehaviour, IPointerEnterHandler, IPointerExitH
         _renderer.material = normal;
     }
 
-    public void OnPointerDown(PointerEventData eventData)
-    {
-        upgradeCanvas.SetActive(true);
-    }
 }
