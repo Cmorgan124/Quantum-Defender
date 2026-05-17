@@ -1,28 +1,15 @@
+using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class turretUIenabler : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
+public class TurretSelection : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("Refrences")]
-    [SerializeField] GameObject upgradeCanvas;
-    [SerializeField] Canvas canvas;
 
     [SerializeField] private Material outline;
     [SerializeField] private Material normal;
     [SerializeField] private Renderer _renderer;
-    Camera maincamera;
-
-
-    void Awake()
-    {
-        canvas.worldCamera = maincamera;
-        upgradeCanvas.SetActive(false);    
-    }
-
-    public void OnPointerDown(PointerEventData eventData)
-    {
-       upgradeCanvas.SetActive(true); 
-    }
+    [SerializeField] private TurretData parentfab;
 
     public void OnPointerEnter(PointerEventData eventData)
     {
@@ -32,6 +19,11 @@ public class turretUIenabler : MonoBehaviour, IPointerDownHandler, IPointerEnter
     public void OnPointerExit(PointerEventData eventData)
     {
         _renderer.material = normal;
+    }
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+            MenuManager.Instance.SelectTurret(parentfab);
     }
 
 }
