@@ -11,6 +11,11 @@ public class TurretSelection : MonoBehaviour, IPointerDownHandler, IPointerEnter
     [SerializeField] private Renderer _renderer;
     [SerializeField] private TurretData parentfab;
 
+    void Start()
+    {
+        parentfab = GetComponentInParent<TurretData>();
+    }
+
     public void OnPointerEnter(PointerEventData eventData)
     {
         _renderer.material = outline;
@@ -23,7 +28,11 @@ public class TurretSelection : MonoBehaviour, IPointerDownHandler, IPointerEnter
 
     public void OnPointerDown(PointerEventData eventData)
     {
-            MenuManager.Instance.SelectTurret(parentfab);
+        if(parentfab != null)
+        {
+            MenuManager.Instance.SelectTurret(parentfab);        
+        }
+
     }
 
 }

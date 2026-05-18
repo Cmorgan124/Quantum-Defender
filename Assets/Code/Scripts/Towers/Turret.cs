@@ -19,11 +19,7 @@ public class Turret : MonoBehaviour
 
     private Transform target;
     private float timeUntilFire;
-
-   
-    
-
-
+    public int Kills { get; private set; }
 
     //if target is in range, shoot
     private void Update()
@@ -56,6 +52,15 @@ public class Turret : MonoBehaviour
         GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
         bulletScript.SetTarget(target);
+        if (bulletScript != null)
+        {
+            bulletScript.SetOwner(this);
+        }
+    }
+
+    public void AddKill()
+    {
+        Kills++;
     }
 
     //scans for a target

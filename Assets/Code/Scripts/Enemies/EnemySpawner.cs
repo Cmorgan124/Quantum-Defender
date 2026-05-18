@@ -87,7 +87,7 @@ public class EnemySpawner : MonoBehaviour
     {
         int index = Random.Range(0, enemyPrefabs.Length);
         GameObject prefabToSpawn = enemyPrefabs[index]; 
-        GameObject v = Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity); 
+        GameObject v = Instantiate(prefabToSpawn, LevelManager.Instance.startPoint.position, Quaternion.identity); 
 
         Health h = v.GetComponent<Health>();
 

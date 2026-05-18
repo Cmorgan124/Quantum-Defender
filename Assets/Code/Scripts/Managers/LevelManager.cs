@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    public static LevelManager main;
+    public static LevelManager Instance { get; private set; }
 
     public Transform startPoint;
     public Transform[] path;
@@ -10,7 +10,8 @@ public class LevelManager : MonoBehaviour
     public int currency;
     private void Awake()
     {
-        main = this;
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
     //sets starting currency

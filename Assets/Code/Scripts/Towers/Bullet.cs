@@ -10,11 +10,17 @@ public class Bullet : MonoBehaviour
     [SerializeField] private int bulletDamage = 1;
 
     private Transform target;
+    private Turret myTurret;
 
     //sets a 3 second life span to the bullet
     private void Start()
     {
         Destroy(gameObject, 3f);
+    }
+
+    public void SetOwner(Turret creator)
+    {
+        myTurret = creator;
     }
 
     //setter for target
@@ -38,7 +44,7 @@ public class Bullet : MonoBehaviour
     {
         if(other.gameObject.GetComponent<Health>() != null)
         {
-            other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage);
+            other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage, myTurret);
         }
         Destroy(gameObject);
     }

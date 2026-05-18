@@ -3,27 +3,16 @@ using TMPro;
 
 public class Menu : MonoBehaviour
 {
-    public static Menu Instance { get; private set; }
-
     [Header("Panels")]
     [SerializeField] private GameObject shopPanel;
     [SerializeField] private GameObject turretMenuPanel;
 
-    [Header("References")]
+    [Header("TextMeshes")]
     [SerializeField] TextMeshProUGUI currencyUI;
     [SerializeField] TextMeshProUGUI costUI;
+    [SerializeField] TextMeshProUGUI turretnameUI;
+    [SerializeField] TextMeshProUGUI turretkillsUI;
 
-    private void Awake()
-    {
-        if (Instance == null) 
-        {
-            Instance = this;
-        }
-        else 
-        {
-            Destroy(gameObject);
-        }
-    }
     private void Start()
     {
         ShowShopMenu(); // Make sure the shop is visible by default
@@ -32,14 +21,15 @@ public class Menu : MonoBehaviour
     //sets current money and displays the cost of selected tower
     void Update()
     {
-        currencyUI.text = LevelManager.main.currency.ToString();
-        costUI.text = "Cost: " + BuildManager.main.GetSelectedTower().cost.ToString();
+        currencyUI.text = "$" + LevelManager.Instance.currency.ToString();
+        costUI.text = "Cost: $" + BuildManager.Instance.GetSelectedTower().cost.ToString();
     }
     public void ShowTurretMenu(TurretData turret)
     {
-        // Swap panels
         shopPanel.SetActive(false);
         turretMenuPanel.SetActive(true);
+        turretnameUI.text = turret.turretName;
+        turretkillsUI.text = "Kills: " + turret.kills.ToString();
     }
 
     public void ShowShopMenu()

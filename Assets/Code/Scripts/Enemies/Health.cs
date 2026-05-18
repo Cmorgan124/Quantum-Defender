@@ -7,22 +7,23 @@ public class Health : MonoBehaviour
     [SerializeField] private int currencyWorth = 50;
 
     private bool isDestroyed = false;
-
-    private EnemySpawner spawnScript;
-
     private void Start()
     {
     }
 
     //takes damage and kills enemies
-    public void TakeDamage(int dmg)
+    public void TakeDamage(int dmg, Turret attacker)
     {
         hitPoints -= dmg;
 
         if (hitPoints <= 0 && !isDestroyed)
         {
             EnemySpawner.onEnemyDestroy.Invoke();
-            LevelManager.main.IncreaseCurrency(currencyWorth);
+            LevelManager.Instance.IncreaseCurrency(currencyWorth);
+            if(attacker != null)
+            {
+                attacker.AddKill();
+            }
             isDestroyed = true;
             Destroy(gameObject);
         }

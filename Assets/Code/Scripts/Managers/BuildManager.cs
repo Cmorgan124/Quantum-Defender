@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    public static BuildManager main; //other script access
+    public static BuildManager Instance { get; private set; }
 
     [Header("Refrences")]
     [SerializeField] public Tower[] towers;
@@ -10,7 +10,8 @@ public class BuildManager : MonoBehaviour
     private int selectedTower = 0;
     private void Awake()
     {
-        main = this; //main LevelManager instance
+        if (Instance == null) Instance = this;
+        else Destroy(gameObject);
     }
 
     //getter for selected tower

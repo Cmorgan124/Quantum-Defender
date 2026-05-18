@@ -21,7 +21,7 @@ public class EnemyMovement : MonoBehaviour
     private void Start()
     {
         baseSpeed = moveSpeed;
-        target = LevelManager.main.path[pathIndex]; //Sets first point as target
+        target = LevelManager.Instance.path[pathIndex]; //Sets first point as target
         livesScript = Object.FindFirstObjectByType<Lives>();
     }
 
@@ -33,7 +33,7 @@ public class EnemyMovement : MonoBehaviour
         {
             pathIndex++;
 
-            if (pathIndex == LevelManager.main.path.Length)
+            if (pathIndex == LevelManager.Instance.path.Length)
             {
                 livesScript.lives -= healthScript.hitPoints;
                 EnemySpawner.onEnemyDestroy.Invoke();
@@ -41,7 +41,7 @@ public class EnemyMovement : MonoBehaviour
                 return;
             } else
             {
-                target = LevelManager.main.path[pathIndex]; 
+                target = LevelManager.Instance.path[pathIndex]; 
             }
         }
     }

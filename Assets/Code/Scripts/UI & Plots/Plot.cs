@@ -34,15 +34,15 @@ public class Plot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
             return;
         }
 
-        Tower towerToBuild = BuildManager.main.GetSelectedTower();
+        Tower towerToBuild = BuildManager.Instance.GetSelectedTower();
 
-        if(towerToBuild.cost > LevelManager.main.currency)
+        if(towerToBuild.cost > LevelManager.Instance.currency)
         {
             Debug.Log("Can't afford");
             return;
         }
 
-        LevelManager.main.SpendCurrency(towerToBuild.cost);
+        LevelManager.Instance.SpendCurrency(towerToBuild.cost);
 
         towerObj = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
         turret = towerObj.GetComponent<Turret>();

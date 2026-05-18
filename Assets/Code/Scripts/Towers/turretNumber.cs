@@ -5,13 +5,10 @@ public class turretNumber : MonoBehaviour
 {
     [Header("Refrences")]  
     [SerializeField] private TextMeshPro countText;
-
-    [Header("Attributes")]
-    public static int BasicCount = 0;
+    [SerializeField] public TurretData datascript;
     private void Start()
     {
-        BasicCount++ ; 
-        countText.text =  BasicCount.ToString();    
+        countText.text = TurretData.basicCount.ToString();    
     }
 
 
