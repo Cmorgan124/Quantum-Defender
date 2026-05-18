@@ -30,7 +30,7 @@ public class TurretSelection : MonoBehaviour, IPointerDownHandler, IPointerEnter
     {
         if(parentfab != null)
         {
-            MenuManager.Instance.SelectTurret(parentfab);        
+            SelectManager.Instance.SelectTurret(parentfab);        
         }
 
     }

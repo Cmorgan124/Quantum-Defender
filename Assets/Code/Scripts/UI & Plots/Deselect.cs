@@ -5,7 +5,7 @@ public class Deselect : MonoBehaviour, IPointerDownHandler
 {
     public void OnPointerDown(PointerEventData eventData)
     {
-        MenuManager.Instance.Deselect();
+        SelectManager.Instance.Deselect();
     }
     
 

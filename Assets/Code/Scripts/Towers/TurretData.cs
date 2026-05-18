@@ -10,10 +10,13 @@ public class TurretData : MonoBehaviour
     public string turretName;
     public static int basicCount = 0;
     public int kills = 0;
+    public int turretCost = 100;
+    public int sellValue {get; private set;}
     void Start()
     {
         basicCount++ ; 
         turretName = "Basic Turret " + basicCount.ToString();
+        sellValue = Mathf.RoundToInt(turretCost * 0.7f);
     }
 
     void Update()

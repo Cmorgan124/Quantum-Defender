@@ -12,24 +12,29 @@ public class Menu : MonoBehaviour
     [SerializeField] TextMeshProUGUI costUI;
     [SerializeField] TextMeshProUGUI turretnameUI;
     [SerializeField] TextMeshProUGUI turretkillsUI;
+    [SerializeField] TextMeshProUGUI sellUI;
 
     private void Start()
     {
-        ShowShopMenu(); // Make sure the shop is visible by default
+        ShowShopMenu();
     }
 
-    //sets current money and displays the cost of selected tower
     void Update()
     {
         currencyUI.text = "$" + LevelManager.Instance.currency.ToString();
         costUI.text = "Cost: $" + BuildManager.Instance.GetSelectedTower().cost.ToString();
+        if(SelectManager.Instance.SelectedTurret != null)
+        {
+            turretkillsUI.text = "Kills: " + SelectManager.Instance.SelectedTurret.kills;
+        }
+
     }
     public void ShowTurretMenu(TurretData turret)
     {
         shopPanel.SetActive(false);
         turretMenuPanel.SetActive(true);
         turretnameUI.text = turret.turretName;
-        turretkillsUI.text = "Kills: " + turret.kills.ToString();
+        sellUI.text = "Sell: +$" + turret.sellValue;
     }
 
     public void ShowShopMenu()
