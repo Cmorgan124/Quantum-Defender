@@ -28,6 +28,11 @@ public class Plot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        if (SelectManager.Instance != null && SelectManager.Instance.IsMovingTurret)
+        {
+            SelectManager.Instance.CompleteMove(transform.position);
+            return; 
+        }
 
         if (towerObj != null)
         {

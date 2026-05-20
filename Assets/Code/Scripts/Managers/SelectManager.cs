@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class SelectManager : MonoBehaviour
 {
@@ -7,6 +8,7 @@ public class SelectManager : MonoBehaviour
     [Header("References")]
     [SerializeField] private Menu uiMenu;
     public TurretData SelectedTurret {get; private set; }
+    public bool IsMovingTurret {get; private set;}
 
 private void Awake()
     {
@@ -16,21 +18,80 @@ private void Awake()
 
     public void SelectTurret(TurretData turret) 
     {
+        if(IsMovingTurret) return;
+
         SelectedTurret = turret;
         uiMenu.ShowTurretMenu(turret);
     }
 
     public void Deselect()
     {
+        if (IsMovingTurret)
+        {
+            CancelMove();
+            return;
+        }
         SelectedTurret = null;
         uiMenu.ShowShopMenu();
     }
 
+    public void CancelMove()
+    {
+            IsMovingTurret = false;
+            SelectedTurret = null;
+            uiMenu.ShowShopMenu();
+    }
+
     public void SellSelectedTurret()
     {
-        LevelManager.Instance.currency += SelectedTurret.sellValue;
-        GameObject turretToDestroy = SelectedTurret.gameObject;
-        Deselect(); 
-        Destroy(turretToDestroy);
-    }   
+        if(SelectedTurret != null && !IsMovingTurret)
+        {
+            if(LevelManager.Instance != null)
+            {
+                LevelManager.Instance.currency += SelectedTurret.smValue;
+            }
+            
+            GameObject turretToDestroy = SelectedTurret.gameObject;
+            Deselect(); 
+            Destroy(turretToDestroy);
+        }
+    }  
+
+    public void StartMove()
+{
+        if (SelectedTurret == null) return;
+
+        if (LevelManager.Instance != null && LevelManager.Instance.currency < SelectedTurret.smValue)
+        {
+            Debug.Log("Not enough money to move!");
+            return;
+        }
+
+        StartCoroutine(MoveRoutine());
+    }
+
+    public void CompleteMove(Vector3 newPosition)
+    {
+        if (SelectedTurret != null && LevelManager.Instance != null)
+        {
+            LevelManager.Instance.currency -= SelectedTurret.smValue;
+            SelectedTurret.gameObject.transform.position = newPosition;
+            IsMovingTurret = false; 
+        }
+    }
+
+    private IEnumerator MoveRoutine()
+    {
+        IsMovingTurret = true;
+        
+        uiMenu.ToggleMoveInstructions(true); 
+
+        while (IsMovingTurret)
+        {
+            yield return null; 
+        }
+        uiMenu.ToggleMoveInstructions(false); 
+        uiMenu.ShowShopMenu(); 
+        SelectedTurret = null;  
+    }
 }
