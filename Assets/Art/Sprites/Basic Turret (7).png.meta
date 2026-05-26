@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 232b3b0be6d96af4893356453e737e3a
+guid: 9b7eb2aac31883b4abcb210821e0b9e1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8016004830283721218
-    second: Basic Turret (6)_0
+      213: 2120360176205702292
+    second: Basic Turret (7)_0
   - first:
-      213: -5776465812829445581
-    second: Basic Turret (6)_1
+      213: 7630545649382959376
+    second: Basic Turret (7)_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,11 +103,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Basic Turret (6)_0
+      name: Basic Turret (7)_0
       rect:
         serializedVersion: 2
-        x: 145
-        y: 146
+        x: 0
+        y: 0
+        width: 45
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.6666661}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49420aa98580d6d10800000000000000
+      internalID: 2120360176205702292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Basic Turret (7)_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 9
         width: 51
         height: 51
       alignment: 0
@@ -118,30 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ef59f15d31e61c090800000000000000
-      internalID: -8016004830283721218
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Basic Turret (6)_1
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 34
-        width: 93
-        height: 96
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 332ec11c2fed5dfa0800000000000000
-      internalID: -5776465812829445581
+      spriteID: 019afd9f6d425e960800000000000000
+      internalID: 7630545649382959376
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2ce43787910f6784d8185b149b348295
+    spriteID: 9e9436d28e520ab4c87d6d773963addc
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Basic Turret (6)_0: -8016004830283721218
-      Basic Turret (6)_1: -5776465812829445581
+      Basic Turret (7)_0: 2120360176205702292
+      Basic Turret (7)_1: 7630545649382959376
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

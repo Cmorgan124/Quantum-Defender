@@ -83,12 +83,12 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5776465812829445581, guid: 232b3b0be6d96af4893356453e737e3a, type: 3}
+  m_Sprite: {fileID: 2120360176205702292, guid: 9b7eb2aac31883b4abcb210821e0b9e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.40625, y: 2.03125}
+  m_Size: {x: 0.703125, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -131,8 +131,8 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2.90625, y: 3}
-    newSize: {x: 1.40625, y: 2.03125}
+    oldSize: {x: 0.703125, y: 1}
+    newSize: {x: 0.703125, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
@@ -273,6 +273,7 @@ MonoBehaviour:
   turretscript: {fileID: 8365863964475586911}
   turretName: 
   kills: 0
+  turretCost: 100
 --- !u!1 &1777685891495334895
 GameObject:
   m_ObjectHideFlags: 0
@@ -354,12 +355,12 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -8016004830283721218, guid: 232b3b0be6d96af4893356453e737e3a, type: 3}
+  m_Sprite: {fileID: 7630545649382959376, guid: 9b7eb2aac31883b4abcb210821e0b9e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.51, y: 0.51}
+  m_Size: {x: 0.796875, y: 0.796875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
