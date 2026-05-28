@@ -51,6 +51,10 @@ public class Turret : MonoBehaviour
         GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
         bulletScript.SetTarget(target);
+        if (this.gameObject.name.Contains("Sniper"))
+        {
+            bulletScript.SetSpeed(20f);
+        }
         if (bulletScript != null)
         {
             bulletScript.SetOwner(this);
