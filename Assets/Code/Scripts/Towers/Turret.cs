@@ -13,9 +13,9 @@ public class Turret : MonoBehaviour
 
 
     [Header("Attributes")]
-    [SerializeField] private float targetingRange = 5f;
+    [SerializeField] public float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 200f;
-    [SerializeField] private float bps = 1f; //bullets per second
+    [SerializeField] public float bps = 1f; //bullets per second
     private Transform target;
     private float timeUntilFire;
     public int Kills { get; private set; }
@@ -53,7 +53,7 @@ public class Turret : MonoBehaviour
         bulletScript.SetTarget(target);
         if (this.gameObject.name.Contains("Sniper"))
         {
-            bulletScript.SetSpeed(20f);
+            bulletScript.SetSpeed(30f);
         }
         if (bulletScript != null)
         {

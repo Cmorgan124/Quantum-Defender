@@ -3,8 +3,8 @@ using UnityEngine;
 public class TurretData : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] private Turret turretscript;
-
+    [SerializeField] public Turret turretscript;
+    [SerializeField] public TurretRange rangescript;
     [Header("Turret Data")]
     //Filler
     public string turretName;
@@ -15,6 +15,7 @@ public class TurretData : MonoBehaviour
     void Start()
     {
         basicCount++ ; 
+
         turretName = "Basic Turret " + basicCount.ToString();
         smValue = Mathf.RoundToInt(turretCost * 0.7f);
     }
@@ -23,5 +24,4 @@ public class TurretData : MonoBehaviour
     {
         kills = turretscript.Kills;
     }
-
 }

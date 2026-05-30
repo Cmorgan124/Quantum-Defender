@@ -20,8 +20,14 @@ private void Awake()
     {
         if(IsMovingTurret) return;
 
+        if(SelectedTurret != null)
+        {
+           SelectedTurret.rangescript.HideRange(); 
+        }
+
         SelectedTurret = turret;
         uiMenu.ShowTurretMenu(turret);
+        SelectedTurret.rangescript.ShowRange(SelectedTurret.turretscript.targetingRange);
     }
 
     public void Deselect()
@@ -31,6 +37,7 @@ private void Awake()
             CancelMove();
             return;
         }
+        SelectedTurret.rangescript.HideRange();
         SelectedTurret = null;
         uiMenu.ShowShopMenu();
     }
@@ -38,6 +45,7 @@ private void Awake()
     public void CancelMove()
     {
             IsMovingTurret = false;
+            SelectedTurret.rangescript.HideRange();
             SelectedTurret = null;
             uiMenu.ShowShopMenu();
     }
@@ -91,7 +99,8 @@ private void Awake()
             yield return null; 
         }
         uiMenu.ToggleMoveInstructions(false); 
-        uiMenu.ShowShopMenu(); 
+        uiMenu.ShowShopMenu();
+        SelectedTurret.rangescript.HideRange(); 
         SelectedTurret = null;  
     }
 }

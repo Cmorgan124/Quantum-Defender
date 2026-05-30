@@ -15,7 +15,7 @@ public class Bullet : MonoBehaviour
     //sets a 3 second life span to the bullet and fires it in the direction of the enemy
     private void Start()
     {
-        Destroy(gameObject, 3f);
+        Destroy(gameObject, 2f);
 
         if (!target) return;
 
