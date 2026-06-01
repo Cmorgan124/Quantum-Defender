@@ -9,9 +9,10 @@ public class Menu : MonoBehaviour
     public struct UpgradeButtonUI
     {
         public Button infoButton;
-        public Image iconDisplay;
+        
         [Header("Front Card")]
         public GameObject frontviewContainer;
+        public Image iconDisplay;
         public TextMeshProUGUI titleText;
         public TextMeshProUGUI costText;
 
@@ -78,7 +79,36 @@ public class Menu : MonoBehaviour
 
             if(i == currentLevel)
             {
-                //uiNodes[i].interactableButton.
+                uiNodes[i].infoButton.interactable = true;
+            }
+            else
+            {
+                uiNodes[i].infoButton.interactable = false;
+            }
+        }
+
+        RefreshPanelFlipState();
+    }
+
+    public void ToggleInfoFlipState()
+    {
+        showingDescriptions = !showingDescriptions;
+        RefreshPanelFlipState();
+    }
+
+    private void RefreshPanelFlipState()
+    {
+        for(int i = 0; i < uiNodes.Length; i++)
+        {
+            if (showingDescriptions)
+            {
+                uiNodes[i].frontviewContainer.SetActive(false);
+                uiNodes[i].backviewContainer.SetActive(true);
+            }
+            else
+            {
+                uiNodes[i].frontviewContainer.SetActive(true);
+                uiNodes[i].backviewContainer.SetActive(false); 
             }
         }
     }
