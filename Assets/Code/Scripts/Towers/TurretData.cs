@@ -7,7 +7,6 @@ public class TurretData : MonoBehaviour
     [SerializeField] public Turret turretscript;
     [SerializeField] public TurretRange rangescript;
 
-    [Header("Turret Data")]
     public string turretName;
     public static int basicCount = 0;
     public int kills = 0;

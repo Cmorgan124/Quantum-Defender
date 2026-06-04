@@ -276,6 +276,28 @@ MonoBehaviour:
   turretName: 
   kills: 0
   turretCost: 100
+  currentUpgradeLevel: 0
+  upgradeTree:
+  - nodeName: Rapid Fire
+    nodeDescription: Increses attack speed.
+    nodeIcon: {fileID: 0}
+    resultPrefab: {fileID: 0}
+    upgradeCost: 150
+  - nodeName: 
+    nodeDescription: 
+    nodeIcon: {fileID: 0}
+    resultPrefab: {fileID: 0}
+    upgradeCost: 0
+  - nodeName: 
+    nodeDescription: 
+    nodeIcon: {fileID: 0}
+    resultPrefab: {fileID: 0}
+    upgradeCost: 0
+  - nodeName: 
+    nodeDescription: 
+    nodeIcon: {fileID: 0}
+    resultPrefab: {fileID: 0}
+    upgradeCost: 0
 --- !u!1 &1777685891495334895
 GameObject:
   m_ObjectHideFlags: 0

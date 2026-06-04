@@ -8,6 +8,7 @@ public class Menu : MonoBehaviour
     [System.Serializable]
     public struct UpgradeButtonUI
     {
+        public Button upgradeButton;
         public Button infoButton;
         
         [Header("Front Card")]
@@ -19,6 +20,8 @@ public class Menu : MonoBehaviour
         [Header("Back Card")]
         public GameObject backviewContainer;
         public TextMeshProUGUI descriptionText;
+
+        [HideInInspector] public bool showingDescription;
     }
 
     [Header("Panels/Groups")]
@@ -72,6 +75,8 @@ public class Menu : MonoBehaviour
 
         for(int i = 0; i < uiNodes.Length; i++)
         {
+            uiNodes[i].showingDescription = false;
+
             uiNodes[i].titleText.text = turret.upgradeTree[i].nodeName;
             uiNodes[i].costText.text = "$" + turret.upgradeTree[i].upgradeCost;
             uiNodes[i].descriptionText.text = turret.upgradeTree[i].nodeDescription;
@@ -85,32 +90,30 @@ public class Menu : MonoBehaviour
             {
                 uiNodes[i].infoButton.interactable = false;
             }
+
+            RefreshCard(i);
         }
-
-        RefreshPanelFlipState();
     }
 
-    public void ToggleInfoFlipState()
+    public void ToggleInfoFlipState(int nodeIndex)
     {
-        showingDescriptions = !showingDescriptions;
-        RefreshPanelFlipState();
+        if(nodeIndex < 0 || nodeIndex >= uiNodes.Length) return;
+        uiNodes[nodeIndex].showingDescription = !uiNodes[nodeIndex].showingDescription;
+        RefreshCard(nodeIndex);
     }
 
-    private void RefreshPanelFlipState()
+    private void RefreshCard(int index)
     {
-        for(int i = 0; i < uiNodes.Length; i++)
-        {
             if (showingDescriptions)
             {
-                uiNodes[i].frontviewContainer.SetActive(false);
-                uiNodes[i].backviewContainer.SetActive(true);
+                uiNodes[index].frontviewContainer.SetActive(false);
+                uiNodes[index].backviewContainer.SetActive(true);
             }
             else
             {
-                uiNodes[i].frontviewContainer.SetActive(true);
-                uiNodes[i].backviewContainer.SetActive(false); 
+                uiNodes[index].frontviewContainer.SetActive(true);
+                uiNodes[index].backviewContainer.SetActive(false); 
             }
-        }
     }
 
     public void ShowShopMenu()
