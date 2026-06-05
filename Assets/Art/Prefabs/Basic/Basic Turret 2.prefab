@@ -281,23 +281,23 @@ MonoBehaviour:
   - nodeName: Rapid Fire
     nodeDescription: Increses attack speed.
     nodeIcon: {fileID: 8938545521515212694, guid: cfc470f715962cd4981b08aeb44a32d0, type: 3}
-    resultPrefab: {fileID: 0}
+    resultPrefab: {fileID: 1000207214545019390}
     upgradeCost: 150
-  - nodeName: 
-    nodeDescription: 
+  - nodeName: Optimized Sensors
+    nodeDescription: 'Increases range and allow the turret to see infared atoms. '
     nodeIcon: {fileID: 0}
     resultPrefab: {fileID: 0}
-    upgradeCost: 0
-  - nodeName: 
-    nodeDescription: 
+    upgradeCost: 275
+  - nodeName: F.M.J.
+    nodeDescription: Makes bullets bigger and do more damage.
     nodeIcon: {fileID: 0}
     resultPrefab: {fileID: 0}
-    upgradeCost: 0
-  - nodeName: 
-    nodeDescription: 
+    upgradeCost: 500
+  - nodeName: Double Barrel
+    nodeDescription: Adds a second barrel!
     nodeIcon: {fileID: 0}
     resultPrefab: {fileID: 0}
-    upgradeCost: 0
+    upgradeCost: 1000
 --- !u!1 &1777685891495334895
 GameObject:
   m_ObjectHideFlags: 0
