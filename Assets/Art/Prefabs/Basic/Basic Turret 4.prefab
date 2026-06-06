@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.021049976, z: 0}
-  m_LocalScale: {x: 0.5135239, y: 0.5016816, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 385042228631874355}
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2120360176205702292, guid: 9b7eb2aac31883b4abcb210821e0b9e1, type: 3}
+  m_Sprite: {fileID: -881983017789398162, guid: c4a3b79183ca62a4583c0df49d0e1165, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,8 +130,8 @@ BoxCollider2D:
   m_Offset: {x: 0.004648924, y: 0.047586292}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.6666661}
-    oldSize: {x: 1.40625, y: 2}
+    pivot: {x: 0.49999997, y: 0.67}
+    oldSize: {x: 0.703125, y: 1}
     newSize: {x: 0.703125, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -154,7 +154,7 @@ MonoBehaviour:
   outline: {fileID: 2100000, guid: 9cf38e996973a3c4f8fd4017714f4648, type: 2}
   normal: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   _renderer: {fileID: 5386253652735652942}
-  parentfab: {fileID: 0}
+  parentfab: {fileID: 171629162819533094}
 --- !u!1 &1000207214545019390
 GameObject:
   m_ObjectHideFlags: 0
@@ -168,7 +168,7 @@ GameObject:
   - component: {fileID: 626144181422898035}
   - component: {fileID: 171629162819533094}
   m_Layer: 0
-  m_Name: Basic Turret 1
+  m_Name: Basic Turret 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -208,11 +208,11 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  bulletPrefab: {fileID: 1145031778487384803, guid: cb32585dbbc26cc40ba7cdf915378512, type: 3}
+  bulletPrefab: {fileID: 1145031778487384803, guid: 3559ec093a121a248b4ba5b2ab0b5f48, type: 3}
   firingPoint: {fileID: 1175877188970533948}
-  targetingRange: 2
+  targetingRange: 3
   rotationSpeed: 400
-  bps: 1
+  bps: 2
 --- !u!61 &626144181422898035
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -276,7 +276,7 @@ MonoBehaviour:
   turretName: 
   kills: 0
   turretCost: 100
-  currentUpgradeLevel: 0
+  currentUpgradeLevel: 3
   upgradeTree:
   - nodeName: Rapid Fire
     nodeDescription: Increses attack speed.
@@ -291,7 +291,7 @@ MonoBehaviour:
   - nodeName: F.M.J.
     nodeDescription: Makes bullets bigger and do more damage.
     nodeIcon: {fileID: -3855115967652476948, guid: 21a12ef91f8a9db4c8a2aa08197634ad, type: 3}
-    resultPrefab: {fileID: 1000207214545019390, guid: bf5ac61b5e4f1b645b3461fd795553d7, type: 3}
+    resultPrefab: {fileID: 1000207214545019390}
     upgradeCost: 500
   - nodeName: Double Barrel
     nodeDescription: Adds a second barrel!

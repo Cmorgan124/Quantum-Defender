@@ -212,7 +212,7 @@ MonoBehaviour:
   firingPoint: {fileID: 1175877188970533948}
   targetingRange: 2
   rotationSpeed: 400
-  bps: 2
+  bps: 3
 --- !u!61 &626144181422898035
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -290,8 +290,8 @@ MonoBehaviour:
     upgradeCost: 275
   - nodeName: F.M.J.
     nodeDescription: Makes bullets bigger and do more damage.
-    nodeIcon: {fileID: 0}
-    resultPrefab: {fileID: 0}
+    nodeIcon: {fileID: -3855115967652476948, guid: 21a12ef91f8a9db4c8a2aa08197634ad, type: 3}
+    resultPrefab: {fileID: 1000207214545019390, guid: bf5ac61b5e4f1b645b3461fd795553d7, type: 3}
     upgradeCost: 500
   - nodeName: Double Barrel
     nodeDescription: Adds a second barrel!
