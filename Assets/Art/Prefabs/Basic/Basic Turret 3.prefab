@@ -213,6 +213,8 @@ MonoBehaviour:
   targetingRange: 3
   rotationSpeed: 400
   bps: 2
+  Muzzles:
+  - {fileID: 1175877188970533948}
 --- !u!61 &626144181422898035
 BoxCollider2D:
   m_ObjectHideFlags: 0

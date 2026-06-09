@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEditor;
+using System.Collections.Generic;
 
 
 public class Turret : MonoBehaviour
@@ -16,9 +17,14 @@ public class Turret : MonoBehaviour
     [SerializeField] public float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 200f;
     [SerializeField] public float bps = 1f; //bullets per second
+
     private Transform target;
     private float timeUntilFire;
     public int Kills { get; private set; }
+    public List<Transform> Muzzles = new List<Transform>();
+
+    private int muzzleIndex = 0;
+
 
     //if target is in range, shoot
     private void Update()
@@ -48,7 +54,13 @@ public class Turret : MonoBehaviour
     //spawns a bullet and let it do its thing
     private void Shoot()
     {
-        GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
+        Transform currentMuzzle = Muzzles[muzzleIndex];
+        GameObject bulletObj = Instantiate(bulletPrefab, currentMuzzle.position, currentMuzzle.rotation);
+        muzzleIndex++;
+        if(muzzleIndex >= Muzzles.Count)
+        {
+            muzzleIndex = 0;
+        }
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
         bulletScript.SetTarget(target);
         if (this.gameObject.name.Contains("Sniper"))
