@@ -275,9 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   turretscript: {fileID: 8365863964475586911}
   rangescript: {fileID: 1556321028811672046}
-  turretName: 
-  kills: 0
-  turretCost: 100
+  towerCost: 100
   currentUpgradeLevel: 3
   upgradeTree:
   - nodeName: Rapid Fire
@@ -293,12 +291,12 @@ MonoBehaviour:
   - nodeName: F.M.J.
     nodeDescription: Makes bullets bigger and do more damage.
     nodeIcon: {fileID: -3855115967652476948, guid: 21a12ef91f8a9db4c8a2aa08197634ad, type: 3}
-    resultPrefab: {fileID: 0}
+    resultPrefab: {fileID: 1000207214545019390}
     upgradeCost: 500
   - nodeName: Double Barrel
     nodeDescription: When one isn't enough...
     nodeIcon: {fileID: 5589415578096073829, guid: 0f5a5a80e213149429d86d05911baf1c, type: 3}
-    resultPrefab: {fileID: 0}
+    resultPrefab: {fileID: 1000207214545019390, guid: 9bce0b6d05051aa4fba549b84000bb81, type: 3}
     upgradeCost: 1000
 --- !u!1 &1777685891495334895
 GameObject:
@@ -586,7 +584,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   countText: {fileID: 8959167415978301925}
-  datascript: {fileID: 0}
+  datascript: {fileID: 171629162819533094}
 --- !u!1 &5176227744721231698
 GameObject:
   m_ObjectHideFlags: 0

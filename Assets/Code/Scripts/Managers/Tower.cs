@@ -1,6 +1,8 @@
 using UnityEngine;
 using System;
 
+//Class for the shop
+
 [Serializable]
 public class Tower
 {

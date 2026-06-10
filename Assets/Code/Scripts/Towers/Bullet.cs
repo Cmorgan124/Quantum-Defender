@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//Main projectile logic. Moves gameobject and does damage to enemies. Also helps with the kill stat logic.
+
 public class Bullet : MonoBehaviour
 {
     [Header("Refrences")]
@@ -12,7 +14,7 @@ public class Bullet : MonoBehaviour
     private Transform target;
     private Turret myTurret;
 
-    //sets a 3 second life span to the bullet and fires it in the direction of the enemy
+    //sets a 2 second life span to the bullet and fires it in the direction of the enemy
     private void Start()
     {
         Destroy(gameObject, 2f);
@@ -26,6 +28,7 @@ public class Bullet : MonoBehaviour
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
     }
 
+    //Setter for kill logic
     public void SetOwner(Turret creator)
     {
         myTurret = creator;
@@ -45,10 +48,5 @@ public class Bullet : MonoBehaviour
             other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage, myTurret);
         }
         Destroy(gameObject);
-    }
-
-    public void SetSpeed(float newSpeed)
-    {
-        bulletSpeed = newSpeed;
     }
 }

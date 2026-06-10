@@ -1,14 +1,16 @@
 using UnityEngine;
 using System.Collections;
 
+//A singleton that helps with indiviual tower selection
+
 public class SelectManager : MonoBehaviour
 {
     public static SelectManager Instance { get; private set; }
 
     [Header("References")]
     [SerializeField] private Menu uiMenu;
-    public TurretData SelectedTurret {get; private set; }
-    public bool IsMovingTurret {get; private set;}
+    public TowerData SelectedTower {get; private set; }
+    public bool IsMovingTower {get; private set;}
 
     private void Awake()
     {
@@ -16,57 +18,58 @@ public class SelectManager : MonoBehaviour
          else Destroy(gameObject);
     }
 
-    public void SelectTurret(TurretData turret) 
+    public void SelectTower(TowerData tower) 
     {
-        if(IsMovingTurret) return;
+        if(IsMovingTower) return;
 
-        if(SelectedTurret != null)
+        if(SelectedTower != null)
         {
-           SelectedTurret.rangescript.HideRange(); 
+           SelectedTower.rangescript.HideRange(); 
         }
 
-        SelectedTurret = turret;
-        uiMenu.ShowTurretMenu(turret);
-        SelectedTurret.rangescript.ShowRange(SelectedTurret.turretscript.targetingRange);
+        SelectedTower = tower;
+        uiMenu.ShowTowerMenu(tower);
+        SelectedTower.rangescript.ShowRange(SelectedTower.turretscript.targetingRange);
     }
 
     public void Deselect()
     {
-        if (IsMovingTurret)
+        if (IsMovingTower)
         {
             CancelMove();
             return;
         }
-        SelectedTurret.rangescript.HideRange();
-        SelectedTurret = null;
+        SelectedTower.rangescript.HideRange();
+        SelectedTower = null;
         uiMenu.ShowShopMenu();
     }
 
-    public void UpgradeSelectedTurret(int nodeIndex)
+    public void UpgradeSelectedTower(int nodeIndex)
     {
-        if (SelectedTurret == null) return;
+        if (SelectedTower == null) return;
 
-        if (nodeIndex < 0 || nodeIndex >= SelectedTurret.upgradeTree.Length) return;
+        if (nodeIndex < 0 || nodeIndex >= SelectedTower.upgradeTree.Length) return;
 
-        TurretData.UpgradeNode targetNode = SelectedTurret.upgradeTree[nodeIndex];
+        TowerData.UpgradeNode targetNode = SelectedTower.upgradeTree[nodeIndex];
 
         if (LevelManager.Instance != null && LevelManager.Instance.currency < targetNode.upgradeCost) return;
 
         LevelManager.Instance.currency -= targetNode.upgradeCost;
 
-        Vector3 currentPos = SelectedTurret.transform.position;
-        Quaternion currentRot = SelectedTurret.transform.rotation;
-        int currentKills = SelectedTurret.kills;
+        Vector3 currentPos = SelectedTower.transform.position;
+        Quaternion currentRot = SelectedTower.transform.rotation;
+        int currentKills = SelectedTower.kills;
+        uiMenu.uiNodes[nodeIndex].costText.text = "Bought!";
 
         GameObject newTowerObject = Instantiate(targetNode.resultPrefab, currentPos, currentRot);
-        TurretData newTurretData = newTowerObject.GetComponent<TurretData>();
+        TowerData newTowerData = newTowerObject.GetComponent<TowerData>();
 
-        Destroy(SelectedTurret.gameObject);
+        Destroy(SelectedTower.gameObject);
 
-        if (newTurretData != null)
+        if (newTowerData != null)
         {
-            newTurretData.kills = currentKills;
-            SelectTurret(newTurretData);
+            newTowerData.kills = currentKills;
+            SelectTower(newTowerData);
         }
         else Deselect();
 
@@ -74,32 +77,32 @@ public class SelectManager : MonoBehaviour
 
     public void CancelMove()
     {
-            IsMovingTurret = false;
-            SelectedTurret.rangescript.HideRange();
-            SelectedTurret = null;
+            IsMovingTower = false;
+            SelectedTower.rangescript.HideRange();
+            SelectedTower = null;
             uiMenu.ShowShopMenu();
     }
 
-    public void SellSelectedTurret()
+    public void SellSelectedTower()
     {
-        if(SelectedTurret != null && !IsMovingTurret)
+        if(SelectedTower != null && !IsMovingTower)
         {
             if(LevelManager.Instance != null)
             {
-                LevelManager.Instance.currency += SelectedTurret.smValue;
+                LevelManager.Instance.currency += SelectedTower.smValue;
             }
             
-            GameObject turretToDestroy = SelectedTurret.gameObject;
+            GameObject towerToDestroy = SelectedTower.gameObject;
             Deselect(); 
-            Destroy(turretToDestroy);
+            Destroy(towerToDestroy);
         }
     }  
 
     public void StartMove()
 {
-        if (SelectedTurret == null) return;
+        if (SelectedTower == null) return;
 
-        if (LevelManager.Instance != null && LevelManager.Instance.currency < SelectedTurret.smValue)
+        if (LevelManager.Instance != null && LevelManager.Instance.currency < SelectedTower.smValue)
         {
             Debug.Log("Not enough money to move!");
             return;
@@ -110,27 +113,27 @@ public class SelectManager : MonoBehaviour
 
     public void CompleteMove(Vector3 newPosition)
     {
-        if (SelectedTurret != null && LevelManager.Instance != null)
+        if (SelectedTower != null && LevelManager.Instance != null)
         {
-            LevelManager.Instance.currency -= SelectedTurret.smValue;
-            SelectedTurret.gameObject.transform.position = newPosition;
-            IsMovingTurret = false; 
+            LevelManager.Instance.currency -= SelectedTower.smValue;
+            SelectedTower.gameObject.transform.position = newPosition;
+            IsMovingTower = false; 
         }
     }
 
     private IEnumerator MoveRoutine()
     {
-        IsMovingTurret = true;
+        IsMovingTower = true;
         
         uiMenu.ToggleMoveInstructions(true); 
 
-        while (IsMovingTurret)
+        while (IsMovingTower)
         {
             yield return null; 
         }
         uiMenu.ToggleMoveInstructions(false); 
         uiMenu.ShowShopMenu();
-        SelectedTurret.rangescript.HideRange(); 
-        SelectedTurret = null;  
+        SelectedTower.rangescript.HideRange(); 
+        SelectedTower = null;  
     }
 }

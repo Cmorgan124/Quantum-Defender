@@ -1,11 +1,14 @@
 using UnityEngine;
 using UnityEngine.AI;
 
-public class TurretRange : MonoBehaviour
+//Creates and enables/disables a towers range indicator upon selection
+
+public class TowerRange : MonoBehaviour
 {
     [SerializeField] private int segements = 50;
     [SerializeField] private LineRenderer lr;
 
+    //Sets up variables and hides circle
     void Awake()
     {
         lr.positionCount = segements;
@@ -15,6 +18,7 @@ public class TurretRange : MonoBehaviour
         HideRange();
     }
 
+    //Creates the range circle
     public void ShowRange(float radius)
     {
         float angleStep = 360f/segements;
@@ -32,5 +36,6 @@ public class TurretRange : MonoBehaviour
         lr.enabled = true;
     }
 
+    //Hides component
     public void HideRange() => lr.enabled = false;
 }

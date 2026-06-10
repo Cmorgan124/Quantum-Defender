@@ -1,5 +1,7 @@
 using UnityEngine;
 
+//The main man. A singleton that tracks all the global stuff like currency and enemy pathing. 
+
 public class LevelManager : MonoBehaviour
 {
     public static LevelManager Instance { get; private set; }
@@ -17,7 +19,7 @@ public class LevelManager : MonoBehaviour
     //sets starting currency
     private void Start()
     {
-        currency = 100;
+        currency = 3000;
     }
 
     //increases currency based on enemy type

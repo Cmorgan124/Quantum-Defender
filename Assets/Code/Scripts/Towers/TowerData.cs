@@ -1,16 +1,19 @@
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class TurretData : MonoBehaviour
+//Holds all the unique data for the towers
+
+public class TowerData : MonoBehaviour
 {
     [Header("References")]
     [SerializeField] public Turret turretscript;
-    [SerializeField] public TurretRange rangescript;
+    [SerializeField] public TowerRange rangescript;
 
-    public string turretName;
-    public static int basicCount = 0;
-    public int kills = 0;
-    public int turretCost = 100;
+    //The Data (name, unit #, kills, cost, sell/move value)
+    [System.NonSerialized] public string towerName;
+    [System.NonSerialized] public static int basicCount = 0;
+    [System.NonSerialized] public int kills = 0;
+    public int towerCost = 100;
     public int smValue {get; private set;}
 
     [Header("Upgrade Stuff")]
@@ -30,17 +33,14 @@ public class TurretData : MonoBehaviour
     public UpgradeNode[] upgradeTree = new UpgradeNode[4];
 
 
+    //Names tower and finds it's value
     void Start()
     {
-        if(turretCost == 100)
-        {
-          basicCount++;   
-        }
-
-        turretName = "Basic Turret " + basicCount.ToString();
-        smValue = Mathf.RoundToInt(turretCost * 0.7f);
+        towerName = "Basic Turret " + basicCount.ToString();
+        smValue = Mathf.RoundToInt(towerCost * 0.7f);
     }
 
+    //Connecter for kill stat ui
     void Update()
     {
         kills = turretscript.Kills;

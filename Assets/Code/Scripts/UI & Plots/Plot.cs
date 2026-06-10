@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+//Allows the player the click the plots to place towers.
+
 public class Plot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IPointerDownHandler
 {
     [Header("Refrences")]
@@ -28,7 +30,7 @@ public class Plot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (SelectManager.Instance != null && SelectManager.Instance.IsMovingTurret)
+        if (SelectManager.Instance != null && SelectManager.Instance.IsMovingTower)
         {
             SelectManager.Instance.CompleteMove(transform.position);
             return; 

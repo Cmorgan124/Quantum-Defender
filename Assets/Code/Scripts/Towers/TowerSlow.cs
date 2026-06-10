@@ -3,7 +3,9 @@ using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using UnityEditor;
 
-public class TurretSlowmo : MonoBehaviour
+//Main slowmo logic, scans its range for enemies and temporarily reduces there speed.
+
+public class TowerSlow : MonoBehaviour
 {
     [Header("Refrences")]
     [SerializeField] private LayerMask enemyMask;

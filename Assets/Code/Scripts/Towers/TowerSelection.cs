@@ -2,18 +2,20 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class TurretSelection : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
+//Highlights the tower you are hovering over and procs the selected tower logic. 
+
+public class TowerSelection : MonoBehaviour, IPointerDownHandler, IPointerEnterHandler, IPointerExitHandler
 {
     [Header("Refrences")]
 
     [SerializeField] private Material outline;
     [SerializeField] private Material normal;
     [SerializeField] private Renderer _renderer;
-    [SerializeField] private TurretData parentfab;
+    [SerializeField] private TowerData parentfab;
 
     void Start()
     {
-        parentfab = GetComponentInParent<TurretData>();
+        parentfab = GetComponentInParent<TowerData>();
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -30,7 +32,7 @@ public class TurretSelection : MonoBehaviour, IPointerDownHandler, IPointerEnter
     {
         if(parentfab != null)
         {
-            SelectManager.Instance.SelectTurret(parentfab);        
+            SelectManager.Instance.SelectTower(parentfab);        
         }
 
     }

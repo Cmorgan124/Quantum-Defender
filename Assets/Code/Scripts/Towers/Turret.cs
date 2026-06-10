@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 
-
+//Core logic for the basic turret. Constantly scans for a enemy, rotates towards it, and fires bullets at it. If the turret kills a enemy, it adds it to its stats
 public class Turret : MonoBehaviour
 {
     [Header("Refrences")]
@@ -22,7 +22,6 @@ public class Turret : MonoBehaviour
     private float timeUntilFire;
     public int Kills { get; private set; }
     public List<Transform> Muzzles = new List<Transform>();
-
     private int muzzleIndex = 0;
 
 
@@ -63,16 +62,13 @@ public class Turret : MonoBehaviour
         }
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
         bulletScript.SetTarget(target);
-        if (this.gameObject.name.Contains("Sniper"))
-        {
-            bulletScript.SetSpeed(30f);
-        }
         if (bulletScript != null)
         {
             bulletScript.SetOwner(this);
         }
     }
 
+    //Increases kill count
     public void AddKill()
     {
         Kills++;

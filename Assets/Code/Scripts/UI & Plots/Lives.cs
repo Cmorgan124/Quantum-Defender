@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 
+//Pretty simple health logic for the player.
 public class Lives : MonoBehaviour
 {
     public int lives = 50;

@@ -203,7 +203,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 370662040}
         m_TargetAssemblyTypeName: SelectManager, Assembly-CSharp
-        m_MethodName: UpgradeSelectedTurret
+        m_MethodName: UpgradeSelectedTower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -226,7 +226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.8679245, b: 0.11031651, a: 1}
+  m_Color: {r: 0, g: 0.8679245, b: 0.11031651, a: 0.74509805}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -607,7 +607,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -616,14 +616,14 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1301,12 +1301,12 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 597178876}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: ToggleInfoFlipState
+        m_MethodName: ToggleInfo
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -2456,7 +2456,7 @@ MonoBehaviour:
   - {fileID: 693803001}
   - {fileID: 304569247}
   - {fileID: 17258539}
-  currency: 0
+  currency: 3000
 --- !u!4 &370662037
 Transform:
   m_ObjectHideFlags: 0
@@ -3115,7 +3115,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 370662040}
         m_TargetAssemblyTypeName: SelectManager, Assembly-CSharp
-        m_MethodName: UpgradeSelectedTurret
+        m_MethodName: UpgradeSelectedTower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3138,7 +3138,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.8679245, b: 0.11031651, a: 1}
+  m_Color: {r: 0, g: 0.8679245, b: 0.11031651, a: 0.74509805}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -4052,7 +4052,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4061,14 +4061,14 @@ MonoBehaviour:
   m_text: Upgrade 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4802,7 +4802,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -4811,14 +4811,14 @@ MonoBehaviour:
   m_text: Upgrade 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5094,7 +5094,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -5103,14 +5103,14 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5289,7 +5289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   shopPanel: {fileID: 858076699}
-  turretMenuPanel: {fileID: 512657928}
+  towerMenuPanel: {fileID: 512657928}
   moveinstructionsPanel: {fileID: 280390403}
   smGroup: {fileID: 115424053}
   uiNodes:
@@ -5331,8 +5331,8 @@ MonoBehaviour:
     showingDescription: 0
   currencyUI: {fileID: 899686146}
   costUI: {fileID: 495294313}
-  turretnameUI: {fileID: 465505982}
-  turretkillsUI: {fileID: 372523271}
+  towernameUI: {fileID: 465505982}
+  towerkillsUI: {fileID: 372523271}
   sellUI: {fileID: 1157988210}
   moveUI: {fileID: 2076852013}
 --- !u!1 &619394800
@@ -6014,7 +6014,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7324,7 +7324,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7333,14 +7333,14 @@ MonoBehaviour:
   m_text: Upgrade 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8122,7 +8122,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -0.000055153, y: 0}
-  m_SizeDelta: {x: 100, y: 100}
+  m_SizeDelta: {x: 150, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &949898428
 MonoBehaviour:
@@ -8138,7 +8138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10799,7 +10799,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 597178876}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: ToggleInfoFlipState
+        m_MethodName: ToggleInfo
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -11635,7 +11635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -11644,14 +11644,14 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -13151,7 +13151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -13587,7 +13587,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 370662040}
         m_TargetAssemblyTypeName: SelectManager, Assembly-CSharp
-        m_MethodName: UpgradeSelectedTurret
+        m_MethodName: UpgradeSelectedTower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -13610,7 +13610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.8679245, b: 0.11031651, a: 1}
+  m_Color: {r: 0, g: 0.8679245, b: 0.11031651, a: 0.74509805}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -14097,7 +14097,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 597178876}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: ToggleInfoFlipState
+        m_MethodName: ToggleInfo
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14940,7 +14940,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 597178876}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: ToggleInfoFlipState
+        m_MethodName: ToggleInfo
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15400,7 +15400,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -15409,14 +15409,14 @@ MonoBehaviour:
   m_text: Upgrade 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4281479730
-  m_fontColor: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15551,7 +15551,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 370662040}
         m_TargetAssemblyTypeName: SelectManager, Assembly-CSharp
-        m_MethodName: UpgradeSelectedTurret
+        m_MethodName: UpgradeSelectedTower
         m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15574,7 +15574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.8679245, b: 0.11031651, a: 1}
+  m_Color: {r: 0, g: 0.8679245, b: 0.11031651, a: 0.74509805}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -15819,7 +15819,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.000055153, y: 0}
+  m_AnchoredPosition: {x: 1.1455, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2058876419
@@ -15836,7 +15836,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -16049,7 +16049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -16058,14 +16058,14 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
+  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4278190080
-  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
