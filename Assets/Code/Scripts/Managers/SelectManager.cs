@@ -47,7 +47,6 @@ public class SelectManager : MonoBehaviour
     public void UpgradeSelectedTower(int nodeIndex)
     {
         if (SelectedTower == null) return;
-
         if (nodeIndex < 0 || nodeIndex >= SelectedTower.upgradeTree.Length) return;
 
         TowerData.UpgradeNode targetNode = SelectedTower.upgradeTree[nodeIndex];
@@ -59,7 +58,6 @@ public class SelectManager : MonoBehaviour
         Vector3 currentPos = SelectedTower.transform.position;
         Quaternion currentRot = SelectedTower.transform.rotation;
         int currentKills = SelectedTower.kills;
-        uiMenu.uiNodes[nodeIndex].costText.text = "Bought!";
 
         GameObject newTowerObject = Instantiate(targetNode.resultPrefab, currentPos, currentRot);
         TowerData newTowerData = newTowerObject.GetComponent<TowerData>();

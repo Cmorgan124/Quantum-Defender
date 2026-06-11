@@ -43,8 +43,6 @@ public class Menu : MonoBehaviour
     [SerializeField] TextMeshProUGUI sellUI;
     [SerializeField] TextMeshProUGUI moveUI;
 
-    private bool showingDescriptions = false;
-
     //Ensures that the shop menu is displayed at the start
     private void Start()
     {
@@ -90,13 +88,12 @@ public class Menu : MonoBehaviour
 
             if(i == currentLevel)
             {
-                uiNodes[i].infoButton.interactable = true;
+                uiNodes[i].upgradeButton.interactable = true;
             }
             else
             {
-                uiNodes[i].infoButton.interactable = false;
+                uiNodes[i].upgradeButton.interactable = false;
             }
-
             RefreshCard(i);
         }
     }
@@ -112,7 +109,7 @@ public class Menu : MonoBehaviour
     //Shows the correct side of the upgrade button
     private void RefreshCard(int index)
     {
-            if (showingDescriptions)
+            if (uiNodes[index].showingDescription)
             {
                 uiNodes[index].frontviewContainer.SetActive(false);
                 uiNodes[index].backviewContainer.SetActive(true);

@@ -19,7 +19,7 @@ public class LevelManager : MonoBehaviour
     //sets starting currency
     private void Start()
     {
-        currency = 3000;
+        currency = 1000000;
     }
 
     //increases currency based on enemy type

@@ -132,7 +132,7 @@ GameObject:
   - component: {fileID: 1223101}
   - component: {fileID: 1223100}
   m_Layer: 5
-  m_Name: Upgrade Button
+  m_Name: Upgrade Button 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -568,7 +568,7 @@ GameObject:
   - component: {fileID: 73529978}
   - component: {fileID: 73529977}
   m_Layer: 5
-  m_Name: Cost
+  m_Name: Cost 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -616,14 +616,14 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
+  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1229,7 +1229,7 @@ GameObject:
   - component: {fileID: 176447143}
   - component: {fileID: 176447142}
   m_Layer: 5
-  m_Name: Info
+  m_Name: Info 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1306,7 +1306,7 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 1
+          m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -1690,7 +1690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 220780325}
   m_Layer: 5
-  m_Name: Back
+  m_Name: Back 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3044,7 +3044,7 @@ GameObject:
   - component: {fileID: 404480256}
   - component: {fileID: 404480255}
   m_Layer: 5
-  m_Name: Upgrade Button
+  m_Name: Upgrade Button 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3660,7 +3660,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39
+  m_fontSize: 39.15
   m_fontSizeBase: 46
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -3803,7 +3803,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 370662040}
         m_TargetAssemblyTypeName: SelectManager, Assembly-CSharp
-        m_MethodName: SellSelectedTurret
+        m_MethodName: SellSelectedTower
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4005,7 +4005,7 @@ GameObject:
   - component: {fileID: 488806158}
   - component: {fileID: 488806159}
   m_Layer: 5
-  m_Name: Upgrade Name
+  m_Name: Upgrade Name 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4061,14 +4061,14 @@ MonoBehaviour:
   m_text: Upgrade 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
+  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -4755,7 +4755,7 @@ GameObject:
   - component: {fileID: 522525868}
   - component: {fileID: 522525869}
   m_Layer: 5
-  m_Name: Upgrade Name
+  m_Name: Upgrade Name 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4811,14 +4811,14 @@ MonoBehaviour:
   m_text: Upgrade 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
+  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5074,7 +5074,7 @@ GameObject:
   - component: {fileID: 593711868}
   - component: {fileID: 593711867}
   m_Layer: 5
-  m_Name: Cost
+  m_Name: Cost 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -5103,14 +5103,14 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
+  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -5304,7 +5304,7 @@ MonoBehaviour:
     showingDescription: 0
   - upgradeButton: {fileID: 2005135296}
     infoButton: {fileID: 1868427996}
-    frontviewContainer: {fileID: 1479173432}
+    frontviewContainer: {fileID: 1634148204}
     iconDisplay: {fileID: 708668667}
     titleText: {fileID: 522525869}
     costText: {fileID: 593711867}
@@ -5967,7 +5967,7 @@ GameObject:
   - component: {fileID: 708668666}
   - component: {fileID: 708668667}
   m_Layer: 5
-  m_Name: Upgrade Image
+  m_Name: Upgrade Image 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7285,7 +7285,7 @@ GameObject:
   - component: {fileID: 896942736}
   - component: {fileID: 896942735}
   m_Layer: 5
-  m_Name: Upgrade Name
+  m_Name: Upgrade Name 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7333,14 +7333,14 @@ MonoBehaviour:
   m_text: Upgrade 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
+  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -8099,7 +8099,7 @@ GameObject:
   - component: {fileID: 949898429}
   - component: {fileID: 949898428}
   m_Layer: 5
-  m_Name: Upgrade Image
+  m_Name: Upgrade Image 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9670,12 +9670,12 @@ GameObject:
   - component: {fileID: 1269216083}
   - component: {fileID: 1269216082}
   m_Layer: 5
-  m_Name: Description
+  m_Name: Description 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1269216081
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9742,7 +9742,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.2
+  m_fontSize: 39.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9781,7 +9781,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -18.38855, y: -49.327084, z: -20.431763, w: -50.697357}
+  m_margin: {x: 10, y: 10, z: 10, w: 10}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10727,7 +10727,7 @@ GameObject:
   - component: {fileID: 1378520481}
   - component: {fileID: 1378520480}
   m_Layer: 5
-  m_Name: Info
+  m_Name: Info 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11050,7 +11050,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1421922724}
   m_Layer: 5
-  m_Name: Front
+  m_Name: Front 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11307,7 +11307,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1479173433}
   m_Layer: 5
-  m_Name: Front
+  m_Name: Front 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11615,7 +11615,7 @@ GameObject:
   - component: {fileID: 1517918392}
   - component: {fileID: 1517918391}
   m_Layer: 5
-  m_Name: Cost
+  m_Name: Cost 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11644,14 +11644,14 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
+  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -11755,7 +11755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1547286739}
   m_Layer: 5
-  m_Name: Back
+  m_Name: Back 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12013,7 +12013,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1582831166}
   m_Layer: 5
-  m_Name: Back
+  m_Name: Back 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12049,7 +12049,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1584800876}
   m_Layer: 5
-  m_Name: Front
+  m_Name: Front 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12215,12 +12215,12 @@ GameObject:
   - component: {fileID: 1602903527}
   - component: {fileID: 1602903526}
   m_Layer: 5
-  m_Name: Description
+  m_Name: Description 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1602903525
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12287,7 +12287,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.2
+  m_fontSize: 39.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12326,7 +12326,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -18.38855, y: -49.327084, z: -20.431763, w: -50.697357}
+  m_margin: {x: 10, y: 10, z: 10, w: 10}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12540,12 +12540,12 @@ GameObject:
   - component: {fileID: 1633324794}
   - component: {fileID: 1633324793}
   m_Layer: 5
-  m_Name: Description
+  m_Name: Description 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1633324793
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12593,7 +12593,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.2
+  m_fontSize: 39.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -12632,7 +12632,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -18.38855, y: -49.327084, z: -20.431763, w: -50.697357}
+  m_margin: {x: 10, y: 10, z: 10, w: 10}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -12675,7 +12675,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1634148205}
   m_Layer: 5
-  m_Name: Front
+  m_Name: Front 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13104,7 +13104,7 @@ GameObject:
   - component: {fileID: 1680728277}
   - component: {fileID: 1680728278}
   m_Layer: 5
-  m_Name: Upgrade Image
+  m_Name: Upgrade Image 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13535,7 +13535,7 @@ GameObject:
   - component: {fileID: 1786429470}
   - component: {fileID: 1786429469}
   m_Layer: 5
-  m_Name: Upgrade Button
+  m_Name: 'Upgrade Button 3 '
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13954,8 +13954,8 @@ RectTransform:
   m_Children:
   - {fileID: 1223099}
   - {fileID: 176447141}
-  - {fileID: 1582831166}
   - {fileID: 1421922724}
+  - {fileID: 1582831166}
   m_Father: {fileID: 780943695}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -14045,7 +14045,7 @@ GameObject:
   - component: {fileID: 1868427997}
   - component: {fileID: 1868427996}
   m_Layer: 5
-  m_Name: Info
+  m_Name: Info 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14888,7 +14888,7 @@ GameObject:
   - component: {fileID: 1975729070}
   - component: {fileID: 1975729069}
   m_Layer: 5
-  m_Name: Info
+  m_Name: Info 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15224,12 +15224,12 @@ GameObject:
   - component: {fileID: 1998707435}
   - component: {fileID: 1998707434}
   m_Layer: 5
-  m_Name: Description
+  m_Name: Description 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1998707434
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15277,7 +15277,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.2
+  m_fontSize: 39.05
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -15316,7 +15316,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -18.38855, y: -49.327084, z: -20.431763, w: -50.697357}
+  m_margin: {x: 10, y: 10, z: 10, w: 10}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -15361,7 +15361,7 @@ GameObject:
   - component: {fileID: 2000701920}
   - component: {fileID: 2000701919}
   m_Layer: 5
-  m_Name: Upgrade Name
+  m_Name: Upgrade Name 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15409,14 +15409,14 @@ MonoBehaviour:
   m_text: Upgrade 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
+  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -15499,7 +15499,7 @@ GameObject:
   - component: {fileID: 2005135297}
   - component: {fileID: 2005135296}
   m_Layer: 5
-  m_Name: Upgrade Button
+  m_Name: Upgrade Button 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15797,7 +15797,7 @@ GameObject:
   - component: {fileID: 2058876420}
   - component: {fileID: 2058876419}
   m_Layer: 5
-  m_Name: Upgrade Image
+  m_Name: Upgrade Image 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16010,7 +16010,7 @@ GameObject:
   - component: {fileID: 2074770891}
   - component: {fileID: 2074770890}
   m_Layer: 5
-  m_Name: Cost
+  m_Name: Cost 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16058,14 +16058,14 @@ MonoBehaviour:
   m_text: New Text
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
-  m_sharedMaterial: {fileID: 2100000, guid: 912426323effa1840acf16ac579c7b83, type: 2}
+  m_sharedMaterial: {fileID: 4433846382192982414, guid: 8eee36d587c3563439bc6170f554de3b, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -16259,7 +16259,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24.8
+  m_fontSize: 25.6
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -16590,7 +16590,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2109962660}
   m_Layer: 5
-  m_Name: Back
+  m_Name: Back 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -34,9 +34,9 @@ public class TowerData : MonoBehaviour
 
 
     //Names tower and finds it's value
-    void Start()
+    void Awake()
     {
-        towerName = "Basic Turret " + basicCount.ToString();
+        towerName = gameObject.name;
         smValue = Mathf.RoundToInt(towerCost * 0.7f);
     }
 

@@ -10,7 +10,6 @@ public class Plot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     [SerializeField] private Color hoverColor;
 
     private GameObject towerObj;
-    public Turret turret;
     private Color startColor;
 
     private void Start()
@@ -52,6 +51,5 @@ public class Plot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
         LevelManager.Instance.SpendCurrency(towerToBuild.cost);
 
         towerObj = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
-        turret = towerObj.GetComponent<Turret>();
     }
 }
