@@ -9,7 +9,8 @@ public class Plot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Color hoverColor;
 
-    private GameObject towerObj;
+    public GameObject placedTower = null;
+
     private Color startColor;
 
     private void Start()
@@ -29,27 +30,6 @@ public class Plot : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, IP
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        if (SelectManager.Instance != null && SelectManager.Instance.IsMovingTower)
-        {
-            SelectManager.Instance.CompleteMove(transform.position);
-            return; 
-        }
-
-        if (towerObj != null)
-        {
-            return;
-        }
-
-        Tower towerToBuild = BuildManager.Instance.GetSelectedTower();
-
-        if(towerToBuild.cost > LevelManager.Instance.currency)
-        {
-            Debug.Log("Can't afford");
-            return;
-        }
-
-        LevelManager.Instance.SpendCurrency(towerToBuild.cost);
-
-        towerObj = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
+        BuildManager.Instance.PlaceTower(this);
     }
 }

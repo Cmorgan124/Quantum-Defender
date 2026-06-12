@@ -2504,6 +2504,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faded7d3ff41b5a46ac6768f4c61d295, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  menu: {fileID: 597178876}
   towers:
   - name: Basic Turret
     cost: 100

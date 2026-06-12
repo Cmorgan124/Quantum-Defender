@@ -29,7 +29,7 @@ public class Menu : MonoBehaviour
 
     [Header("Panels/Groups")]
     [SerializeField] private GameObject shopPanel;
-    [SerializeField] private GameObject towerMenuPanel;
+    [SerializeField] public GameObject towerMenuPanel;
     [SerializeField] private GameObject moveinstructionsPanel;
     [SerializeField] private GameObject smGroup;
 

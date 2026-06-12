@@ -58,6 +58,7 @@ public class SelectManager : MonoBehaviour
         Vector3 currentPos = SelectedTower.transform.position;
         Quaternion currentRot = SelectedTower.transform.rotation;
         int currentKills = SelectedTower.kills;
+        string currentName = SelectedTower.towerName;
 
         GameObject newTowerObject = Instantiate(targetNode.resultPrefab, currentPos, currentRot);
         TowerData newTowerData = newTowerObject.GetComponent<TowerData>();
@@ -66,6 +67,7 @@ public class SelectManager : MonoBehaviour
 
         if (newTowerData != null)
         {
+            newTowerData.towerName = currentName;
             newTowerData.kills = currentKills;
             SelectTower(newTowerData);
         }
@@ -109,13 +111,17 @@ public class SelectManager : MonoBehaviour
         StartCoroutine(MoveRoutine());
     }
 
-    public void CompleteMove(Vector3 newPosition)
+    public void CompleteMove(Vector3 newPosition, Plot newPlot)
     {
         if (SelectedTower != null && LevelManager.Instance != null)
         {
+            Plot oldPlot = SelectedTower.currentPlot;
+            if(oldPlot) oldPlot.placedTower = null;
             LevelManager.Instance.currency -= SelectedTower.smValue;
             SelectedTower.gameObject.transform.position = newPosition;
-            IsMovingTower = false; 
+            newPlot.placedTower = SelectedTower.gameObject;
+            SelectedTower.currentPlot = newPlot;
+            IsMovingTower = false;
         }
     }
 

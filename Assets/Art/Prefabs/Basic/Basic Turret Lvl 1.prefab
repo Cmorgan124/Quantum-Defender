@@ -275,6 +275,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   turretscript: {fileID: 8365863964475586911}
   rangescript: {fileID: 628936424121653563}
+  towerFamily: Basic Turret
   towerCost: 100
   currentUpgradeLevel: 0
   upgradeTree:

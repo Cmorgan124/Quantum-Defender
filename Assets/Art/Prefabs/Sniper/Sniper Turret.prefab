@@ -157,6 +157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TurretData
   turretscript: {fileID: 0}
   rangescript: {fileID: 7281195068795926509}
+  towerFamily: Sniper Turret
   towerCost: 200
   currentUpgradeLevel: 0
   upgradeTree:

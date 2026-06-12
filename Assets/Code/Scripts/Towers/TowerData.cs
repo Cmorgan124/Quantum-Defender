@@ -10,11 +10,12 @@ public class TowerData : MonoBehaviour
     [SerializeField] public TowerRange rangescript;
 
     //The Data (name, unit #, kills, cost, sell/move value)
-    [System.NonSerialized] public string towerName;
-    [System.NonSerialized] public static int basicCount = 0;
-    [System.NonSerialized] public int kills = 0;
+    public string towerFamily;
     public int towerCost = 100;
+    public Plot currentPlot = null;
     public int smValue {get; private set;}
+    [System.NonSerialized] public int kills = 0;
+    [System.NonSerialized] public string towerName;
 
     [Header("Upgrade Stuff")]
     public int currentUpgradeLevel = 0;
@@ -36,7 +37,6 @@ public class TowerData : MonoBehaviour
     //Names tower and finds it's value
     void Awake()
     {
-        towerName = gameObject.name;
         smValue = Mathf.RoundToInt(towerCost * 0.7f);
     }
 
