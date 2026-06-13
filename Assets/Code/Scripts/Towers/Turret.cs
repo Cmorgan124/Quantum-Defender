@@ -63,16 +63,14 @@ public class Turret : MonoBehaviour
         }
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
         bulletScript.SetTarget(target);
-        if (bulletScript != null)
-        {
-            bulletScript.SetOwner(this);
-        }
+        TowerData sourceData = GetComponent<TowerData>();
+        bulletScript.SetSource(sourceData);
     }
 
     //Increases kill count
     public void AddKill()
     {
-        towerData.Kills++;
+        towerData.kills++;
     }
 
     //scans for a target

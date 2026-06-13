@@ -12,7 +12,7 @@ public class Bullet : MonoBehaviour
     [SerializeField] private int bulletDamage = 1;
 
     private Transform target;
-    private Turret myTurret;
+    private TowerData sourceTower;
 
     //sets a 2 second life span to the bullet and fires it in the direction of the enemy
     private void Start()
@@ -29,9 +29,9 @@ public class Bullet : MonoBehaviour
     }
 
     //Setter for kill logic
-    public void SetOwner(Turret creator)
+    public void SetSource(TowerData source)
     {
-        myTurret = creator;
+        sourceTower = source;
     }
 
     //setter for target
@@ -45,7 +45,7 @@ public class Bullet : MonoBehaviour
     {
         if(other.gameObject.GetComponent<Health>() != null)
         {
-            other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage, myTurret);
+            other.gameObject.GetComponent<Health>().TakeDamage(bulletDamage, sourceTower);
         }
         Destroy(gameObject);
     }

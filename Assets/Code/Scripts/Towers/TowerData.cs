@@ -14,7 +14,7 @@ public class TowerData : MonoBehaviour
     public int towerCost = 100;
     public Plot currentPlot = null;
     public int smValue {get; private set;}
-    [System.NonSerialized] public int Kills;
+    [System.NonSerialized] public int kills;
     [System.NonSerialized] public string towerName;
 
     [Header("Upgrade Stuff")]

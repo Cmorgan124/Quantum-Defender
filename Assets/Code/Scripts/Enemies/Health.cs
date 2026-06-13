@@ -7,26 +7,24 @@ public class Health : MonoBehaviour
     [SerializeField] private int currencyWorth = 50;
 
     private bool isDestroyed = false;
-    private void Start()
-    {
-    }
-
     //takes damage and kills enemies
-    public void TakeDamage(int dmg, Turret attacker)
+    public void TakeDamage(int dmg, TowerData attackerData)
     {
         hitPoints -= dmg;
 
         if (hitPoints <= 0 && !isDestroyed)
         {
-            EnemySpawner.onEnemyDestroy.Invoke();
-            LevelManager.Instance.IncreaseCurrency(currencyWorth);
-            if(attacker != null)
-            {
-                attacker.AddKill();
-            }
-            isDestroyed = true;
-            Destroy(gameObject);
+            Die(attackerData);
         }
+    }
+
+    private void Die(TowerData killerData)
+    {
+        if(killerData != null)
+        {
+            killerData.kills++;
+        }
+        Destroy(gameObject);
     }
 
     //increases health based on wave
