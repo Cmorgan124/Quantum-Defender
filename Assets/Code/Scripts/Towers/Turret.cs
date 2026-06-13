@@ -10,6 +10,7 @@ public class Turret : MonoBehaviour
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
+    [SerializeField] private TowerData towerData;
 
 
 
@@ -20,7 +21,7 @@ public class Turret : MonoBehaviour
 
     private Transform target;
     private float timeUntilFire;
-    public int Kills { get; private set; }
+    
     public List<Transform> Muzzles = new List<Transform>();
     private int muzzleIndex = 0;
 
@@ -71,7 +72,7 @@ public class Turret : MonoBehaviour
     //Increases kill count
     public void AddKill()
     {
-        Kills++;
+        towerData.Kills++;
     }
 
     //scans for a target

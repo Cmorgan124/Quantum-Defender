@@ -10,7 +10,7 @@ public class Tower
     public int cost;
     public GameObject prefab;
 
-    //just a struct for the towers
+    //just a "struct" for the towers
     public Tower (string _name, int _cost, GameObject _prefab)
     {
         name = _name;

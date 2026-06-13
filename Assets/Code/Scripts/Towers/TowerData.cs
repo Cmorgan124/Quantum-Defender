@@ -14,7 +14,7 @@ public class TowerData : MonoBehaviour
     public int towerCost = 100;
     public Plot currentPlot = null;
     public int smValue {get; private set;}
-    [System.NonSerialized] public int kills = 0;
+    [System.NonSerialized] public int Kills;
     [System.NonSerialized] public string towerName;
 
     [Header("Upgrade Stuff")]
@@ -38,11 +38,5 @@ public class TowerData : MonoBehaviour
     void Awake()
     {
         smValue = Mathf.RoundToInt(towerCost * 0.7f);
-    }
-
-    //Connecter for kill stat ui
-    void Update()
-    {
-        kills = turretscript.Kills;
     }
 }
