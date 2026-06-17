@@ -159,28 +159,32 @@ MonoBehaviour:
   rangescript: {fileID: 7281195068795926509}
   towerFamily: Sniper Turret
   towerCost: 200
+  currentPlot: {fileID: 0}
   currentUpgradeLevel: 0
   upgradeTree:
-  - nodeName: 
-    nodeDescription: 
+  - nodeName: X-Ray Scope
+    nodeDescription: 'Allows the turret to see infared atoms as well as occasilly
+      hit weak points for double damage. '
     nodeIcon: {fileID: 0}
     resultPrefab: {fileID: 0}
-    upgradeCost: 0
-  - nodeName: 
-    nodeDescription: 
+    upgradeCost: 350
+  - nodeName: Armor Penetrating Rounds
+    nodeDescription: 'Increases damage to all and even more damage to shields and
+      tanks. '
     nodeIcon: {fileID: 0}
     resultPrefab: {fileID: 0}
-    upgradeCost: 0
-  - nodeName: 
-    nodeDescription: 
+    upgradeCost: 675
+  - nodeName: Fire Rate
+    nodeDescription: 'Increases fire rate. '
     nodeIcon: {fileID: 0}
     resultPrefab: {fileID: 0}
-    upgradeCost: 0
-  - nodeName: 
-    nodeDescription: 
+    upgradeCost: 900
+  - nodeName: 'Chain  '
+    nodeDescription: Bullets jump to another atom and rarely to a third! (Stops on
+      shields)
     nodeIcon: {fileID: 0}
     resultPrefab: {fileID: 0}
-    upgradeCost: 0
+    upgradeCost: 1175
 --- !u!1 &1777685891495334895
 GameObject:
   m_ObjectHideFlags: 0
