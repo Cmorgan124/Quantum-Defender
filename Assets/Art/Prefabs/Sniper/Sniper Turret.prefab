@@ -165,24 +165,25 @@ MonoBehaviour:
   - nodeName: X-Ray Scope
     nodeDescription: 'Allows the turret to see infared atoms as well as occasilly
       hit weak points for double damage. '
-    nodeIcon: {fileID: 0}
+    nodeIcon: {fileID: -205256736224796951, guid: abe28d2b393a375479d198511f83cc1a, type: 3}
     resultPrefab: {fileID: 0}
     upgradeCost: 350
   - nodeName: Armor Penetrating Rounds
     nodeDescription: 'Increases damage to all and even more damage to shields and
       tanks. '
-    nodeIcon: {fileID: 0}
+    nodeIcon: {fileID: -4887311164423257744, guid: a5ade2f58be72474d994e49f431e3e90, type: 3}
     resultPrefab: {fileID: 0}
     upgradeCost: 675
-  - nodeName: Fire Rate
-    nodeDescription: 'Increases fire rate. '
+  - nodeName: Bottomless Mag
+    nodeDescription: Give the turret a infinite magazine for increase fire rate,
+      don't ask how it works...
     nodeIcon: {fileID: 0}
     resultPrefab: {fileID: 0}
     upgradeCost: 900
-  - nodeName: 'Chain  '
+  - nodeName: 'Chain Shot '
     nodeDescription: Bullets jump to another atom and rarely to a third! (Stops on
       shields)
-    nodeIcon: {fileID: 0}
+    nodeIcon: {fileID: -3935251972730444297, guid: 4f76e75ad6be3d3478803b947ba9942f, type: 3}
     resultPrefab: {fileID: 0}
     upgradeCost: 1175
 --- !u!1 &1777685891495334895
