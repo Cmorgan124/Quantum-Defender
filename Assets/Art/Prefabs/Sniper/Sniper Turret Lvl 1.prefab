@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4003722260274829532}
   - component: {fileID: 5386253652735652942}
-  - component: {fileID: 8237587828325746987}
+  - component: {fileID: 846105761791236743}
+  - component: {fileID: 6704097573870672185}
   m_Layer: 0
   m_Name: Gun
   m_TagString: Untagged
@@ -27,8 +28,8 @@ Transform:
   m_GameObject: {fileID: 514062563570599252}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0041, y: -0.0028, z: 0}
-  m_LocalScale: {x: 0.14845228, y: 0.11873028, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 385042228631874355}
@@ -59,7 +60,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -80,19 +81,65 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1244322399
   m_SortingLayer: 1
-  m_SortingOrder: 1
+  m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -855276330361998176, guid: 905b5f55b57ab3d4c9b676a8d6c9425f, type: 3}
+  m_Sprite: {fileID: -2321306305409286197, guid: 09bc5ba2d9ad19b4b8b0ed4f2251f181, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.3, y: 3.14}
+  m_Size: {x: 0.703125, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &8237587828325746987
+--- !u!61 &846105761791236743
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 514062563570599252}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0.004648924, y: 0.047586292}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.68}
+    oldSize: {x: 0.453125, y: 1}
+    newSize: {x: 0.703125, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 1.6417487, y: 1.6485453}
+  m_EdgeRadius: 0
+--- !u!114 &6704097573870672185
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -103,11 +150,11 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 535f9a507dfe40a44a4d164e4e252118, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TurretSelection
-  outline: {fileID: -876546973899608171, guid: c42a43e760bb955488d445b4147bea53, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::turretUIenabler
+  outline: {fileID: 2100000, guid: 9cf38e996973a3c4f8fd4017714f4648, type: 2}
   normal: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   _renderer: {fileID: 5386253652735652942}
-  parentfab: {fileID: 8179406994928502628}
+  parentfab: {fileID: 171629162819533094}
 --- !u!1 &1000207214545019390
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,9 +164,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5659050682803018157}
-  - component: {fileID: 8179406994928502628}
+  - component: {fileID: 626144181422898035}
+  - component: {fileID: 171629162819533094}
   m_Layer: 0
-  m_Name: Sniper Turret
+  m_Name: Sniper Turret Lvl 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -134,16 +182,62 @@ Transform:
   m_GameObject: {fileID: 1000207214545019390}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.492, y: 3.499, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 7839565844490859358}
   - {fileID: 385042228631874355}
-  - {fileID: 1787353779082521414}
+  - {fileID: 1886043327054879562}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8179406994928502628
+--- !u!61 &626144181422898035
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000207214545019390}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: -0.0023872852, y: 0.0047745705}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Size: {x: 0.8710847, y: 0.8376622}
+  m_EdgeRadius: 0
+--- !u!114 &171629162819533094
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -154,38 +248,37 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: af0a89b848b15b94ca3d110883d227f1, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TurretData
+  m_EditorClassIdentifier: '::'
   turretscript: {fileID: 0}
-  rangescript: {fileID: 7281195068795926509}
+  rangescript: {fileID: 628936424121653563}
   towerFamily: Sniper Turret
   towerCost: 200
   currentPlot: {fileID: 0}
   currentUpgradeLevel: 0
   upgradeTree:
   - nodeName: X-Ray Scope
-    nodeDescription: 'Allows the turret to see infared atoms as well as occasilly
-      hit weak points for double damage. '
+    nodeDescription: Allows Sniper Turret to see infared atoms and occasially hit
+      weak points for bonus damage.
     nodeIcon: {fileID: -205256736224796951, guid: abe28d2b393a375479d198511f83cc1a, type: 3}
     resultPrefab: {fileID: 0}
-    upgradeCost: 350
+    upgradeCost: 300
   - nodeName: Armor Penetrating Rounds
-    nodeDescription: 'Increases damage to all and even more damage to shields and
+    nodeDescription: 'Bullets do more damage and even more damage to shields and
       tanks. '
     nodeIcon: {fileID: -4887311164423257744, guid: a5ade2f58be72474d994e49f431e3e90, type: 3}
     resultPrefab: {fileID: 0}
-    upgradeCost: 675
+    upgradeCost: 450
   - nodeName: Bottomless Mag
-    nodeDescription: Give the turret a infinite magazine for increase fire rate,
-      don't ask how it works...
-    nodeIcon: {fileID: 0}
+    nodeDescription: Sniper Turret gains a bottomless, infinite magazine, allowing
+      for faster shooting. Do ask how it works...
+    nodeIcon: {fileID: -2239144084583755759, guid: ee1a61057f3d2ef4dbe8c0abae18b015, type: 3}
     resultPrefab: {fileID: 0}
-    upgradeCost: 900
-  - nodeName: 'Chain Shot '
-    nodeDescription: Bullets jump to another atom and rarely to a third! (Stops on
-      shields)
-    nodeIcon: {fileID: -3935251972730444297, guid: 4f76e75ad6be3d3478803b947ba9942f, type: 3}
+    upgradeCost: 750
+  - nodeName: Chain Shot
+    nodeDescription: Bullets jump to a second target, and rarely a third.
+    nodeIcon: {fileID: -1630117411774804813, guid: 4f76e75ad6be3d3478803b947ba9942f, type: 3}
     resultPrefab: {fileID: 0}
-    upgradeCost: 1175
+    upgradeCost: 1250
 --- !u!1 &1777685891495334895
 GameObject:
   m_ObjectHideFlags: 0
@@ -196,7 +289,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7839565844490859358}
   - component: {fileID: 5663695816711458177}
-  - component: {fileID: 9187472445294717369}
   m_Layer: 0
   m_Name: Base
   m_TagString: Untagged
@@ -214,7 +306,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.122431636, y: 0.12311038, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5659050682803018157}
@@ -268,32 +360,16 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 2775892632983638829, guid: 905b5f55b57ab3d4c9b676a8d6c9425f, type: 3}
+  m_Sprite: {fileID: -2216543134390806908, guid: 09bc5ba2d9ad19b4b8b0ed4f2251f181, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.98, y: 1.98}
+  m_Size: {x: 0.796875, y: 0.796875}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
---- !u!114 &9187472445294717369
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1777685891495334895}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 535f9a507dfe40a44a4d164e4e252118, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TowerSelection
-  outline: {fileID: -876546973899608171, guid: c42a43e760bb955488d445b4147bea53, type: 3}
-  normal: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  _renderer: {fileID: 5663695816711458177}
-  parentfab: {fileID: 8179406994928502628}
 --- !u!1 &5176227744721231698
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,7 +403,7 @@ Transform:
   - {fileID: 1175877188970533948}
   m_Father: {fileID: 5659050682803018157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &6481715859850358992
+--- !u!1 &7190424392829266084
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -335,9 +411,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1787353779082521414}
-  - component: {fileID: 7281195068795926509}
-  - component: {fileID: 4863578654430894432}
+  - component: {fileID: 1886043327054879562}
+  - component: {fileID: 8181657879071017264}
+  - component: {fileID: 628936424121653563}
   m_Layer: 0
   m_Name: Range
   m_TagString: Untagged
@@ -345,43 +421,29 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &1787353779082521414
+--- !u!4 &1886043327054879562
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6481715859850358992}
+  m_GameObject: {fileID: 7190424392829266084}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5659050682803018157}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7281195068795926509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6481715859850358992}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c182d0fedec4072428637cd8dc711a44, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TurretRange
-  segements: 50
-  lr: {fileID: 4863578654430894432}
---- !u!120 &4863578654430894432
+--- !u!120 &8181657879071017264
 LineRenderer:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6481715859850358992}
+  m_GameObject: {fileID: 7190424392829266084}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -400,7 +462,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 0}
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -434,7 +496,7 @@ LineRenderer:
       m_Curve:
       - serializedVersion: 3
         time: 0
-        value: 1
+        value: 0.024177551
         inSlope: 0
         outSlope: 0
         tangentMode: 0
@@ -484,6 +546,20 @@ LineRenderer:
   m_UseWorldSpace: 1
   m_Loop: 0
   m_ApplyActiveColorSpace: 1
+--- !u!114 &628936424121653563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7190424392829266084}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c182d0fedec4072428637cd8dc711a44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TurretRange
+  segements: 50
+  lr: {fileID: 8181657879071017264}
 --- !u!1 &7228953187001050922
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +585,7 @@ Transform:
   m_GameObject: {fileID: 7228953187001050922}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.74, z: 0}
+  m_LocalPosition: {x: 0, y: -0.636, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

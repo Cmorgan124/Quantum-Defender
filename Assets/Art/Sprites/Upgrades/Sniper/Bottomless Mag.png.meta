@@ -106,12 +106,12 @@ TextureImporter:
       name: Bottomless Mag_0
       rect:
         serializedVersion: 2
-        x: 16
+        x: 0
         y: 0
-        width: 29
-        height: 60
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -124,33 +124,11 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
-    - serializedVersion: 2
-      name: Bottomless Mag_1
-      rect:
-        serializedVersion: 2
-        x: 44
-        y: 1
-        width: 17
-        height: 60
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7cf953b15f783b720800000000000000
-      internalID: 2860779675103633351
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: d6095c5394f3f6241973cb08a0c10eee
     internalID: 0
     vertices: []
     indices: 

@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: 905b5f55b57ab3d4c9b676a8d6c9425f
+guid: 09bc5ba2d9ad19b4b8b0ed4f2251f181
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2775892632983638829
-    second: Sniper Turret (5)_0
+      213: -2321306305409286197
+    second: Sniper Tier 1_0
   - first:
-      213: -855276330361998176
-    second: Sniper Turret (5)_1
+      213: -2216543134390806908
+    second: Sniper Tier 1_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -103,35 +103,35 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Sniper Turret (5)_0
+      name: Sniper Tier 1_0
       rect:
         serializedVersion: 2
-        x: 583
-        y: 587
-        width: 198
-        height: 198
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+        x: 13
+        y: 0
+        width: 29
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.68}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d231d9374a3f58620800000000000000
-      internalID: 2775892632983638829
+      spriteID: bcf743bc63019cfd0800000000000000
+      internalID: -2321306305409286197
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Sniper Turret (5)_1
+      name: Sniper Tier 1_1
       rect:
         serializedVersion: 2
-        x: 75
-        y: 66
-        width: 294
-        height: 454
+        x: 77
+        y: 9
+        width: 47
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -140,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0a439ff75b27124f0800000000000000
-      internalID: -855276330361998176
+      spriteID: 4861e4553c14d31e0800000000000000
+      internalID: -2216543134390806908
       vertices: []
       indices: 
       edges: []
@@ -150,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e0743d74ecc007f48b45cb9dcd17838f
+    spriteID: 079f6b83d818bb342b537da2eb9d4f21
     internalID: 0
     vertices: []
     indices: 
@@ -160,8 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Sniper Turret (5)_0: 2775892632983638829
-      Sniper Turret (5)_1: -855276330361998176
+      Sniper Tier 1_0: -2321306305409286197
+      Sniper Tier 1_1: -2216543134390806908
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
