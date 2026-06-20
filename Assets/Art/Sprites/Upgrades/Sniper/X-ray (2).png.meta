@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0f5a5a80e213149429d86d05911baf1c
+guid: 353a81bfe207be746845bac20205bb64
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5589415578096073829
-    second: Double Gun (1)_0
+      213: -3625113544606913588
+    second: X-ray (2)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Double Gun (1)_0
+      name: X-ray (2)_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 19
-        width: 53
-        height: 34
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56c7372bad7919d40800000000000000
-      internalID: 5589415578096073829
+      spriteID: ccb6f37107201bdc0800000000000000
+      internalID: -3625113544606913588
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f18e082716ff43d4bbf44e4cf03e89b4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Double Gun (1)_0: 5589415578096073829
+      X-ray (2)_0: -3625113544606913588
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

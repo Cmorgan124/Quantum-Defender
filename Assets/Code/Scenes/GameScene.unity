@@ -2510,8 +2510,8 @@ MonoBehaviour:
     cost: 100
     prefab: {fileID: 1000207214545019390, guid: 8ffc13079c15b774bb9e7129269f8bcd, type: 3}
   - name: Sniper Turret
-    cost: 0
-    prefab: {fileID: 1000207214545019390, guid: 485cb4010b5250a4f90dfe609fb5afcd, type: 3}
+    cost: 200
+    prefab: {fileID: 1000207214545019390, guid: 8efc27950a45ee4418904cfd6ef86ccd, type: 3}
   - name: Freeze Trap
     cost: 150
     prefab: {fileID: 3967351347314308327, guid: 9541814dbfd5341478f48797eb3b6aac, type: 3}

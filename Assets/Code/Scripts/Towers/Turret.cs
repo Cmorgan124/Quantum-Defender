@@ -15,7 +15,6 @@ public class Turret : MonoBehaviour
 
 
     [Header("Attributes")]
-    [SerializeField] public float targetingRange = 5f;
     [SerializeField] private float rotationSpeed = 200f;
     [SerializeField] public float bps = 1f; //bullets per second
 
@@ -25,6 +24,10 @@ public class Turret : MonoBehaviour
     public List<Transform> Muzzles = new List<Transform>();
     private int muzzleIndex = 0;
 
+    void Awake()
+    {
+        towerData = GetComponent<TowerData>();
+    }
 
     //if target is in range, shoot
     private void Update()
@@ -76,7 +79,7 @@ public class Turret : MonoBehaviour
     //scans for a target
     private void FindTarget()
     {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, (Vector2) transform.position, 0f, enemyMask);
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, towerData.range, (Vector2) transform.position, 0f, enemyMask);
 
         if (hits.Length > 0)
         {
@@ -87,7 +90,7 @@ public class Turret : MonoBehaviour
     //checks if the scanned target is in range
     private bool CheckTargetIsInRange()
     {
-        return Vector2.Distance(target.position, transform.position) <= targetingRange;
+        return Vector2.Distance(target.position, transform.position) <= towerData.range;
     }
 
     //moves the turrent orientation to face the enemy
@@ -103,6 +106,6 @@ public class Turret : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+        Handles.DrawWireDisc(transform.position, transform.forward, towerData.range);
     }
 }

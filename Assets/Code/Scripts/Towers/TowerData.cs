@@ -6,12 +6,12 @@ using UnityEngine;
 public class TowerData : MonoBehaviour
 {
     [Header("References")]
-    [SerializeField] public Turret turretscript;
     [SerializeField] public TowerRange rangescript;
 
-    //The Data (name, unit #, kills, cost, sell/move value)
+    //The Data (name, unit #, kills, cost, sell/move value, and range)
     public string towerFamily;
     public int towerCost = 100;
+    public float range = 5f;
     public Plot currentPlot = null;
     public int smValue {get; private set;}
     [System.NonSerialized] public int kills;

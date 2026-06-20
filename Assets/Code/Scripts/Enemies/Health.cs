@@ -25,6 +25,7 @@ public class Health : MonoBehaviour
             killerData.kills++;
         }
         Destroy(gameObject);
+        LevelManager.Instance.currency += currencyWorth;
     }
 
     //increases health based on wave

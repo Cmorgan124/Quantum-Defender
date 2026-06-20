@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 0f5a5a80e213149429d86d05911baf1c
+guid: 5cbdc9c9f2449a84eb7703f564d3a2dc
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5589415578096073829
-    second: Double Gun (1)_0
+      213: -6036669272534964933
+    second: Sniper Tier 3_0
+  - first:
+      213: 9071967210001088128
+    second: Sniper Tier 3_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +103,35 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Double Gun (1)_0
+      name: Sniper Tier 3_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 19
-        width: 53
-        height: 34
+        x: 13
+        y: 0
+        width: 29
+        height: 64
+      alignment: 9
+      pivot: {x: 0.5, y: 0.68}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35a900c741793ca0800000000000000
+      internalID: -6036669272534964933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sniper Tier 3_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 9
+        width: 47
+        height: 47
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +140,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 56c7372bad7919d40800000000000000
-      internalID: 5589415578096073829
+      spriteID: 08e3b16bc1a16ed70800000000000000
+      internalID: 9071967210001088128
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: f18e082716ff43d4bbf44e4cf03e89b4
+    spriteID: 3c716c6e15f2bab45bd723628e9b196a
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Double Gun (1)_0: 5589415578096073829
+      Sniper Tier 3_0: -6036669272534964933
+      Sniper Tier 3_1: 9071967210001088128
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

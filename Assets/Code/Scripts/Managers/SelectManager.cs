@@ -29,7 +29,7 @@ public class SelectManager : MonoBehaviour
 
         SelectedTower = tower;
         uiMenu.ShowTowerMenu(tower);
-        SelectedTower.rangescript.ShowRange(SelectedTower.turretscript.targetingRange);
+        SelectedTower.rangescript.ShowRange(SelectedTower.range);
     }
 
     public void Deselect()

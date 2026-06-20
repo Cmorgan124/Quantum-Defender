@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: abe28d2b393a375479d198511f83cc1a
+guid: ebb6641c1568cff4a8cade4da7bbc3a6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -205256736224796951
-    second: X-ray_0
+      213: -8348623910392783437
+    second: Sniper Tier 4_0
+  - first:
+      213: 4827292704907295418
+    second: Sniper Tier 4_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: X-ray_0
+      name: Sniper Tier 4_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 13
         y: 0
-        width: 64
+        width: 37
         height: 64
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.393, y: 0.69}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 9ee909df518c62df0800000000000000
-      internalID: -205256736224796951
+      spriteID: 3bd94b159cab32c80800000000000000
+      internalID: -8348623910392783437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sniper Tier 4_1
+      rect:
+        serializedVersion: 2
+        x: 77
+        y: 9
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aba75d6932dfdf240800000000000000
+      internalID: 4827292704907295418
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0477d53fc1d221942b97189fe366dd09
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      X-ray_0: -205256736224796951
+      Sniper Tier 4_0: -8348623910392783437
+      Sniper Tier 4_1: 4827292704907295418
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
