@@ -166,6 +166,7 @@ GameObject:
   - component: {fileID: 5659050682803018157}
   - component: {fileID: 626144181422898035}
   - component: {fileID: 171629162819533094}
+  - component: {fileID: 1547840429151135769}
   m_Layer: 0
   m_Name: Sniper Turret Lvl 3
   m_TagString: Untagged
@@ -253,7 +254,6 @@ MonoBehaviour:
   towerFamily: Sniper Turret
   towerCost: 200
   range: 7
-  currentPlot: {fileID: 0}
   currentUpgradeLevel: 2
   upgradeTree:
   - nodeName: X-Ray Scope
@@ -279,6 +279,28 @@ MonoBehaviour:
     nodeIcon: {fileID: -1630117411774804813, guid: 4f76e75ad6be3d3478803b947ba9942f, type: 3}
     resultPrefab: {fileID: 1000207214545019390, guid: 3d5b20ee1a939e4458c0d6aab862c0d0, type: 3}
     upgradeCost: 1250
+--- !u!114 &1547840429151135769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1000207214545019390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64e8fa0b66a510a4c9815952d8aa8e8c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Turret
+  turretRotationPoint: {fileID: 385042228631874355}
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 64
+  bulletPrefab: {fileID: 1145031778487384803, guid: 0f7393097f81c1e4da8633f268fa6ed8, type: 3}
+  towerData: {fileID: 171629162819533094}
+  rotationSpeed: 200
+  bps: 1
+  Muzzles:
+  - {fileID: 1175877188970533948}
 --- !u!1 &1777685891495334895
 GameObject:
   m_ObjectHideFlags: 0

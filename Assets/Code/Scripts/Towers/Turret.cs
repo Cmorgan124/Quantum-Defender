@@ -9,7 +9,6 @@ public class Turret : MonoBehaviour
     [SerializeField] private Transform turretRotationPoint;
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
-    [SerializeField] private Transform firingPoint;
     [SerializeField] private TowerData towerData;
 
 

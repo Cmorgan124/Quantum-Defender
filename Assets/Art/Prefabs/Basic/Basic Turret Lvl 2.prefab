@@ -210,7 +210,7 @@ MonoBehaviour:
     m_Bits: 64
   bulletPrefab: {fileID: 1145031778487384803, guid: cb32585dbbc26cc40ba7cdf915378512, type: 3}
   firingPoint: {fileID: 1175877188970533948}
-  towerData: {fileID: 0}
+  towerData: {fileID: 171629162819533094}
   rotationSpeed: 400
   bps: 2
   Muzzles:

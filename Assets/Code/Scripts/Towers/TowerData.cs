@@ -12,7 +12,7 @@ public class TowerData : MonoBehaviour
     public string towerFamily;
     public int towerCost = 100;
     public float range = 5f;
-    public Plot currentPlot = null;
+    [System.NonSerialized] public Plot currentPlot = null;
     public int smValue {get; private set;}
     [System.NonSerialized] public int kills;
     [System.NonSerialized] public string towerName;
