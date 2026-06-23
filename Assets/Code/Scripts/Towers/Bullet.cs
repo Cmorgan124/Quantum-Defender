@@ -10,13 +10,23 @@ public class Bullet : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float bulletSpeed = 7f;
     public int bulletDamage = 1;
+    float sniperXraychance = .75f;
 
     private Transform target;
     private TowerData sourceTower;
+    private string family;
+    private int tier;
+
+    //Crit chance for Sniper lvl 2 and beyond
 
     //sets a 2 second life span to the bullet and fires it in the direction of the enemy
     private void Start()
-    {
+    {        
+        if((Random.value >= sniperXraychance) && (family == "Sniper Turret") &&  (tier >= 1))
+        {
+            Debug.Log("crit");
+            bulletDamage *= 2;
+        }
         Destroy(gameObject, 2f);
 
         if (!target) return;
@@ -32,6 +42,8 @@ public class Bullet : MonoBehaviour
     public void SetSource(TowerData source)
     {
         sourceTower = source;
+        family = sourceTower.towerFamily;
+        tier = sourceTower.currentUpgradeLevel;
     }
 
     //setter for target

@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3072579094289412927}
   - component: {fileID: 2430756828095359160}
   - component: {fileID: -1406687841430873912}
-  - component: {fileID: 3668235080612854819}
   m_Layer: 7
   m_Name: Sniper Bullet APR
   m_TagString: Untagged
@@ -136,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rb: {fileID: 7897167340071354099}
-  bulletSpeed: 20
+  bulletSpeed: 40
   bulletDamage: 4
 --- !u!70 &2430756828095359160
 CapsuleCollider2D:
@@ -294,16 +293,3 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!114 &3668235080612854819
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145031778487384803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d275f171c48d10e4f94835f22b41d5da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  bulletscript: {fileID: 3072579094289412927}

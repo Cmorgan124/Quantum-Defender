@@ -23,11 +23,6 @@ public class Turret : MonoBehaviour
     public List<Transform> Muzzles = new List<Transform>();
     private int muzzleIndex = 0;
 
-    void Awake()
-    {
-        towerData = GetComponent<TowerData>();
-    }
-
     //if target is in range, shoot
     private void Update()
     {

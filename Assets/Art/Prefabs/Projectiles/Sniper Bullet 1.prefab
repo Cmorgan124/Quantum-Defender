@@ -135,7 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rb: {fileID: 7897167340071354099}
-  bulletSpeed: 20
+  bulletSpeed: 40
   bulletDamage: 2
 --- !u!70 &2430756828095359160
 CapsuleCollider2D:

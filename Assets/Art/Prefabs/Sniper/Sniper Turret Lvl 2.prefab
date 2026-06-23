@@ -167,7 +167,6 @@ GameObject:
   - component: {fileID: 626144181422898035}
   - component: {fileID: 171629162819533094}
   - component: {fileID: 8367021243117018024}
-  - component: {fileID: 2626784557232920239}
   m_Layer: 0
   m_Name: Sniper Turret Lvl 2
   m_TagString: Untagged
@@ -296,26 +295,12 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  bulletPrefab: {fileID: 1145031778487384803, guid: 36ce9d082d02dd24b9ce56f9d2bf8042, type: 3}
-  firingPoint: {fileID: 0}
+  bulletPrefab: {fileID: 1145031778487384803, guid: de8f0596af313344ebbd425bc7af4d0f, type: 3}
   towerData: {fileID: 171629162819533094}
   rotationSpeed: 200
   bps: 1
   Muzzles:
   - {fileID: 1175877188970533948}
---- !u!114 &2626784557232920239
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1000207214545019390}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d275f171c48d10e4f94835f22b41d5da, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  bulletscript: {fileID: 0}
 --- !u!1 &1777685891495334895
 GameObject:
   m_ObjectHideFlags: 0

@@ -26,6 +26,7 @@ public class Health : MonoBehaviour
         }
         Destroy(gameObject);
         LevelManager.Instance.currency += currencyWorth;
+        EnemySpawner.onEnemyDestroy.Invoke();
     }
 
     //increases health based on wave

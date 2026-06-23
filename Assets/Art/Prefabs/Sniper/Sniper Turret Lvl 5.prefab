@@ -295,7 +295,7 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  bulletPrefab: {fileID: 1145031778487384803, guid: 36ce9d082d02dd24b9ce56f9d2bf8042, type: 3}
+  bulletPrefab: {fileID: 1145031778487384803, guid: 0f7393097f81c1e4da8633f268fa6ed8, type: 3}
   towerData: {fileID: 171629162819533094}
   rotationSpeed: 200
   bps: 2
