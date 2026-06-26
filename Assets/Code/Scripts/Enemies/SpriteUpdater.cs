@@ -43,10 +43,18 @@ public class SpriteUpdater : MonoBehaviour
     private SpriteSet GetCurrentSet()
     {
         int hp = healthScript.hitPoints;
-
-        if (hp == 6) return threeRing;
-        if (hp == 5) return twoRing;
-        if (hp >= 4) return oneRing;
+        if (gameObject.name.Contains("Atom"))
+        {
+            if (hp == 6) return threeRing;
+            if (hp == 5) return twoRing;
+            if (hp >= 4) return oneRing;  
+        }
+        if (gameObject.name.Contains("Tank"))
+        {
+            if (hp == 11) return threeRing;
+            if (hp == 10) return twoRing;
+            if (hp >= 9) return oneRing;            
+        }
         return noRing; 
     }
 

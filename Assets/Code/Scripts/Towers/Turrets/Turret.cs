@@ -52,14 +52,14 @@ public class Turret : MonoBehaviour
     private void Shoot()
     {
         Transform currentMuzzle = Muzzles[muzzleIndex];
-        GameObject bulletObj = Instantiate(bulletPrefab, currentMuzzle.position, currentMuzzle.rotation);
+    
         muzzleIndex++;
         if(muzzleIndex >= Muzzles.Count)
         {
             muzzleIndex = 0;
         }
+        GameObject bulletObj = Instantiate(bulletPrefab, currentMuzzle.position, currentMuzzle.rotation);
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
-        bulletScript.SetTarget(target);
         TowerData sourceData = GetComponent<TowerData>();
         bulletScript.SetSource(sourceData, target);
     }

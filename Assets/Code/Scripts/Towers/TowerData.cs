@@ -34,7 +34,7 @@ public class TowerData : MonoBehaviour
     public UpgradeNode[] upgradeTree = new UpgradeNode[4];
 
 
-    //Names tower and finds it's value
+    //finds sell/move value
     void Awake()
     {
         smValue = Mathf.RoundToInt(towerCost * 0.7f);

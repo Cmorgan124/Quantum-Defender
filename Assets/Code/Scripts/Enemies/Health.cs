@@ -26,27 +26,5 @@ public class Health : MonoBehaviour
         }
         Destroy(gameObject);
         LevelManager.Instance.currency += currencyWorth;
-        EnemySpawner.onEnemyDestroy.Invoke();
-    }
-
-    //increases health based on wave
-    public void healthIncrease(int wave)
-    {
-        if (wave < 4)
-        {
-            hitPoints = 3;
-        }
-        else if (wave >= 4 && wave < 7)
-        {
-            hitPoints = 4;
-        }
-        else if (wave >= 7 && wave < 10)
-        {
-            hitPoints = 5;
-        }
-        else
-        {
-            hitPoints = 6;
-        }
     }
 }
