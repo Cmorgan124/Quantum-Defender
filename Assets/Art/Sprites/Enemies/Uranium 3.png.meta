@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: c55f1dc058945844289e3e4a00a19345
+guid: 0d9f21ac31fb38d44a5bb2df472b247f
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8773219622175176026
-    second: Tank Enemy (3_3 shield) (3)_0
+      213: -8230238971583588059
+    second: Uranium 5_0
   - first:
-      213: -3308227880899847551
-    second: Tank Enemy (3_3 shield) (3)_1
+      213: -1441388100947946279
+    second: Uranium 5_1
   - first:
-      213: 5254436679626278395
-    second: Tank Enemy (3_3 shield) (3)_2
+      213: 3157783839840355401
+    second: Uranium 5_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tank Enemy (3_3 shield) (3)_0
+      name: Uranium 5_0
       rect:
         serializedVersion: 2
-        x: 55
-        y: 63
-        width: 146
-        height: 146
+        x: 4
+        y: 11
+        width: 51
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a55fc3c83ccb0c970800000000000000
-      internalID: 8773219622175176026
+      spriteID: 5291f22d24158cd80800000000000000
+      internalID: -8230238971583588059
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tank Enemy (3_3 shield) (3)_1
+      name: Uranium 5_1
       rect:
         serializedVersion: 2
-        x: 323
-        y: 63
-        width: 146
-        height: 146
+        x: 73
+        y: 15
+        width: 52
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 18adbe22540d612d0800000000000000
-      internalID: -3308227880899847551
+      spriteID: 9d4d583b8292ffbe0800000000000000
+      internalID: -1441388100947946279
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tank Enemy (3_3 shield) (3)_2
+      name: Uranium 5_2
       rect:
         serializedVersion: 2
-        x: 587
-        y: 63
-        width: 146
-        height: 146
+        x: 139
+        y: 15
+        width: 52
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: bf548e722528be840800000000000000
-      internalID: 5254436679626278395
+      spriteID: 9444723fba3b2db20800000000000000
+      internalID: 3157783839840355401
       vertices: []
       indices: 
       edges: []
@@ -185,9 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tank Enemy (3_3 shield) (3)_0: 8773219622175176026
-      Tank Enemy (3_3 shield) (3)_1: -3308227880899847551
-      Tank Enemy (3_3 shield) (3)_2: 5254436679626278395
+      Uranium 5_0: -8230238971583588059
+      Uranium 5_1: -1441388100947946279
+      Uranium 5_2: 3157783839840355401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

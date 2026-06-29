@@ -11,6 +11,7 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] GameObject tankringed;
     [SerializeField] GameObject shield;
     [SerializeField] GameObject speedster;
+    [SerializeField] GameObject speedsterringed;
     [SerializeField] GameObject infared;
     [SerializeField] GameObject boss;
 
@@ -31,6 +32,16 @@ public class EnemySpawner : MonoBehaviour
     public void SpawnTankRinged()
     {
         GameObject Tankringed = Instantiate(tankringed, LevelManager.Instance.startPoint.position, Quaternion.identity); 
+    }
+
+    public void SpawnSpeedster()
+    {
+        GameObject Speedster = Instantiate(speedster, LevelManager.Instance.startPoint.position, Quaternion.identity); 
+    }
+
+    public void SpawnSpeedsterRinged()
+    {
+        GameObject Speedsterringed = Instantiate(speedsterringed, LevelManager.Instance.startPoint.position, Quaternion.identity); 
     }
 
 }

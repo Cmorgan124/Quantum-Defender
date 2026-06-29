@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 7cb1553ad7563d140a1617ac2ef44f19
+guid: 3498c746954e82e429c195d92c51bca4
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3629843882910652691
-    second: Enemy (3_3 shield) (18)_0
+      213: -8433763450633558878
+    second: Helium (2)_0
   - first:
-      213: -8490844033698906160
-    second: Enemy (3_3 shield) (18)_1
+      213: -9181053393486595225
+    second: Helium (2)_1
   - first:
-      213: -323765387109329887
-    second: Enemy (3_3 shield) (18)_2
+      213: 3405271754323575114
+    second: Helium (2)_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Enemy (3_3 shield) (18)_0
+      name: Helium (2)_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 31
-        width: 198
-        height: 214
+        x: 4
+        y: 11
+        width: 51
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 319930f97cbcf5230800000000000000
-      internalID: 3629843882910652691
+      spriteID: 2a4605d53d045fa80800000000000000
+      internalID: -8433763450633558878
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy (3_3 shield) (18)_1
+      name: Helium (2)_1
       rect:
         serializedVersion: 2
-        x: 279
-        y: 31
-        width: 234
-        height: 214
+        x: 73
+        y: 15
+        width: 52
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0dfb12876567a2a80800000000000000
-      internalID: -8490844033698906160
+      spriteID: 76b3659f498569080800000000000000
+      internalID: -9181053393486595225
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Enemy (3_3 shield) (18)_2
+      name: Helium (2)_2
       rect:
         serializedVersion: 2
-        x: 543
-        y: 31
-        width: 234
-        height: 214
+        x: 139
+        y: 15
+        width: 52
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 12418c68811c18bf0800000000000000
-      internalID: -323765387109329887
+      spriteID: a41c0206e94f14f20800000000000000
+      internalID: 3405271754323575114
       vertices: []
       indices: 
       edges: []
@@ -185,9 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Enemy (3_3 shield) (18)_0: 3629843882910652691
-      Enemy (3_3 shield) (18)_1: -8490844033698906160
-      Enemy (3_3 shield) (18)_2: -323765387109329887
+      Helium (2)_0: -8433763450633558878
+      Helium (2)_1: -9181053393486595225
+      Helium (2)_2: 3405271754323575114
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

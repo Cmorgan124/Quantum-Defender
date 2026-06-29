@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 0152736316ae5fa4d96dd3db7c4134c8
+guid: 3328a188018b6c149b555ffd987b05f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8838177746412718364
-    second: Tank Enemy (3_3 shield)_0
+      213: 4309264562589017522
+    second: Helium (4)_0
   - first:
-      213: 2543249525388901308
-    second: Tank Enemy (3_3 shield)_1
+      213: -1335002542053984822
+    second: Helium (4)_1
   - first:
-      213: -3997189406232179988
-    second: Tank Enemy (3_3 shield)_2
+      213: -4436282657572390171
+    second: Helium (4)_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -57,7 +57,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -106,13 +106,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Tank Enemy (3_3 shield)_0
+      name: Helium (4)_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 31
-        width: 198
-        height: 214
+        x: 13
+        y: 15
+        width: 38
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -121,20 +121,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c1941bc65d387aa70800000000000000
-      internalID: 8838177746412718364
+      spriteID: 2b52c48c9459dcb30800000000000000
+      internalID: 4309264562589017522
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tank Enemy (3_3 shield)_1
+      name: Helium (4)_1
       rect:
         serializedVersion: 2
-        x: 279
-        y: 31
-        width: 234
-        height: 214
+        x: 80
+        y: 15
+        width: 38
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,20 +143,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cbb7cf7f7ff6b4320800000000000000
-      internalID: 2543249525388901308
+      spriteID: ac5f0aad24e197de0800000000000000
+      internalID: -1335002542053984822
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Tank Enemy (3_3 shield)_2
+      name: Helium (4)_2
       rect:
         serializedVersion: 2
-        x: 543
-        y: 31
-        width: 234
-        height: 214
+        x: 146
+        y: 15
+        width: 38
+        height: 38
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -165,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cea839db9612788c0800000000000000
-      internalID: -3997189406232179988
+      spriteID: 5eafb286d682f62c0800000000000000
+      internalID: -4436282657572390171
       vertices: []
       indices: 
       edges: []
@@ -185,9 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Tank Enemy (3_3 shield)_0: 8838177746412718364
-      Tank Enemy (3_3 shield)_1: 2543249525388901308
-      Tank Enemy (3_3 shield)_2: -3997189406232179988
+      Helium (4)_0: 4309264562589017522
+      Helium (4)_1: -1335002542053984822
+      Helium (4)_2: -4436282657572390171
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

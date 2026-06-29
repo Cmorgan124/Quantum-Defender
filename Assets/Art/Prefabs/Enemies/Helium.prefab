@@ -14,9 +14,9 @@ GameObject:
   - component: {fileID: 6680907049279908655}
   - component: {fileID: 6164460669540006876}
   - component: {fileID: 6455261187925858898}
-  - component: {fileID: 6741731829233336973}
+  - component: {fileID: 7416050386920481230}
   m_Layer: 6
-  m_Name: Tank Ringed
+  m_Name: Helium
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.16, y: 0.18, z: 0.18}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -86,12 +86,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -3997189406232179988, guid: 0152736316ae5fa4d96dd3db7c4134c8, type: 3}
+  m_Sprite: {fileID: -4436282657572390171, guid: 3328a188018b6c149b555ffd987b05f6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_Size: {x: 1.46, y: 1.46}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -157,8 +157,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.030685404}
-  m_Radius: 3.3813193
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 2.4110568
 --- !u!114 &6164460669540006876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyMovement
   rb: {fileID: 3909670760755569770}
-  moveSpeed: 1
+  moveSpeed: 3
   healthScript: {fileID: 6455261187925858898}
 --- !u!114 &6455261187925858898
 MonoBehaviour:
@@ -186,9 +186,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ac95f5e59e3c4459c728f734b0080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  hitPoints: 11
-  currencyWorth: 100
---- !u!114 &6741731829233336973
+  hitPoints: 5
+  currencyWorth: 75
+--- !u!114 &7416050386920481230
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -199,21 +199,21 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0e4d3dedceffff94aa55767d41e44bc0, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::SpriteUpdater
+  m_EditorClassIdentifier: '::'
   noRing:
-    up: {fileID: -3308227880899847551, guid: c55f1dc058945844289e3e4a00a19345, type: 3}
-    down: {fileID: 5254436679626278395, guid: c55f1dc058945844289e3e4a00a19345, type: 3}
-    side: {fileID: 8773219622175176026, guid: c55f1dc058945844289e3e4a00a19345, type: 3}
+    up: {fileID: -1335002542053984822, guid: 3328a188018b6c149b555ffd987b05f6, type: 3}
+    down: {fileID: -4436282657572390171, guid: 3328a188018b6c149b555ffd987b05f6, type: 3}
+    side: {fileID: 4309264562589017522, guid: 3328a188018b6c149b555ffd987b05f6, type: 3}
   oneRing:
-    up: {fileID: 3745427283603890658, guid: 6aeab866d7807a04f81b36646ff2d70d, type: 3}
-    down: {fileID: 6931290961913557275, guid: 6aeab866d7807a04f81b36646ff2d70d, type: 3}
-    side: {fileID: -2450500011656117320, guid: 6aeab866d7807a04f81b36646ff2d70d, type: 3}
+    up: {fileID: 2888619234949725317, guid: 0a8f09be1eeb8a442bbfb5feb365348d, type: 3}
+    down: {fileID: -459278175175653990, guid: 0a8f09be1eeb8a442bbfb5feb365348d, type: 3}
+    side: {fileID: -2448479792359236416, guid: 0a8f09be1eeb8a442bbfb5feb365348d, type: 3}
   twoRing:
-    up: {fileID: 2343781165312108574, guid: 51b7c7e246c8e9746b6c321ca5d94468, type: 3}
-    down: {fileID: -1182299290102186809, guid: 51b7c7e246c8e9746b6c321ca5d94468, type: 3}
-    side: {fileID: 1281804599971581825, guid: 51b7c7e246c8e9746b6c321ca5d94468, type: 3}
+    up: {fileID: -9181053393486595225, guid: 3498c746954e82e429c195d92c51bca4, type: 3}
+    down: {fileID: 3405271754323575114, guid: 3498c746954e82e429c195d92c51bca4, type: 3}
+    side: {fileID: -8433763450633558878, guid: 3498c746954e82e429c195d92c51bca4, type: 3}
   threeRing:
-    up: {fileID: 2543249525388901308, guid: 0152736316ae5fa4d96dd3db7c4134c8, type: 3}
-    down: {fileID: -3997189406232179988, guid: 0152736316ae5fa4d96dd3db7c4134c8, type: 3}
-    side: {fileID: 8838177746412718364, guid: 0152736316ae5fa4d96dd3db7c4134c8, type: 3}
+    up: {fileID: 4631641547504775541, guid: 5303f95e670e8f046abc0d3869d7716b, type: 3}
+    down: {fileID: 757769320838180873, guid: 5303f95e670e8f046abc0d3869d7716b, type: 3}
+    side: {fileID: 6314963323311254462, guid: 5303f95e670e8f046abc0d3869d7716b, type: 3}
   spriteRenderer: {fileID: 4160993378092058466}
