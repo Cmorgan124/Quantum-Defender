@@ -201,19 +201,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   noRing:
-    up: {fileID: -366448800804664038, guid: 368671df8b11eaf41917dcc0e110ec6a, type: 3}
-    down: {fileID: -6135262099567121372, guid: 368671df8b11eaf41917dcc0e110ec6a, type: 3}
-    side: {fileID: 2982224481281499429, guid: 368671df8b11eaf41917dcc0e110ec6a, type: 3}
+    up: {fileID: 821387405799029720, guid: 43afbc99ba3490046884f5cd5d9ac759, type: 3}
+    down: {fileID: -2644514285892466807, guid: 43afbc99ba3490046884f5cd5d9ac759, type: 3}
+    side: {fileID: -5499972176954694534, guid: 43afbc99ba3490046884f5cd5d9ac759, type: 3}
   oneRing:
-    up: {fileID: -4147156308085488291, guid: b52c9c16571dcac42876c8c2ce656b2f, type: 3}
-    down: {fileID: 8691713403375857152, guid: b52c9c16571dcac42876c8c2ce656b2f, type: 3}
-    side: {fileID: -5364230152791294368, guid: b52c9c16571dcac42876c8c2ce656b2f, type: 3}
+    up: {fileID: 821387405799029720, guid: 51a10c29c03d20c42b64dc3e4aa2cc9e, type: 3}
+    down: {fileID: -2644514285892466807, guid: 51a10c29c03d20c42b64dc3e4aa2cc9e, type: 3}
+    side: {fileID: -5499972176954694534, guid: 51a10c29c03d20c42b64dc3e4aa2cc9e, type: 3}
   twoRing:
-    up: {fileID: 8187630475365317075, guid: 986ca6caa686bdb418ac82b608883a0b, type: 3}
-    down: {fileID: -7132040430216715341, guid: 986ca6caa686bdb418ac82b608883a0b, type: 3}
-    side: {fileID: 6997266115196522288, guid: 986ca6caa686bdb418ac82b608883a0b, type: 3}
+    up: {fileID: 821387405799029720, guid: 621dc38f4a9766d49a750451d2f93131, type: 3}
+    down: {fileID: -2644514285892466807, guid: 621dc38f4a9766d49a750451d2f93131, type: 3}
+    side: {fileID: -5499972176954694534, guid: 621dc38f4a9766d49a750451d2f93131, type: 3}
   threeRing:
-    up: {fileID: -8490844033698906160, guid: 7cb1553ad7563d140a1617ac2ef44f19, type: 3}
-    down: {fileID: -323765387109329887, guid: 7cb1553ad7563d140a1617ac2ef44f19, type: 3}
-    side: {fileID: 3629843882910652691, guid: 7cb1553ad7563d140a1617ac2ef44f19, type: 3}
+    up: {fileID: 821387405799029720, guid: 43f2fe4ed10dd714ebea4f90b1183924, type: 3}
+    down: {fileID: -2644514285892466807, guid: 43f2fe4ed10dd714ebea4f90b1183924, type: 3}
+    side: {fileID: -5499972176954694534, guid: 43f2fe4ed10dd714ebea4f90b1183924, type: 3}
   spriteRenderer: {fileID: 4160993378092058466}
