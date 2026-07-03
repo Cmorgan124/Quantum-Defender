@@ -31,6 +31,11 @@ public class EnemySpawner : MonoBehaviour
         {
           Renderer _Renderer = Atom.GetComponent<Renderer>();
           _Renderer.material = new Material(infraredMaterial);
+          Health enemyScript = Atom.GetComponent<Health>();
+          if (enemyScript != null)
+          {
+            enemyScript.IsInfrared = true;
+          }
         }
     }
     public void SpawnAtomRinged()
@@ -40,6 +45,11 @@ public class EnemySpawner : MonoBehaviour
         {
           Renderer _Renderer = Atomringed.GetComponent<Renderer>();
           _Renderer.material = new Material(infraredMaterial);
+          Health enemyScript = Atomringed.GetComponent<Health>();
+          if (enemyScript != null)
+          {
+            enemyScript.IsInfrared = true;
+          }
         }
     }
 
@@ -50,6 +60,11 @@ public class EnemySpawner : MonoBehaviour
         {
           Renderer _Renderer = Tank.GetComponent<Renderer>();
           _Renderer.material = new Material(infraredMaterial);
+          Health enemyScript = Tank.GetComponent<Health>();
+          if (enemyScript != null)
+          {
+            enemyScript.IsInfrared = true;
+          }
         } 
     }
 
@@ -60,6 +75,11 @@ public class EnemySpawner : MonoBehaviour
         {
           Renderer _Renderer = Tankringed.GetComponent<Renderer>();
           _Renderer.material = new Material(infraredMaterial);
+          Health enemyScript = Tankringed.GetComponent<Health>();
+          if (enemyScript != null)
+          {
+            enemyScript.IsInfrared = true;
+          }
         } 
     }
 
@@ -70,6 +90,11 @@ public class EnemySpawner : MonoBehaviour
         {
           Renderer _Renderer = Speedster.GetComponent<Renderer>();
           _Renderer.material = new Material(infraredMaterial);
+          Health enemyScript = Speedster.GetComponent<Health>();
+          if (enemyScript != null)
+          {
+            enemyScript.IsInfrared = true;
+          }
         } 
     }
 
@@ -80,6 +105,11 @@ public class EnemySpawner : MonoBehaviour
         {
           Renderer _Renderer = Speedsterringed.GetComponent<Renderer>();
           _Renderer.material = new Material(infraredMaterial);
+          Health enemyScript = Speedsterringed.GetComponent<Health>();
+          if (enemyScript != null)
+          {
+            enemyScript.IsInfrared = true;
+          }
         } 
     }
 

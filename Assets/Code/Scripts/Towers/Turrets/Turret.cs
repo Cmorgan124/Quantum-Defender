@@ -16,6 +16,7 @@ public class Turret : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] private float rotationSpeed = 200f;
     [SerializeField] public float bps = 1f; //bullets per second
+    [SerializeField] private bool seeInfrared;
 
     private Transform target;
     private float timeUntilFire;
@@ -75,9 +76,21 @@ public class Turret : MonoBehaviour
     {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, towerData.range, (Vector2) transform.position, 0f, enemyMask);
 
-        if (hits.Length > 0)
+        if (hits.Length > 0 && seeInfrared)
         {
             target = hits[0].transform;
+        }
+        else
+        {
+            for(int i = 0; i < hits.Length; i++)
+            {
+                Health enemyScript = hits[i].collider.GetComponent<Health>();
+                if (enemyScript && !enemyScript.IsInfrared)
+                {
+                    target = hits[i].transform;
+                    break;
+                }
+            }
         }
     }
 

@@ -137,7 +137,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.6417487, y: 1.6485453}
+  m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
 --- !u!114 &6704097573870672185
 MonoBehaviour:
@@ -209,10 +209,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   bulletPrefab: {fileID: 1145031778487384803, guid: 3559ec093a121a248b4ba5b2ab0b5f48, type: 3}
-  firingPoint: {fileID: 1175877188970533948}
   towerData: {fileID: 171629162819533094}
   rotationSpeed: 400
   bps: 2
+  seeInfrared: 1
   Muzzles:
   - {fileID: 1175877188970533948}
 --- !u!61 &626144181422898035
@@ -249,7 +249,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0023872852, y: 0.0047745705}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -259,7 +259,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.8710847, y: 0.8376622}
+  m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
 --- !u!114 &171629162819533094
 MonoBehaviour:
@@ -274,11 +274,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rangescript: {fileID: 1556321028811672046}
-  towerFamily: Basic Turret
   towerCost: 1025
   range: 3
-  currentPlot: {fileID: 0}
   currentUpgradeLevel: 3
+  towerFamily: Basic Turret
   upgradeTree:
   - nodeName: Rapid Fire
     nodeDescription: Increses attack speed.

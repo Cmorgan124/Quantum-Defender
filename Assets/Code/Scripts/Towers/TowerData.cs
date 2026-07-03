@@ -9,7 +9,6 @@ public class TowerData : MonoBehaviour
     [SerializeField] public TowerRange rangescript;
 
     //The Data (name, unit #, kills, cost, sell/move value, and range)
-    public string towerFamily;
     public int towerCost = 100;
     public float range = 5f;
     [System.NonSerialized] public Plot currentPlot = null;
@@ -19,6 +18,7 @@ public class TowerData : MonoBehaviour
 
     [Header("Upgrade Stuff")]
     public int currentUpgradeLevel = 0;
+    public string towerFamily;
     
     [System.Serializable]
     public struct UpgradeNode

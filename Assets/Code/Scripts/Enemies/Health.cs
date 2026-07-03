@@ -5,6 +5,7 @@ public class Health : MonoBehaviour
     [Header("Attributes")]
     [SerializeField] public int hitPoints = 3;
     [SerializeField] private int currencyWorth = 50;
+    public bool IsInfrared { get; set; } = false;
 
     private bool isDestroyed = false;
     //takes damage and kills enemies

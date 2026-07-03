@@ -127,7 +127,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.004648924, y: 0.047586292}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.6666661}
@@ -137,7 +137,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 1.6417487, y: 1.6485453}
+  m_Size: {x: 0.9, y: 0.9}
   m_EdgeRadius: 0
 --- !u!114 &6704097573870672185
 MonoBehaviour:
@@ -209,10 +209,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   bulletPrefab: {fileID: 1145031778487384803, guid: cb32585dbbc26cc40ba7cdf915378512, type: 3}
-  firingPoint: {fileID: 1175877188970533948}
   towerData: {fileID: 171629162819533094}
   rotationSpeed: 400
   bps: 1
+  seeInfrared: 0
   Muzzles:
   - {fileID: 1175877188970533948}
 --- !u!61 &626144181422898035
@@ -274,11 +274,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rangescript: {fileID: 628936424121653563}
-  towerFamily: Basic Turret
   towerCost: 100
   range: 2
-  currentPlot: {fileID: 0}
   currentUpgradeLevel: 0
+  towerFamily: Basic Turret
   upgradeTree:
   - nodeName: Rapid Fire
     nodeDescription: Increses attack speed.
@@ -418,7 +417,7 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 4003722260274829532}
   - {fileID: 1175877188970533948}

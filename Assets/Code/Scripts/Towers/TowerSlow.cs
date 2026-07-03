@@ -9,9 +9,9 @@ public class TowerSlow : MonoBehaviour
 {
     [Header("Refrences")]
     [SerializeField] private LayerMask enemyMask;
+    [SerializeField] private TowerData towerData;
 
     [Header("Attributes")]
-    [SerializeField] private float targetingRange = 5f;
     [SerializeField] private float aps = 4f; //attacks per second
     [SerializeField] private float freezeTime = 1f;
 
@@ -34,7 +34,7 @@ public class TowerSlow : MonoBehaviour
     //slows enemies movement speed who are in range
     private void FreezeEnemies()
     {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, (Vector2)transform.position, 0f, enemyMask);
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, towerData.range, (Vector2)transform.position, 0f, enemyMask);
 
         if (hits.Length > 0)
         {
@@ -62,6 +62,6 @@ public class TowerSlow : MonoBehaviour
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.cyan;
-        Handles.DrawWireDisc(transform.position, transform.forward, targetingRange);
+        Handles.DrawWireDisc(transform.position, transform.forward, towerData.range);
     }
 }
