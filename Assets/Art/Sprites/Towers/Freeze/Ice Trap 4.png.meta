@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: e3285828ce7cb5749993dd8c5379d344
+guid: 2e048a382d68bd046b9619283ffc6512
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4037024474595004910
-    second: Ice Trap 3 (1)_0
+      213: 7025555150680115886
+    second: Ice Trap 4_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Ice Trap 3 (1)_0
+      name: Ice Trap 4_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 56
-        height: 56
+        x: 3
+        y: 3
+        width: 58
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 21ee43221ab99f7c0800000000000000
-      internalID: -4037024474595004910
+      spriteID: eaa4432cf29cf7160800000000000000
+      internalID: 7025555150680115886
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Ice Trap 3 (1)_0: -4037024474595004910
+      Ice Trap 4_0: 7025555150680115886
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
