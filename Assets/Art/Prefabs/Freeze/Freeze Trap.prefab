@@ -289,24 +289,24 @@ MonoBehaviour:
   currentUpgradeLevel: 0
   towerFamily: Freeze
   upgradeTree:
-  - nodeName: Circuit Upgrade
+  - nodeName: More Barrels
     nodeDescription: Increases Range and cooldown rate.
-    nodeIcon: {fileID: 0}
+    nodeIcon: {fileID: -7105762879853918730, guid: 25345ead5eaa09b48ae5ef79e1dee6de, type: 3}
     resultPrefab: {fileID: 0}
     upgradeCost: 175
   - nodeName: Deep Freeze
     nodeDescription: Slows even more and atoms now slowly thaw after being frozen.
-    nodeIcon: {fileID: 0}
+    nodeIcon: {fileID: -3193302457673902627, guid: b1d0361a2dc49be418b53a80f59f085d, type: 3}
     resultPrefab: {fileID: 0}
     upgradeCost: 250
   - nodeName: Frostbite
     nodeDescription: Atoms now take a small amount of damage upon freeze.
-    nodeIcon: {fileID: 0}
+    nodeIcon: {fileID: 6495106804565829785, guid: 0bde99b1b50328f4cb0fc9fc6e821e80, type: 3}
     resultPrefab: {fileID: 0}
     upgradeCost: 400
   - nodeName: 0 Kelvin
     nodeDescription: Zero cooldown, good luck out running this Helium atoms!
-    nodeIcon: {fileID: 0}
+    nodeIcon: {fileID: -1475002866472564400, guid: d38c707c812acf1439638b6e4efaf29d, type: 3}
     resultPrefab: {fileID: 0}
     upgradeCost: 750
 --- !u!114 &4419250659795478220
