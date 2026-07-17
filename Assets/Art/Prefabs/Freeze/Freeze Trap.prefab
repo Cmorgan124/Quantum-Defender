@@ -285,7 +285,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
   rangescript: {fileID: 9032285139838207769}
   towerCost: 150
-  range: 1
+  range: 1.25
   currentUpgradeLevel: 0
   towerFamily: Freeze
   upgradeTree:
@@ -300,7 +300,7 @@ MonoBehaviour:
     resultPrefab: {fileID: 0}
     upgradeCost: 250
   - nodeName: Frostbite
-    nodeDescription: Atoms now take a small amount of damage upon freeze.
+    nodeDescription: Atoms now take a small amount of damage upon intial freeze.
     nodeIcon: {fileID: 6495106804565829785, guid: 0bde99b1b50328f4cb0fc9fc6e821e80, type: 3}
     resultPrefab: {fileID: 0}
     upgradeCost: 400

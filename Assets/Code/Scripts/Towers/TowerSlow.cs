@@ -10,16 +10,27 @@ public class TowerSlow : MonoBehaviour
     [Header("Refrences")]
     [SerializeField] private LayerMask enemyMask;
     [SerializeField] private TowerData towerData;
+    private Transform target;
 
     [Header("Attributes")]
-    [SerializeField] private float aps = 4f; //attacks per second
-    [SerializeField] private float freezeTime = 1f;
+    [SerializeField] private float aps = 1f; //attacks per second
+    [SerializeField] private float freezeTime = 2f;
+    [SerializeField] private float freezeStrength = .5f;
 
     private float timeUntilFire;
 
-    //periodically fires
     private void Update()
     {
+        if(target == null)
+        {
+            FindTarget();
+            return;
+        }
+
+        if(!CheckTargetIsInRange()) {
+            target = null;
+            timeUntilFire = 0f;
+        } else
         {
             timeUntilFire += Time.deltaTime;
 
@@ -31,34 +42,39 @@ public class TowerSlow : MonoBehaviour
         }
     }
 
+    private void FindTarget()
+    {
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, towerData.range, enemyMask);
+
+        if (hits.Length > 0)
+        {
+            target = hits[0].transform;
+        }
+    }
+
     //slows enemies movement speed who are in range
     private void FreezeEnemies()
     {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, towerData.range, (Vector2)transform.position, 0f, enemyMask);
+        Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, towerData.range, enemyMask);
 
         if (hits.Length > 0)
         {
             for(int i = 0; i < hits.Length; i++)
             {
-                RaycastHit2D hit = hits[i];
+                Collider2D hit = hits[i];
 
                 EnemyMovement em = hit.transform.GetComponent<EnemyMovement>();
-                em.UpdateSpeed(0.5f);
-
-                StartCoroutine(ResetEnemySpeed(em));
+                em.Freeze(freezeStrength, freezeTime);
             }
         }
     }
 
-    //gives them back their speed
-    private IEnumerator ResetEnemySpeed(EnemyMovement em)
+    private bool CheckTargetIsInRange()
     {
-        yield return new WaitForSeconds(freezeTime);
-
-        em.ResetSpeed();
+        return Vector2.Distance(target.position, transform.position) <= towerData.range;
     }
 
-    //lemme see yo targeting range
+    //range gizmo
     private void OnDrawGizmosSelected()
     {
         Handles.color = Color.cyan;

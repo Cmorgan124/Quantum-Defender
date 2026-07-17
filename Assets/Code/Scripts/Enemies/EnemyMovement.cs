@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
@@ -16,6 +17,7 @@ public class EnemyMovement : MonoBehaviour
     private int pathIndex = 0; //Index of path point in list
     [System.NonSerialized] public Vector2 currentDirection;
     private float baseSpeed;
+    private Coroutine activeFreeze;
 
     //sets movespeed, first target, and links to livesscript
     private void Start()
@@ -53,11 +55,23 @@ public class EnemyMovement : MonoBehaviour
         rb.linearVelocity = direction * moveSpeed;
     }
 
-    public void UpdateSpeed(float newSpeed)
+    public void Freeze(float newSpeed, float duration)
     {
+        if(activeFreeze != null)
+        {
+            StopCoroutine(activeFreeze);
+        }
         moveSpeed = newSpeed;
+        activeFreeze = StartCoroutine(FreezeCountdown(duration));
     }
 
+    private IEnumerator FreezeCountdown(float duration)
+    {
+        yield return new WaitForSeconds(duration);
+
+        ResetSpeed();
+        activeFreeze = null;
+    }
     public void ResetSpeed()
     {
         moveSpeed = baseSpeed;
