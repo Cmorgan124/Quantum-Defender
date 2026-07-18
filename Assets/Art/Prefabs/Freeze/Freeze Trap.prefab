@@ -270,7 +270,7 @@ MonoBehaviour:
     m_Bits: 64
   towerData: {fileID: 2744779924245307945}
   cooldown: 1
-  freezeTime: 1
+  freezeTime: 0.75
   freezeStrength: 0.5
 --- !u!114 &2744779924245307945
 MonoBehaviour:
@@ -298,7 +298,7 @@ MonoBehaviour:
   - nodeName: Deep Freeze
     nodeDescription: 'Longer, Stronger freeze. '
     nodeIcon: {fileID: -3193302457673902627, guid: b1d0361a2dc49be418b53a80f59f085d, type: 3}
-    resultPrefab: {fileID: 0}
+    resultPrefab: {fileID: 3967351347314308327, guid: 02a2e64de5cae734c96a5f079d339912, type: 3}
     upgradeCost: 250
   - nodeName: Frostbite
     nodeDescription: Atoms now take a small amount of damage upon intial freeze.

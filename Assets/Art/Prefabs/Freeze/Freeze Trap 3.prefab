@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 4419250659795478220}
   - component: {fileID: -5520710267681502761}
   m_Layer: 0
-  m_Name: Freeze Trap 2
+  m_Name: Freeze Trap 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 6286305254689242715, guid: 66cebfa99a9e3794fab65f0e14095fa5, type: 3}
+  m_Sprite: {fileID: -4037024474595004910, guid: e3285828ce7cb5749993dd8c5379d344, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -270,8 +270,8 @@ MonoBehaviour:
     m_Bits: 64
   towerData: {fileID: 2744779924245307945}
   cooldown: 0.75
-  freezeTime: 0.75
-  freezeStrength: 0.5
+  freezeTime: 1
+  freezeStrength: 0.33
 --- !u!114 &2744779924245307945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -287,18 +287,18 @@ MonoBehaviour:
   rangescript: {fileID: 9032285139838207769}
   towerCost: 325
   range: 2
-  currentUpgradeLevel: 1
+  currentUpgradeLevel: 2
   towerFamily: Freeze
   upgradeTree:
   - nodeName: More Barrels
     nodeDescription: Increases Range and cooldown rate.
     nodeIcon: {fileID: -7105762879853918730, guid: 25345ead5eaa09b48ae5ef79e1dee6de, type: 3}
-    resultPrefab: {fileID: 3967351347314308327}
+    resultPrefab: {fileID: 3967351347314308327, guid: 55741de6301269e46a954eca1250aa73, type: 3}
     upgradeCost: 175
   - nodeName: Deep Freeze
     nodeDescription: 'Longer, Stronger freeze. '
     nodeIcon: {fileID: -3193302457673902627, guid: b1d0361a2dc49be418b53a80f59f085d, type: 3}
-    resultPrefab: {fileID: 3967351347314308327, guid: 02a2e64de5cae734c96a5f079d339912, type: 3}
+    resultPrefab: {fileID: 3967351347314308327}
     upgradeCost: 250
   - nodeName: Frostbite
     nodeDescription: Atoms now take a small amount of damage upon intial freeze.
