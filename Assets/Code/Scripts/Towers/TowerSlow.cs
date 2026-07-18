@@ -13,11 +13,11 @@ public class TowerSlow : MonoBehaviour
     private Transform target;
 
     [Header("Attributes")]
-    [SerializeField] private float aps = 1f; //attacks per second
+    [SerializeField] private float cooldown = 1f;
     [SerializeField] private float freezeTime = 2f;
     [SerializeField] private float freezeStrength = .5f;
 
-    private float timeUntilFire;
+    private float timeUntilFire = 0f;
 
     private void Update()
     {
@@ -33,9 +33,10 @@ public class TowerSlow : MonoBehaviour
         } else
         {
             timeUntilFire += Time.deltaTime;
-
-            if (timeUntilFire >= 1f / aps)
+            Debug.Log(timeUntilFire);
+            if (timeUntilFire >= cooldown)
             {
+                Debug.Log("fire");
                 FreezeEnemies();
                 timeUntilFire = 0f;
             }
@@ -59,6 +60,7 @@ public class TowerSlow : MonoBehaviour
 
         if (hits.Length > 0)
         {
+            Debug.Log("Freezing " + hits.Length + " targets" );
             for(int i = 0; i < hits.Length; i++)
             {
                 Collider2D hit = hits[i];
@@ -71,7 +73,7 @@ public class TowerSlow : MonoBehaviour
 
     private bool CheckTargetIsInRange()
     {
-        return Vector2.Distance(target.position, transform.position) <= towerData.range;
+        return Vector2.Distance(target.position, transform.position) <= towerData.range + .1f;
     }
 
     //range gizmo

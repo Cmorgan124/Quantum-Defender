@@ -170,9 +170,9 @@ GameObject:
   - component: {fileID: 72133088602298415}
   - component: {fileID: 2744779924245307945}
   - component: {fileID: 4419250659795478220}
-  - component: {fileID: 5613915141921223099}
+  - component: {fileID: -5520710267681502761}
   m_Layer: 0
-  m_Name: Freeze Trap
+  m_Name: Freeze Trap 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 6083196135509714502, guid: 1b982b27babd3c84a8bc92e22006d5f8, type: 3}
+  m_Sprite: {fileID: 6286305254689242715, guid: 66cebfa99a9e3794fab65f0e14095fa5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -269,7 +269,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   towerData: {fileID: 2744779924245307945}
-  cooldown: 1
+  cooldown: 0.75
   freezeTime: 1
   freezeStrength: 0.5
 --- !u!114 &2744779924245307945
@@ -285,15 +285,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
   rangescript: {fileID: 9032285139838207769}
-  towerCost: 150
-  range: 1.25
-  currentUpgradeLevel: 0
+  towerCost: 325
+  range: 2
+  currentUpgradeLevel: 1
   towerFamily: Freeze
   upgradeTree:
   - nodeName: More Barrels
     nodeDescription: Increases Range and cooldown rate.
     nodeIcon: {fileID: -7105762879853918730, guid: 25345ead5eaa09b48ae5ef79e1dee6de, type: 3}
-    resultPrefab: {fileID: 3967351347314308327, guid: 55741de6301269e46a954eca1250aa73, type: 3}
+    resultPrefab: {fileID: 3967351347314308327}
     upgradeCost: 175
   - nodeName: Deep Freeze
     nodeDescription: 'Longer, Stronger freeze. '
@@ -326,7 +326,7 @@ MonoBehaviour:
   normal: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   _renderer: {fileID: 2888004713505044501}
   parentfab: {fileID: 2744779924245307945}
---- !u!58 &5613915141921223099
+--- !u!58 &-5520710267681502761
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -361,4 +361,4 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 0.44
+  m_Radius: 0.43749997

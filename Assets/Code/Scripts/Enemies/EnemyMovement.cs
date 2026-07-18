@@ -17,7 +17,7 @@ public class EnemyMovement : MonoBehaviour
     private int pathIndex = 0; //Index of path point in list
     [System.NonSerialized] public Vector2 currentDirection;
     private float baseSpeed;
-    private Coroutine activeFreeze;
+    private Coroutine activeFreeze = null;
 
     //sets movespeed, first target, and links to livesscript
     private void Start()
@@ -55,20 +55,21 @@ public class EnemyMovement : MonoBehaviour
         rb.linearVelocity = direction * moveSpeed;
     }
 
-    public void Freeze(float newSpeed, float duration)
+    public void Freeze(float debuffStrength, float duration)
     {
         if(activeFreeze != null)
         {
+            Debug.Log("Corutine Active");
             StopCoroutine(activeFreeze);
         }
-        moveSpeed = newSpeed;
+        moveSpeed =  baseSpeed * debuffStrength;
+        Debug.Log("movespeed: " + moveSpeed);
         activeFreeze = StartCoroutine(FreezeCountdown(duration));
     }
 
     private IEnumerator FreezeCountdown(float duration)
     {
         yield return new WaitForSeconds(duration);
-
         ResetSpeed();
         activeFreeze = null;
     }
