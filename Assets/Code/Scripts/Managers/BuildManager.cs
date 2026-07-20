@@ -36,7 +36,7 @@ public class BuildManager : MonoBehaviour
         selectedTower = _selectedTower;
     }
 
-    //
+    //Places towers for initial buy, as well as for move option
     public void PlaceTower(Plot plot)
     {
         if (SelectManager.Instance != null && SelectManager.Instance.IsMovingTower)

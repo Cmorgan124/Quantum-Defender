@@ -272,6 +272,7 @@ MonoBehaviour:
   cooldown: 0.75
   freezeTime: 1
   freezeStrength: 0.33
+  frostbite: 0
 --- !u!114 &2744779924245307945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -288,7 +289,7 @@ MonoBehaviour:
   towerCost: 325
   range: 2
   currentUpgradeLevel: 2
-  towerFamily: Freeze
+  towerFamily: Freeze Trap
   upgradeTree:
   - nodeName: More Barrels
     nodeDescription: Increases Range and cooldown rate.
@@ -303,10 +304,10 @@ MonoBehaviour:
   - nodeName: Frostbite
     nodeDescription: Atoms now take a small amount of damage upon intial freeze.
     nodeIcon: {fileID: 6495106804565829785, guid: 0bde99b1b50328f4cb0fc9fc6e821e80, type: 3}
-    resultPrefab: {fileID: 0}
+    resultPrefab: {fileID: 3967351347314308327, guid: 5c7242f2f9b0c0341a8c49b7b80432e8, type: 3}
     upgradeCost: 400
   - nodeName: 0 Kelvin
-    nodeDescription: Zero cooldown, good luck out running this Helium atoms!
+    nodeDescription: 'Zero cooldown, good luck out running this Helium atoms! '
     nodeIcon: {fileID: -1475002866472564400, guid: d38c707c812acf1439638b6e4efaf29d, type: 3}
     resultPrefab: {fileID: 0}
     upgradeCost: 750
@@ -323,7 +324,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerSelection
   outline: {fileID: 2100000, guid: 9cf38e996973a3c4f8fd4017714f4648, type: 2}
-  normal: {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
   _renderer: {fileID: 2888004713505044501}
   parentfab: {fileID: 2744779924245307945}
 --- !u!58 &-5520710267681502761

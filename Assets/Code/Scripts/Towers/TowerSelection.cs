@@ -9,13 +9,16 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IPointerEnterH
     [Header("Refrences")]
 
     [SerializeField] private Material outline;
-    [SerializeField] private Material normal;
     [SerializeField] private Renderer _renderer;
     [SerializeField] private TowerData parentfab;
+
+    private Material defaultMaterial;
 
     void Start()
     {
         parentfab = GetComponentInParent<TowerData>();
+        defaultMaterial = _renderer.material;
+
     }
 
     public void OnPointerEnter(PointerEventData eventData)
@@ -25,7 +28,7 @@ public class TowerSelection : MonoBehaviour, IPointerDownHandler, IPointerEnterH
 
     public void OnPointerExit(PointerEventData eventData)
     {
-        _renderer.material = normal;
+        _renderer.material = defaultMaterial;
     }
 
     public void OnPointerDown(PointerEventData eventData)

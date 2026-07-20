@@ -16,6 +16,7 @@ public class TowerSlow : MonoBehaviour
     [SerializeField] private float cooldown = 1f;
     [SerializeField] private float freezeTime = 2f;
     [SerializeField] private float freezeStrength = .5f;
+    [SerializeField] private int frostbite = 1;
 
     private float timeUntilFire = 0f;
 
@@ -64,6 +65,12 @@ public class TowerSlow : MonoBehaviour
             for(int i = 0; i < hits.Length; i++)
             {
                 Collider2D hit = hits[i];
+                
+                if(towerData.currentUpgradeLevel >= 3)
+                {
+                    hit.TryGetComponent(out Health enemy);
+                    enemy.TakeDamage(frostbite, towerData);
+                }
 
                 EnemyMovement em = hit.transform.GetComponent<EnemyMovement>();
                 em.Freeze(freezeStrength, freezeTime);
