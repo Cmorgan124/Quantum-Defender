@@ -86,12 +86,12 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -4436282657572390171, guid: 3328a188018b6c149b555ffd987b05f6, type: 3}
+  m_Sprite: {fileID: -1184136244388430644, guid: 3d12efd08d8f4754c9b99a63c1ffe6e2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 1.46, y: 1.46}
+  m_Size: {x: 0.38, y: 0.38}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -188,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   hitPoints: 5
   currencyWorth: 75
+  canFrostbite: 1
 --- !u!114 &7416050386920481230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -201,19 +202,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   noRing:
-    up: {fileID: -1335002542053984822, guid: 3328a188018b6c149b555ffd987b05f6, type: 3}
-    down: {fileID: -4436282657572390171, guid: 3328a188018b6c149b555ffd987b05f6, type: 3}
-    side: {fileID: 4309264562589017522, guid: 3328a188018b6c149b555ffd987b05f6, type: 3}
+    up: {fileID: -5081000118181971270, guid: 3d12efd08d8f4754c9b99a63c1ffe6e2, type: 3}
+    down: {fileID: -1184136244388430644, guid: 3d12efd08d8f4754c9b99a63c1ffe6e2, type: 3}
+    side: {fileID: -3548054657998996733, guid: 3d12efd08d8f4754c9b99a63c1ffe6e2, type: 3}
   oneRing:
-    up: {fileID: 2888619234949725317, guid: 0a8f09be1eeb8a442bbfb5feb365348d, type: 3}
-    down: {fileID: -459278175175653990, guid: 0a8f09be1eeb8a442bbfb5feb365348d, type: 3}
-    side: {fileID: -2448479792359236416, guid: 0a8f09be1eeb8a442bbfb5feb365348d, type: 3}
+    up: {fileID: -2497544174249778342, guid: 1485427f98477b240a5e88c3a492df3e, type: 3}
+    down: {fileID: -4885210077973524129, guid: 1485427f98477b240a5e88c3a492df3e, type: 3}
+    side: {fileID: 8500551875918189250, guid: 1485427f98477b240a5e88c3a492df3e, type: 3}
   twoRing:
-    up: {fileID: -9181053393486595225, guid: 3498c746954e82e429c195d92c51bca4, type: 3}
-    down: {fileID: 3405271754323575114, guid: 3498c746954e82e429c195d92c51bca4, type: 3}
-    side: {fileID: -8433763450633558878, guid: 3498c746954e82e429c195d92c51bca4, type: 3}
+    up: {fileID: 8670883912691694342, guid: 2c031cba9b837e34eb6e8c50333cefca, type: 3}
+    down: {fileID: 1625030329819795513, guid: 2c031cba9b837e34eb6e8c50333cefca, type: 3}
+    side: {fileID: 8301990646140213001, guid: 2c031cba9b837e34eb6e8c50333cefca, type: 3}
   threeRing:
-    up: {fileID: 4631641547504775541, guid: 5303f95e670e8f046abc0d3869d7716b, type: 3}
-    down: {fileID: 757769320838180873, guid: 5303f95e670e8f046abc0d3869d7716b, type: 3}
-    side: {fileID: 6314963323311254462, guid: 5303f95e670e8f046abc0d3869d7716b, type: 3}
+    up: {fileID: 2874573085775320837, guid: 533f26a1c5bc8494f96369392d596908, type: 3}
+    down: {fileID: 7135220526311980786, guid: 533f26a1c5bc8494f96369392d596908, type: 3}
+    side: {fileID: 6097504711242440559, guid: 533f26a1c5bc8494f96369392d596908, type: 3}
   spriteRenderer: {fileID: 4160993378092058466}

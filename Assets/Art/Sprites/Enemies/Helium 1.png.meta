@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 3328a188018b6c149b555ffd987b05f6
+guid: 3d12efd08d8f4754c9b99a63c1ffe6e2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4309264562589017522
-    second: Helium (4)_0
+      213: -3548054657998996733
+    second: Helium (8)_0
   - first:
-      213: -1335002542053984822
-    second: Helium (4)_1
+      213: -5081000118181971270
+    second: Helium (8)_1
   - first:
-      213: -4436282657572390171
-    second: Helium (4)_2
+      213: -1184136244388430644
+    second: Helium (8)_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -106,7 +106,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Helium (4)_0
+      name: Helium (8)_0
       rect:
         serializedVersion: 2
         x: 13
@@ -121,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 2b52c48c9459dcb30800000000000000
-      internalID: 4309264562589017522
+      spriteID: 30bbc424617c2cec0800000000000000
+      internalID: -3548054657998996733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helium (4)_1
+      name: Helium (8)_1
       rect:
         serializedVersion: 2
         x: 80
@@ -143,14 +143,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ac5f0aad24e197de0800000000000000
-      internalID: -1335002542053984822
+      spriteID: ababb041059ac79b0800000000000000
+      internalID: -5081000118181971270
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Helium (4)_2
+      name: Helium (8)_2
       rect:
         serializedVersion: 2
         x: 146
@@ -165,8 +165,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5eafb286d682f62c0800000000000000
-      internalID: -4436282657572390171
+      spriteID: cccff8b0c5a119fe0800000000000000
+      internalID: -1184136244388430644
       vertices: []
       indices: 
       edges: []
@@ -185,9 +185,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Helium (4)_0: 4309264562589017522
-      Helium (4)_1: -1335002542053984822
-      Helium (4)_2: -4436282657572390171
+      Helium (8)_0: -3548054657998996733
+      Helium (8)_1: -5081000118181971270
+      Helium (8)_2: -1184136244388430644
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

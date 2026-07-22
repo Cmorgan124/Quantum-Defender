@@ -172,7 +172,7 @@ GameObject:
   - component: {fileID: 4419250659795478220}
   - component: {fileID: -5520710267681502761}
   m_Layer: 0
-  m_Name: Freeze Trap 2
+  m_Name: Freeze Trap 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 6286305254689242715, guid: 66cebfa99a9e3794fab65f0e14095fa5, type: 3}
+  m_Sprite: {fileID: -2352087998653474207, guid: 57b33946ed928ae41954993962f5b932, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -269,10 +269,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   towerData: {fileID: 2744779924245307945}
-  cooldown: 0.75
-  freezeTime: 0.33
-  freezeStrength: 0.5
-  frostbite: 0
+  cooldown: 0
+  freezeTime: 1
+  freezeStrength: 0.25
+  frostbite: 4
 --- !u!114 &2744779924245307945
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -286,15 +286,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
   rangescript: {fileID: 9032285139838207769}
-  towerCost: 325
+  towerCost: 1725
   range: 2
-  currentUpgradeLevel: 1
+  currentUpgradeLevel: 4
   towerFamily: Freeze Trap
   upgradeTree:
   - nodeName: More Barrels
     nodeDescription: Increases Range and cooldown rate.
     nodeIcon: {fileID: -7105762879853918730, guid: 25345ead5eaa09b48ae5ef79e1dee6de, type: 3}
-    resultPrefab: {fileID: 3967351347314308327}
+    resultPrefab: {fileID: 3967351347314308327, guid: 55741de6301269e46a954eca1250aa73, type: 3}
     upgradeCost: 175
   - nodeName: Deep Freeze
     nodeDescription: 'Longer, Stronger freeze. '
@@ -310,7 +310,7 @@ MonoBehaviour:
     nodeDescription: 'Absolute freeze and Zero cooldown, good luck out running this
       Helium atoms! '
     nodeIcon: {fileID: -1475002866472564400, guid: d38c707c812acf1439638b6e4efaf29d, type: 3}
-    resultPrefab: {fileID: 3967351347314308327, guid: 6dcf98b5f630e644daa411a8c738bb66, type: 3}
+    resultPrefab: {fileID: 3967351347314308327}
     upgradeCost: 750
 --- !u!114 &4419250659795478220
 MonoBehaviour:

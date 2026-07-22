@@ -34,7 +34,6 @@ public class TowerSlow : MonoBehaviour
         } else
         {
             timeUntilFire += Time.deltaTime;
-            Debug.Log(timeUntilFire);
             if (timeUntilFire >= cooldown)
             {
                 Debug.Log("fire");
@@ -51,6 +50,7 @@ public class TowerSlow : MonoBehaviour
         if (hits.Length > 0)
         {
             target = hits[0].transform;
+            Debug.Log("Target Found");
         }
     }
 
@@ -65,11 +65,12 @@ public class TowerSlow : MonoBehaviour
             for(int i = 0; i < hits.Length; i++)
             {
                 Collider2D hit = hits[i];
+                hit.TryGetComponent(out Health enemy);
                 
-                if(towerData.currentUpgradeLevel >= 3)
+                if(towerData.currentUpgradeLevel >= 3 && enemy.canFrostbite)
                 {
-                    hit.TryGetComponent(out Health enemy);
                     enemy.TakeDamage(frostbite, towerData);
+                    enemy.canFrostbite = false;
                 }
 
                 EnemyMovement em = hit.transform.GetComponent<EnemyMovement>();
@@ -80,7 +81,7 @@ public class TowerSlow : MonoBehaviour
 
     private bool CheckTargetIsInRange()
     {
-        return Vector2.Distance(target.position, transform.position) <= towerData.range + .1f;
+        return Vector2.Distance(target.position, transform.position) <= towerData.range + .15f;
     }
 
     //range gizmo
