@@ -158,7 +158,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.016513048}
-  m_Radius: 0.4408097
+  m_Radius: 0.3851947
 --- !u!114 &6164460669540006876
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -188,6 +188,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   hitPoints: 11
   currencyWorth: 100
+  canFrostbite: 1
 --- !u!114 &6741731829233336973
 MonoBehaviour:
   m_ObjectHideFlags: 0
