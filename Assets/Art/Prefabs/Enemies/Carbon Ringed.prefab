@@ -217,4 +217,7 @@ MonoBehaviour:
     up: {fileID: 821387405799029720, guid: 43f2fe4ed10dd714ebea4f90b1183924, type: 3}
     down: {fileID: -2644514285892466807, guid: 43f2fe4ed10dd714ebea4f90b1183924, type: 3}
     side: {fileID: -5499972176954694534, guid: 43f2fe4ed10dd714ebea4f90b1183924, type: 3}
+  oneRinghealth: 4
+  twoRinghealth: 5
+  threeRinghealth: 6
   spriteRenderer: {fileID: 4160993378092058466}

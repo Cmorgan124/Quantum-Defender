@@ -116,9 +116,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 21
-        y: 5
-        width: 44
-        height: 49
+        y: 20
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,10 +137,10 @@ TextureImporter:
       name: Hydrogen_4
       rect:
         serializedVersion: 2
-        x: 73
+        x: 88
         y: 20
-        width: 49
-        height: 43
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -159,10 +159,10 @@ TextureImporter:
       name: Hydrogen_2
       rect:
         serializedVersion: 2
-        x: 136
-        y: 0
-        width: 49
-        height: 43
+        x: 151
+        y: 25
+        width: 18
+        height: 18
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -173,6 +173,72 @@ TextureImporter:
       bones: []
       spriteID: 526d05de5430a104989f4bfb09d5d1e6
       internalID: -6131124289064510216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hydrogen_0
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 5
+        width: 25
+        height: 49
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5691ffeb89a80ef498cf3d9836170789
+      internalID: -408333758342837403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hydrogen_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 39
+        width: 49
+        height: 25
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be8a0a9fcb9819646805aecce1e77c81
+      internalID: -3097895561795760854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Hydrogen_5
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 0
+        width: 49
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d74365ab6f992d458d385a5a5819725
+      internalID: -2052987534
       vertices: []
       indices: 
       edges: []
@@ -191,14 +257,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":1,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":64.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":0,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
       Hydrogen_0: -408333758342837403
       Hydrogen_1: -3097895561795760854
       Hydrogen_2: -6131124289064510216
       Hydrogen_3: -2933618250414453589
       Hydrogen_4: -8772582470728784554
-      Hydrogen_5: 2051628481
+      Hydrogen_5: -2052987534
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

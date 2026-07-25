@@ -11,7 +11,7 @@ public class EnemyMovement : MonoBehaviour
 
     [SerializeField] private Health healthScript;
     private Lives livesScript;
-
+    [SerializeField] private bool shield;
 
     private Transform target; //current point that is targeted
     private int pathIndex = 0; //Index of path point in list
@@ -37,7 +37,10 @@ public class EnemyMovement : MonoBehaviour
 
             if (pathIndex == LevelManager.Instance.path.Length)
             {
-                livesScript.lives -= healthScript.hitPoints;
+                if (!shield)
+                {
+                    livesScript.lives -= healthScript.hitPoints;   
+                }
                 Destroy(gameObject); 
                 return;
             } else

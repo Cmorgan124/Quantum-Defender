@@ -113,4 +113,19 @@ public class EnemySpawner : MonoBehaviour
         } 
     }
 
+    public void SpawnShield()
+    {
+        GameObject Shield = Instantiate(shield, LevelManager.Instance.startPoint.position, Quaternion.identity); 
+        if (isInfrared)
+        {
+          Renderer _Renderer = Shield.GetComponent<Renderer>();
+          _Renderer.material = new Material(infraredMaterial);
+          Health enemyScript = Shield.GetComponent<Health>();
+          if (enemyScript != null)
+          {
+            enemyScript.IsInfrared = true;
+          }
+        } 
+    }
+
 }

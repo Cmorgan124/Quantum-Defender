@@ -50,7 +50,6 @@ public class TowerSlow : MonoBehaviour
         if (hits.Length > 0)
         {
             target = hits[0].transform;
-            Debug.Log("Target Found");
         }
     }
 

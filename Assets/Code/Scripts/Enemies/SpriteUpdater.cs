@@ -14,7 +14,9 @@ public class SpriteUpdater : MonoBehaviour
     public SpriteSet twoRing;
     public SpriteSet threeRing;
 
-    private SpriteSet currentSet;
+    [SerializeField] private int oneRinghealth;
+    [SerializeField] private int twoRinghealth;
+    [SerializeField] private int threeRinghealth;
 
     [Header("References")]
     public SpriteRenderer spriteRenderer;
@@ -43,24 +45,9 @@ public class SpriteUpdater : MonoBehaviour
     private SpriteSet GetCurrentSet()
     {
         int hp = healthScript.hitPoints;
-        if (gameObject.name.Contains("Carbon"))
-        {
-            if (hp == 6) return threeRing;
-            if (hp == 5) return twoRing;
-            if (hp >= 4) return oneRing;  
-        }
-        if (gameObject.name.Contains("Uranium"))
-        {
-            if (hp == 11) return threeRing;
-            if (hp == 10) return twoRing;
-            if (hp >= 9) return oneRing;            
-        }
-        if (gameObject.name.Contains("Helium"))
-        {
-            if (hp == 8) return threeRing;
-            if (hp == 7) return twoRing;
-            if (hp >= 6) return oneRing;            
-        }
+        if(hp == threeRinghealth) return threeRing;
+        if(hp == twoRinghealth) return twoRing;
+        if(hp == oneRinghealth) return oneRing;
         return noRing; 
     }
 
