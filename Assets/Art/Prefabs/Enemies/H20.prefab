@@ -31,9 +31,9 @@ Transform:
   m_Children:
   - {fileID: 2907922714137483000}
   - {fileID: 4252288527495807060}
+  - {fileID: 3957458872552950960}
   - {fileID: 5466341570117139038}
   - {fileID: 1321299421739328629}
-  - {fileID: 3957458872552950960}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &3185435875000944893
@@ -127,7 +127,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 8872145227217075702, guid: fd6ee9d1ea180704bb152e1193bc0eed, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1213887824239464456}
   m_SourcePrefab: {fileID: 100100000, guid: fd6ee9d1ea180704bb152e1193bc0eed, type: 3}
 --- !u!4 &4252288527495807060 stripped
 Transform:
@@ -139,6 +142,20 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 8872145227217075702, guid: fd6ee9d1ea180704bb152e1193bc0eed, type: 3}
   m_PrefabInstance: {fileID: 3185435875000944893}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1213887824239464456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6274851419401286923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a61d7750437cde4584173b1a63cd2a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::HydroShield
+  hydrogenShieldleft: {fileID: 3212270744014822880}
+  hydrogenShieldright: {fileID: 0}
 --- !u!1001 &4570270314404552273
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -191,6 +208,14 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -823033627879922679, guid: 18dbee6a7ea5d5a449a9d2208a1774b5, type: 3}
+    - target: {fileID: 5989463264650057707, guid: dce2ee38fb5e9d04094631470a3b094e, type: 3}
+      propertyPath: hydrogenShieldleft
+      value: 
+      objectReference: {fileID: 3212270744014822880}
+    - target: {fileID: 5989463264650057707, guid: dce2ee38fb5e9d04094631470a3b094e, type: 3}
+      propertyPath: hydrogenShieldright
+      value: 
+      objectReference: {fileID: 588214577748849957}
     - target: {fileID: 8872145227217075702, guid: dce2ee38fb5e9d04094631470a3b094e, type: 3}
       propertyPath: m_Name
       value: Oxygen
@@ -257,6 +282,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: -2933618250414453589, guid: 5d82927271ed62f4da09a6da7ab80beb, type: 3}
+    - target: {fileID: 4672728776251133367, guid: fd6ee9d1ea180704bb152e1193bc0eed, type: 3}
+      propertyPath: hydrogenShieldright
+      value: 
+      objectReference: {fileID: 588214577748849957}
     - target: {fileID: 8872145227217075702, guid: fd6ee9d1ea180704bb152e1193bc0eed, type: 3}
       propertyPath: m_Name
       value: Hydrogen right
@@ -279,13 +308,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4220298617661505385}
     m_Modifications:
-    - target: {fileID: 1972513123940879374, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
-      propertyPath: hydrogen
-      value: 
-      objectReference: {fileID: 6274851419401286923}
+    - target: {fileID: 7621704332839494397, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621704332839494397, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7621704332839494397, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.15
+      value: -1.1500001
       objectReference: {fileID: 0}
     - target: {fileID: 7621704332839494397, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -305,7 +338,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7621704332839494397, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 7621704332839494397, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
       propertyPath: m_LocalRotation.z
@@ -336,6 +369,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
+--- !u!1 &3212270744014822880 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8339060595331085229, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
+  m_PrefabInstance: {fileID: 6858432841916132941}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3957458872552950960 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7621704332839494397, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
@@ -349,17 +387,21 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4220298617661505385}
     m_Modifications:
-    - target: {fileID: 1972513123940879374, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
-      propertyPath: hydrogen
-      value: 
-      objectReference: {fileID: 588214577748849957}
-    - target: {fileID: 3282845348674336022, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
-      propertyPath: m_BodyType
+    - target: {fileID: 7621704332839494397, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621704332839494397, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7621704332839494397, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
+      propertyPath: m_LocalScale.z
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7621704332839494397, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.15
+      value: 1.1500001
       objectReference: {fileID: 0}
     - target: {fileID: 7621704332839494397, guid: 215fd8e833c46c94882ac6d320b289c7, type: 3}
       propertyPath: m_LocalPosition.y

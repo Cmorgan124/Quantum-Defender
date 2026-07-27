@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 4881810877581939996}
   - component: {fileID: 9219116792647277080}
   - component: {fileID: -5429368778765880853}
-  - component: {fileID: 1972513123940879374}
   - component: {fileID: 8868866677625286237}
   m_Layer: 6
   m_Name: HydroShield
@@ -192,6 +191,7 @@ MonoBehaviour:
   rb: {fileID: 3282845348674336022}
   moveSpeed: 1.5
   healthScript: {fileID: -5429368778765880853}
+  shield: 1
 --- !u!114 &-5429368778765880853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -207,19 +207,6 @@ MonoBehaviour:
   hitPoints: 10000
   currencyWorth: 10000
   canFrostbite: 0
---- !u!114 &1972513123940879374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8339060595331085229}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1a61d7750437cde4584173b1a63cd2a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::HydroShield
-  hydrogen: {fileID: 0}
 --- !u!114 &8868866677625286237
 MonoBehaviour:
   m_ObjectHideFlags: 0

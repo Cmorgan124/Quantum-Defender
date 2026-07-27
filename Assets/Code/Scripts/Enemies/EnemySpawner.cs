@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -118,12 +119,18 @@ public class EnemySpawner : MonoBehaviour
         GameObject Shield = Instantiate(shield, LevelManager.Instance.startPoint.position, Quaternion.identity); 
         if (isInfrared)
         {
-          Renderer _Renderer = Shield.GetComponent<Renderer>();
-          _Renderer.material = new Material(infraredMaterial);
-          Health enemyScript = Shield.GetComponent<Health>();
-          if (enemyScript != null)
+          Transform[] transforms = Shield.GetComponentsInChildren<Transform>(true);
+          foreach(Transform _Transform in transforms)
           {
-            enemyScript.IsInfrared = true;
+            if(_Transform == Shield.transform) continue;
+            GameObject obj = _Transform.gameObject;
+            Renderer _Renderer = obj.GetComponent<Renderer>();
+            _Renderer.material = new Material(infraredMaterial);
+            Health enemyScript = obj.GetComponent<Health>();
+            if (enemyScript != null)
+            {
+              enemyScript.IsInfrared = true;
+            }
           }
         } 
     }
