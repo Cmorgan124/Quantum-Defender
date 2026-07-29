@@ -2197,6 +2197,18 @@ MonoBehaviour:
   - name: Freeze Trap
     cost: 150
     prefab: {fileID: 3967351347314308327, guid: 9541814dbfd5341478f48797eb3b6aac, type: 3}
+  - name: Explosive Turret
+    cost: 300
+    prefab: {fileID: 0}
+  - name: Support Tower
+    cost: 350
+    prefab: {fileID: 0}
+  - name: Cash Generator
+    cost: 500
+    prefab: {fileID: 0}
+  - name: Colossal Tower
+    cost: 1000
+    prefab: {fileID: 0}
 --- !u!114 &370662040
 MonoBehaviour:
   m_ObjectHideFlags: 0
