@@ -207,7 +207,7 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  bulletPrefab: {fileID: 0}
+  bulletPrefab: {fileID: 1145031778487384803, guid: cbd8f9f7958f4cf43a5b0467be4ba77c, type: 3}
   towerData: {fileID: 171629162819533094}
   rotationSpeed: 400
   bps: 0.5
@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   rangescript: {fileID: 628936424121653563}
   towerCost: 300
-  range: 1
+  range: 1.5
   currentUpgradeLevel: 0
   towerFamily: Explosive Turret
   upgradeTree:

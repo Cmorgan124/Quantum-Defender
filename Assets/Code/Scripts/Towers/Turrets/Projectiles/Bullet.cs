@@ -25,7 +25,6 @@ public class Bullet : MonoBehaviour
     //sets a 2 second life span to the bullet
     protected virtual void Start()
     {        
-
         Destroy(gameObject, 2f);
     }
 

@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 762072659114000641}
   - component: {fileID: 3113789944169746899}
   - component: {fileID: 7897167340071354099}
-  - component: {fileID: 3072579094289412927}
   - component: {fileID: 2430756828095359160}
   - component: {fileID: -1406687841430873912}
+  - component: {fileID: 475315227695852848}
   m_Layer: 7
-  m_Name: FMJ
+  m_Name: Missile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.5105, y: 2.618, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.7217095}
+  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 3986285767239628251, guid: f5e962f0a1b79f645aa6ff7b7fbae52a, type: 3}
+  m_Sprite: {fileID: -4478703775913692564, guid: 5edc462a2e0f09c4694bfe9eb96c5af7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -122,21 +122,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
---- !u!114 &3072579094289412927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1145031778487384803}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee14eb333b5421c4db2c3047f09f3518, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  rb: {fileID: 7897167340071354099}
-  bulletSpeed: 10
-  bulletDamage: 3
 --- !u!70 &2430756828095359160
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -171,8 +156,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.0005230904, y: -0.0024112463}
-  m_Size: {x: 0.22825435, y: 0.52005506}
+  m_Offset: {x: 0.002314617, y: -0.0034721312}
+  m_Size: {x: 0.27, y: 0.72}
   m_Direction: 0
 --- !u!96 &-1406687841430873912
 TrailRenderer:
@@ -293,3 +278,22 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
+--- !u!114 &475315227695852848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145031778487384803}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07052d197bc572b418ac00b2aff42311, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  rb: {fileID: 7897167340071354099}
+  bulletSpeed: 7
+  bulletDamage: 2
+  splashRadius: 0.8
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 64
