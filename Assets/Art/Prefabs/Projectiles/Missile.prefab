@@ -293,7 +293,7 @@ MonoBehaviour:
   rb: {fileID: 7897167340071354099}
   bulletSpeed: 7
   bulletDamage: 2
-  splashRadius: 0.8
+  splashRadius: 0.5
   enemyMask:
     serializedVersion: 2
     m_Bits: 64

@@ -204,8 +204,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c0ac95f5e59e3c4459c728f734b0080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Health
+  render: {fileID: 3724598450114620121}
   hitPoints: 10000
   currencyWorth: 10000
+  damageColor: {r: 0.4716981, g: 0.4716981, b: 0.4716981, a: 1}
   canFrostbite: 0
 --- !u!114 &8868866677625286237
 MonoBehaviour:

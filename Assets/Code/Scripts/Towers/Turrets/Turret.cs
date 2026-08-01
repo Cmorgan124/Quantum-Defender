@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
+using System.Collections;
 
 //Core logic for the basic turret. Constantly scans for a enemy, rotates towards it, and fires bullets at it. If the turret kills a enemy, it adds it to its stats
 public class Turret : MonoBehaviour
@@ -11,15 +12,17 @@ public class Turret : MonoBehaviour
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private TowerData towerData;
 
-
-
     [Header("Attributes")]
     [SerializeField] private float rotationSpeed = 200f;
     [SerializeField] public float bps = 1f; //bullets per second
     [SerializeField] private bool seeInfrared;
+    [SerializeField] private WaitForSeconds gunfiretime = new WaitForSeconds(.1f);
 
     private Transform target;
     private float timeUntilFire;
+
+    [SerializeField] private List<Transform> gunfires = new List<Transform>();
+    private int gunfireIndex = 0;
     
     public List<Transform> Muzzles = new List<Transform>();
     private int muzzleIndex = 0;
@@ -52,6 +55,7 @@ public class Turret : MonoBehaviour
     //spawns a bullet and let it do its thing
     private void Shoot()
     {
+        StartCoroutine(DisplayGunfire());
         Transform currentMuzzle = Muzzles[muzzleIndex];
     
         muzzleIndex++;
@@ -63,6 +67,7 @@ public class Turret : MonoBehaviour
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
         TowerData sourceData = GetComponent<TowerData>();
         bulletScript.SetSource(sourceData, target);
+
     }
 
     //Increases kill count
@@ -114,5 +119,18 @@ public class Turret : MonoBehaviour
     {
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, towerData.range);
+    }
+
+    private IEnumerator DisplayGunfire()
+    {
+        Transform currentgunfire = gunfires[gunfireIndex];
+        gunfireIndex++;
+        if(gunfireIndex >= gunfires.Count)
+        {
+            gunfireIndex = 0;
+        }
+        currentgunfire.gameObject.SetActive(true);
+        yield return gunfiretime;
+        currentgunfire.gameObject.SetActive(false);
     }
 }

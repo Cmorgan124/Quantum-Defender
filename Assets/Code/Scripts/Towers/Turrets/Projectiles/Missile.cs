@@ -10,7 +10,8 @@ public class Missile : Bullet
 
     protected override void OnTriggerEnter2D(Collider2D collision)
     {
-        Instantiate(explosion, transform.position, transform.rotation);
+        Vector3 tipPosition = transform.position + (transform.up * 0.5f);
+        Instantiate(explosion, tipPosition, transform.rotation);
         Collider2D[] hits = Physics2D.OverlapCircleAll(transform.position, splashRadius, enemyMask);
 
         if(hits.Length > 0)
