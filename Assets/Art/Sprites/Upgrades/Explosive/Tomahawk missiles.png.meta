@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5edc462a2e0f09c4694bfe9eb96c5af7
+guid: 331ec7769d4fda14baed1312230f4152
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4478703775913692564
-    second: Missile_0
+      213: 5875893434658285327
+    second: Tomahawk missiles_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,23 +100,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Missile_0
+      name: Tomahawk missiles_0
       rect:
         serializedVersion: 2
-        x: 22
-        y: 15
-        width: 17
-        height: 44
+        x: 0
+        y: 2
+        width: 64
+        height: 61
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c62b67e15a278d1c0800000000000000
-      internalID: -4478703775913692564
+      spriteID: f076bde62fd5b8150800000000000000
+      internalID: 5875893434658285327
       vertices: []
       indices: 
       edges: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 2db40e399ee8d9944b64817b2bee342e
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Missile_0: -4478703775913692564
+      Tomahawk missiles_0: 5875893434658285327
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
