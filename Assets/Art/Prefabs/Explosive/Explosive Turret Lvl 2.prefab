@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5701399182418268436, guid: 6a72c1e7da44ad449838235d0e74f934, type: 3}
+  m_Sprite: {fileID: -4606176940862504197, guid: ef7cac847202f2d4e90dbe629932fd2b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,7 +130,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.6}
+    pivot: {x: 0.49349767, y: 0.5864477}
     oldSize: {x: 1.03125, y: 0.890625}
     newSize: {x: 1.03125, y: 0.890625}
     adaptiveTilingThreshold: 0.5
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 171629162819533094}
   - component: {fileID: 6907618652553123888}
   m_Layer: 0
-  m_Name: Explosive Turret Lvl 1
+  m_Name: Explosive Turret Lvl 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -231,15 +231,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rangescript: {fileID: 628936424121653563}
-  towerCost: 300
-  range: 1.75
-  currentUpgradeLevel: 0
+  towerCost: 500
+  range: 2.5
+  currentUpgradeLevel: 1
   towerFamily: Explosive Turret
   upgradeTree:
   - nodeName: Better Fueling
     nodeDescription: Increases range.
     nodeIcon: {fileID: 8423618311319096446, guid: 425464d1ac6104f4da3a8a14043d7946, type: 3}
-    resultPrefab: {fileID: 1000207214545019390, guid: 6e76ab5ab7c0c974f899a7339a7a4e64, type: 3}
+    resultPrefab: {fileID: 1000207214545019390}
     upgradeCost: 200
   - nodeName: Tomahawk Missiles
     nodeDescription: 'Bigger blast radius and does more damage. '

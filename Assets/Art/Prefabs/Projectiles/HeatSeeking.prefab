@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 7897167340071354099}
   - component: {fileID: 2430756828095359160}
   - component: {fileID: -1406687841430873912}
-  - component: {fileID: 475315227695852848}
+  - component: {fileID: 498465758683612440}
   m_Layer: 7
-  m_Name: Missile
+  m_Name: HeatSeeking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.5105, y: 2.618, z: 0}
-  m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
+  m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -85,7 +85,7 @@ SpriteRenderer:
   m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1518114905146836669, guid: 4f51c0380148d2e4a821d5f08dbf81eb, type: 3}
+  m_Sprite: {fileID: 3084127129149832945, guid: 70b07bf1a81540d4aa61cb90110a8479, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -156,8 +156,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.002314617, y: -0.0034721312}
-  m_Size: {x: 0.27, y: 0.72}
+  m_Offset: {x: 0.0023142498, y: 0.00231425}
+  m_Size: {x: 0.3273786, y: 0.9478277}
   m_Direction: 0
 --- !u!96 &-1406687841430873912
 TrailRenderer:
@@ -278,7 +278,7 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!114 &475315227695852848
+--- !u!114 &498465758683612440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -287,14 +287,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1145031778487384803}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 07052d197bc572b418ac00b2aff42311, type: 3}
+  m_Script: {fileID: 11500000, guid: ade6180019d4374439a69306912ff2d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
   rb: {fileID: 7897167340071354099}
   bulletSpeed: 5
-  bulletDamage: 2
-  splashRadius: 0.5
+  bulletDamage: 4
+  splashRadius: 0.75
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  explosion: {fileID: 3139578248613043990, guid: 53cc82a29a0fefc4dbe7d742d471844e, type: 3}
+  explosion: {fileID: 3139578248613043990, guid: 56cf151dfb6bf8b4f97a073332b7e200, type: 3}

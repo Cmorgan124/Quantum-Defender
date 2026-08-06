@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 public class Bullet : MonoBehaviour
 {
     [Header("Refrences")]
-    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] protected Rigidbody2D rb;
 
     [Header("Attributes")]
     [SerializeField] protected float bulletSpeed = 7f;
@@ -16,10 +16,13 @@ public class Bullet : MonoBehaviour
     protected TowerData sourceTower;
     protected Vector2 moveDirection;
 
-    //Specific turret stuff that i dont want throw in a subclass 
+    //Specific turret stuff that i dont want to throw in a subclass 
     private string family;
     private int tier;
     float sniperChance = .67f;
+
+    //targeting variable for heat seeking missile
+    protected Transform target;
 
 
     //sets a 2 second life span to the bullet
@@ -32,6 +35,7 @@ public class Bullet : MonoBehaviour
     public void SetSource(TowerData source, Transform firstTarget)
     {
         sourceTower = source;
+        target = firstTarget;
         moveDirection = (firstTarget.position - transform.position).normalized;
         family = sourceTower.towerFamily;
         tier = sourceTower.currentUpgradeLevel;

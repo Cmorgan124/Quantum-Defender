@@ -83,7 +83,7 @@ SpriteRenderer:
   m_SortingLayer: 2
   m_SortingOrder: 2
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -5701399182418268436, guid: 6a72c1e7da44ad449838235d0e74f934, type: 3}
+  m_Sprite: {fileID: 8466418583582058954, guid: be489559ae719b841bd01c8febc0e0e1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -130,8 +130,8 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.6}
-    oldSize: {x: 1.03125, y: 0.890625}
+    pivot: {x: 0.49395642, y: 0.64215785}
+    oldSize: {x: 1.03125, y: 1}
     newSize: {x: 1.03125, y: 0.890625}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 171629162819533094}
   - component: {fileID: 6907618652553123888}
   m_Layer: 0
-  m_Name: Explosive Turret Lvl 1
+  m_Name: Explosive Turret Lvl 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -207,7 +207,7 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
-  bulletPrefab: {fileID: 1145031778487384803, guid: cbd8f9f7958f4cf43a5b0467be4ba77c, type: 3}
+  bulletPrefab: {fileID: 1145031778487384803, guid: 0ebf6eeed686e7149ab83a24c1101855, type: 3}
   towerData: {fileID: 171629162819533094}
   rotationSpeed: 400
   bps: 0.75
@@ -231,9 +231,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   rangescript: {fileID: 628936424121653563}
-  towerCost: 300
-  range: 1.75
-  currentUpgradeLevel: 0
+  towerCost: 850
+  range: 2.5
+  currentUpgradeLevel: 2
   towerFamily: Explosive Turret
   upgradeTree:
   - nodeName: Better Fueling
@@ -244,7 +244,7 @@ MonoBehaviour:
   - nodeName: Tomahawk Missiles
     nodeDescription: 'Bigger blast radius and does more damage. '
     nodeIcon: {fileID: 5875893434658285327, guid: 331ec7769d4fda14baed1312230f4152, type: 3}
-    resultPrefab: {fileID: 1000207214545019390, guid: b69913f6d5015ca48a264dfb6c03264e, type: 3}
+    resultPrefab: {fileID: 1000207214545019390}
     upgradeCost: 350
   - nodeName: Quad Barrel
     nodeDescription: More barrels = more missiles
