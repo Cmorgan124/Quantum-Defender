@@ -103,12 +103,12 @@ TextureImporter:
       name: Optimized Sensors_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 64
-        height: 64
+        x: 1
+        y: 1
+        width: 62
+        height: 62
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
@@ -125,7 +125,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 54db5a5bdef843448a2a495a60381a14
     internalID: 0
     vertices: []
     indices: 

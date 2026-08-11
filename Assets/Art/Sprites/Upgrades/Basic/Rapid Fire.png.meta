@@ -106,10 +106,10 @@ TextureImporter:
       name: Rapid Fire_0
       rect:
         serializedVersion: 2
-        x: 19
-        y: 9
-        width: 38
-        height: 42
+        x: 20
+        y: 10
+        width: 33
+        height: 40
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
