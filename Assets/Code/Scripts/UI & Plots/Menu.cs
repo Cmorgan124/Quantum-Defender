@@ -11,6 +11,7 @@ public class Menu : MonoBehaviour
     //Upgrade button struct. Holds the main button, info button, and the two sides of the upgrade card (front image and back description).
     public struct UpgradeButtonUI
     {
+        public Image Cover;
         public Button upgradeButton;
         public Button infoButton;
         
@@ -88,12 +89,18 @@ public class Menu : MonoBehaviour
 
             if(i == currentLevel)
             {
+                uiNodes[i].Cover.gameObject.SetActive(false);
                 uiNodes[i].upgradeButton.interactable = true;
             }
-            else
+            if(i < currentLevel)
             {
                 uiNodes[i].upgradeButton.interactable = false;
             }
+            if(i > currentLevel)
+            {
+                uiNodes[i].Cover.gameObject.SetActive(true);
+            }
+            
             RefreshCard(i);
         }
     }
