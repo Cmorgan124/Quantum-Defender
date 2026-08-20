@@ -12,6 +12,7 @@ public class Menu : MonoBehaviour
     public struct UpgradeButtonUI
     {
         public Image Cover;
+        public TextMeshProUGUI bought;
         public Button upgradeButton;
         public Button infoButton;
         
@@ -91,14 +92,17 @@ public class Menu : MonoBehaviour
             {
                 uiNodes[i].Cover.gameObject.SetActive(false);
                 uiNodes[i].upgradeButton.interactable = true;
+                uiNodes[i].bought.gameObject.SetActive(false);
             }
             if(i < currentLevel)
             {
                 uiNodes[i].upgradeButton.interactable = false;
+                uiNodes[i].bought.gameObject.SetActive(true);
             }
             if(i > currentLevel)
             {
                 uiNodes[i].Cover.gameObject.SetActive(true);
+                uiNodes[i].bought.gameObject.SetActive(false);
             }
             
             RefreshCard(i);
