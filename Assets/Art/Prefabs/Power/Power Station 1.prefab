@@ -278,14 +278,14 @@ MonoBehaviour:
   - nodeName: Central Power
     nodeDescription: Independtly powers all towers in radius, discounting all upgrades.
       Way to think smart finicailly!
-    nodeIcon: {fileID: 0}
+    nodeIcon: {fileID: 1336291363450611212, guid: a61cb11b63215a440a793ae09a57923d, type: 3}
     resultPrefab: {fileID: 0}
     upgradeCost: 650
   - nodeName: Super Cells
     nodeDescription: All towers in range get +1 damage. (stackable)
     nodeIcon: {fileID: 0}
     resultPrefab: {fileID: 0}
-    upgradeCost: 975
+    upgradeCost: 1300
   - nodeName: Tesla Charge
     nodeDescription: Occasionally zaps a nearby tower to supercharge them!
     nodeIcon: {fileID: 0}
