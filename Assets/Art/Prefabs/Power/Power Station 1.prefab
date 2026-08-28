@@ -270,7 +270,7 @@ MonoBehaviour:
   currentUpgradeLevel: 0
   towerFamily: Power Station
   upgradeTree:
-  - nodeName: Radar Tower
+  - nodeName: Telemetry Link
     nodeDescription: Increases range for all towers in radius, including itself!
     nodeIcon: {fileID: -2761677816102135445, guid: a28149c3fa7e42a45858876e2717b67b, type: 3}
     resultPrefab: {fileID: 0}
@@ -283,7 +283,7 @@ MonoBehaviour:
     upgradeCost: 650
   - nodeName: Super Cells
     nodeDescription: All towers in range get +1 damage. (stackable)
-    nodeIcon: {fileID: 0}
+    nodeIcon: {fileID: -4710229622224207810, guid: 654c6fdadd830a0499499a2b2c46a692, type: 3}
     resultPrefab: {fileID: 0}
     upgradeCost: 1300
   - nodeName: Tesla Charge
