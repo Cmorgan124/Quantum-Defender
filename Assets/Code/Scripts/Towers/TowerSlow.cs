@@ -13,7 +13,7 @@ public class TowerSlow : MonoBehaviour
     private Transform target;
 
     [Header("Attributes")]
-    [SerializeField] private float cooldown = 1f;
+    [SerializeField] public float cooldown = 1f;
     [SerializeField] private float freezeTime = 2f;
     [SerializeField] private float freezeStrength = .5f;
     [SerializeField] private int frostbite = 1;

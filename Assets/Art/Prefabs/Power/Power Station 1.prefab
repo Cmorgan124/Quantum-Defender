@@ -365,3 +365,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d6f7bd4e212cad43b16976c0d905832, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  towerData: {fileID: 2744779924245307945}
