@@ -89,4 +89,23 @@ public class TowerSlow : MonoBehaviour
         Handles.color = Color.cyan;
         Handles.DrawWireDisc(transform.position, transform.forward, towerData.range);
     }
+
+    public void BuffSlower(int powerStationlevel)
+    {
+        cooldown /= 1.1f;
+        if(powerStationlevel >= 1)
+        {
+            towerData.range *= 1.25f;
+        }
+
+    }
+
+    public void DebuffSlower(int powerStationlevel)
+    {
+        cooldown *= 1.1f;
+        if(powerStationlevel >= 1)
+        {
+            towerData.range /= 1.25f;
+        }
+    }
 }

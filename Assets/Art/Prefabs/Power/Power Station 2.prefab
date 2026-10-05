@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 4235320958629943906}
   - component: {fileID: 589845008518409404}
   m_Layer: 8
-  m_Name: Power Station 1
+  m_Name: Power Station 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -243,7 +243,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 1
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 4131264240907007818, guid: c08eb45c2a4fd7b4898d7d7665ac1738, type: 3}
+  m_Sprite: {fileID: 6780993652585487651, guid: e0ab2e8d6cb9ec642b5cca88d215efdc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -266,15 +266,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerData
   rangescript: {fileID: 9032285139838207769}
-  towerCost: 350
+  towerCost: 725
   range: 2
-  currentUpgradeLevel: 0
+  currentUpgradeLevel: 1
   towerFamily: Power Station
   upgradeTree:
   - nodeName: Telemetry Link
     nodeDescription: Increases range for all towers in radius, including itself!
     nodeIcon: {fileID: -2761677816102135445, guid: a28149c3fa7e42a45858876e2717b67b, type: 3}
-    resultPrefab: {fileID: 3967351347314308327, guid: 420885c62416a2142bfbb6ada0d889aa, type: 3}
+    resultPrefab: {fileID: 0}
     upgradeCost: 375
   - nodeName: Central Power
     nodeDescription: Independtly powers all towers in radius, discounting all upgrades.

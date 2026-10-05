@@ -133,4 +133,25 @@ public class Turret : MonoBehaviour
         yield return gunfiretime;
         currentgunfire.gameObject.SetActive(false);
     }
+
+    //Power Station buffs
+    public void BuffTurret(int powerStationlevel)
+    {
+        bps *= 1.1f;
+        if(powerStationlevel >= 1)
+        {
+            towerData.range *= 1.25f;
+        }
+
+    }
+
+    public void DebuffTurret(int powerStationlevel)
+    {
+        bps /= 1.1f;
+        if(powerStationlevel >= 1)
+        {
+            towerData.range /= 1.25f;
+        }
+
+    }
 }

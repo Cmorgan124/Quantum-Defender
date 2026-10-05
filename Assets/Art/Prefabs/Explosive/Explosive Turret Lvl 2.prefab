@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 5386253652735652942}
   - component: {fileID: 846105761791236743}
   - component: {fileID: 6704097573870672185}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Gun
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -166,7 +166,7 @@ GameObject:
   - component: {fileID: 8365863964475586911}
   - component: {fileID: 171629162819533094}
   - component: {fileID: 6907618652553123888}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Explosive Turret Lvl 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -302,7 +302,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7839565844490859358}
   - component: {fileID: 5663695816711458177}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Base
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -392,7 +392,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 385042228631874355}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RotatePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -428,7 +428,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1808732380806800924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FiringPoint (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -461,7 +461,7 @@ GameObject:
   - component: {fileID: 1886043327054879562}
   - component: {fileID: 8181657879071017264}
   - component: {fileID: 628936424121653563}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -616,7 +616,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1175877188970533948}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: FiringPoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -703,6 +703,10 @@ PrefabInstance:
       value: missile fire (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5623606520593896346, guid: 86c6cc6d5f730d14b9a6a5a78b8f3a2a, type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623606520593896346, guid: 86c6cc6d5f730d14b9a6a5a78b8f3a2a, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -779,6 +783,10 @@ PrefabInstance:
     - target: {fileID: 5623606520593896346, guid: 86c6cc6d5f730d14b9a6a5a78b8f3a2a, type: 3}
       propertyPath: m_Name
       value: missile fire
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623606520593896346, guid: 86c6cc6d5f730d14b9a6a5a78b8f3a2a, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5623606520593896346, guid: 86c6cc6d5f730d14b9a6a5a78b8f3a2a, type: 3}
       propertyPath: m_IsActive

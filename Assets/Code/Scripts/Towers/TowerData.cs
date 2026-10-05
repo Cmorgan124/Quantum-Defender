@@ -37,6 +37,8 @@ public class TowerData : MonoBehaviour
     //finds sell/move value
     void Awake()
     {
+        Physics2D.SyncTransforms();
         smValue = Mathf.RoundToInt(towerCost * 0.7f);
+
     }
 }

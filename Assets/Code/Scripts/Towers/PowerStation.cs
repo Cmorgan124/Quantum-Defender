@@ -6,85 +6,102 @@ using UnityEngine;
 
 public class PowerStation : MonoBehaviour
 {
-    [Header("References")]
-    [SerializeField] private TowerData towerData;
-    private List<TowerData> buffedTowers = new List<TowerData>();
+    [SerializeField] private TowerData towerData; 
+    [SerializeField] private LayerMask towerLayer;
 
-    private void Start()
+    [SerializeField] private CircleCollider2D rangeCollider;
+    private HashSet<TowerData> buffedTowers = new HashSet<TowerData>();
+
+    private void Awake()
     {
-        RemoveBuffs();
-        ScanAndBuff();
+        rangeCollider.radius = towerData.range;
+
     }
 
-    private void RemoveBuffs()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        foreach(TowerData tower in buffedTowers)
+        Debug.Log($"Trigger entered by: {other.gameObject.name} on Layer: {LayerMask.LayerToName(other.gameObject.layer)}");
+        if (((1 << other.gameObject.layer) & towerLayer) == 0) return;
+
+        TowerData targetTower = other.GetComponentInParent<TowerData>();
+
+        if (targetTower != null)
         {
-            if (TryGetComponent<Turret>(out Turret turretscript))
+            if (buffedTowers.Add(targetTower))
             {
-                DebuffTurret(turretscript);
-            }
-            if (TryGetComponent<TowerSlow>(out TowerSlow slowscript))
-            {
-                DebuffSlower(slowscript);
-            }
-            if (TryGetComponent<PowerStation>(out PowerStation stationscript))
-            {
-                DebuffStation(stationscript);
-            }
-            
-        }
-    }
-
-    private void ScanAndBuff()
-    {
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, towerData.range, transform.position);
-        for(int i = 0; i < hits.Length; i++)
-        {  
-            if (TryGetComponent<Turret>(out Turret turretscript))
-            {
-                BuffTurret(turretscript);
-            }
-            if (TryGetComponent<TowerSlow>(out TowerSlow slowscript))
-            {
-                BuffSlower(slowscript);
-            }
-            if (TryGetComponent<PowerStation>(out PowerStation stationscript))
-            {
-                BuffStation(stationscript);
+                if (targetTower.TryGetComponent<Turret>(out Turret turretscript))
+                {
+                    turretscript.BuffTurret(towerData.currentUpgradeLevel);
+                }
+                if (targetTower.TryGetComponent<TowerSlow>(out TowerSlow slowscript))
+                {
+                    slowscript.BuffSlower(towerData.currentUpgradeLevel);
+                }
+                if (targetTower.TryGetComponent<PowerStation>(out PowerStation stationscript))
+                {
+                    stationscript.BuffStation(towerData.currentUpgradeLevel);
+                }
             }
         }
     }
 
-    //move all of these into the scripts the access instead
-    private void BuffTurret(Turret turret)
+    private void OnTriggerExit2D(Collider2D other)
     {
-        turret.bps /= 1.1f;
+        if (((1 << other.gameObject.layer) & towerLayer) == 0) return;
+
+        TowerData targetTower = other.GetComponentInParent<TowerData>();
+
+        if (targetTower != null && buffedTowers.Contains(targetTower))
+        {
+            buffedTowers.Remove(targetTower);
+            TryDebuff(targetTower);
+        }
+        buffedTowers.RemoveWhere(t => t == null);
+    }
+    
+    private void OnDisable()
+    {
+        // Safety net: Clear all active buffs if the PowerStation is sold or destroyed
+        foreach (TowerData tower in buffedTowers)
+        {
+            if (tower != null)
+            {
+                TryDebuff(tower);
+            }
+        }
+        buffedTowers.Clear();
     }
 
-    private void DebuffTurret(Turret turret)
+    private void TryDebuff(TowerData targetTower)
     {
-        turret.bps *= 1.1f;
+            if (targetTower.TryGetComponent<Turret>(out Turret turretscript))
+            {
+                turretscript.DebuffTurret(towerData.currentUpgradeLevel);
+            }
+            if (targetTower.TryGetComponent<TowerSlow>(out TowerSlow slowscript))
+            {
+                slowscript.DebuffSlower(towerData.currentUpgradeLevel);
+            }
+            if (targetTower.TryGetComponent<PowerStation>(out PowerStation stationscript))
+            {
+                stationscript.DebuffStation(towerData.currentUpgradeLevel);
+            }
     }
 
-    private void BuffSlower(TowerSlow slow)
+    public void BuffStation(int powerStationlevel)
     {
-        slow.cooldown /= 1.1f;
+        if(powerStationlevel >= 1)
+        {
+            towerData.range *= 1.25f;
+        }
     }
 
-    private void DebuffSlower(TowerSlow slow)
+    public void DebuffStation(int powerStationlevel)
     {
-        slow.cooldown *= 1.1f;
-    }
-
-    private void BuffStation(PowerStation station)
-    {
-        
-    }
-
-    private void DebuffStation(PowerStation station)
-    {
-        
+        if(powerStationlevel >= 1)
+        {
+            towerData.range /= 1.25f;
+        }
     }
 
 }

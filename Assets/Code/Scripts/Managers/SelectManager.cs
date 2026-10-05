@@ -63,6 +63,8 @@ public class SelectManager : MonoBehaviour
         GameObject newTowerObject = Instantiate(targetNode.resultPrefab, currentPos, currentRot);
         TowerData newTowerData = newTowerObject.GetComponent<TowerData>();
 
+        Physics2D.SyncTransforms();
+
         Destroy(SelectedTower.gameObject);
 
         if (newTowerData != null)

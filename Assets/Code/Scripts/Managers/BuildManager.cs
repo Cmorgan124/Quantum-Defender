@@ -72,5 +72,6 @@ public class BuildManager : MonoBehaviour
         towerCounts[familyKey]++;
         int towerEdition = towerCounts[familyKey];
         towerData.towerName = familyKey + " #" + towerEdition;
+        
     }
 }

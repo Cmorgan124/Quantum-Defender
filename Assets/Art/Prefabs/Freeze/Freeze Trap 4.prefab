@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2220989949697742157}
   - component: {fileID: 6865349423848028749}
   - component: {fileID: 9032285139838207769}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Range
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   - component: {fileID: 2744779924245307945}
   - component: {fileID: 4419250659795478220}
   - component: {fileID: -5520710267681502761}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Freeze Trap 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}

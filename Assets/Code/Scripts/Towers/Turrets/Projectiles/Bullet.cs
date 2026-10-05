@@ -57,6 +57,7 @@ public class Bullet : MonoBehaviour
     //deals damage
     protected virtual void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log($"Bullet hit: {collision.name} on layer {LayerMask.LayerToName(collision.gameObject.layer)}");
         if (collision.TryGetComponent(out Health enemy))
         {
             enemy.TakeDamage(bulletDamage, sourceTower);
