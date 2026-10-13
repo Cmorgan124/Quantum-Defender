@@ -11,35 +11,38 @@ public class PowerStation : MonoBehaviour
 
     [SerializeField] private CircleCollider2D rangeCollider;
     private HashSet<TowerData> buffedTowers = new HashSet<TowerData>();
+    private Dictionary<PowerStation, int> activePowerStationBuffs = new Dictionary<PowerStation, int>();
+    private float baseRange;
 
     private void Awake()
     {
         rangeCollider.radius = towerData.range;
-
+        baseRange = towerData.range;
+        AddOrUpdatePowerStationBuff(this, towerData.currentUpgradeLevel);
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log($"Trigger entered by: {other.gameObject.name} on Layer: {LayerMask.LayerToName(other.gameObject.layer)}");
         if (((1 << other.gameObject.layer) & towerLayer) == 0) return;
 
         TowerData targetTower = other.GetComponentInParent<TowerData>();
 
-        if (targetTower != null)
+        if (buffedTowers.Add(targetTower))
         {
-            if (buffedTowers.Add(targetTower))
+            if (targetTower.TryGetComponent<Turret>(out Turret turretScript))
             {
-                if (targetTower.TryGetComponent<Turret>(out Turret turretscript))
+                turretScript.AddOrUpdatePowerStationBuff(this, towerData.currentUpgradeLevel);
+            }
+            else if (targetTower.TryGetComponent<TowerSlow>(out TowerSlow slowScript))
+            {
+                slowScript.AddOrUpdatePowerStationBuff(this, towerData.currentUpgradeLevel);
+            }
+            else
+            {
+                PowerStation stationScript = targetTower.GetComponentInChildren<PowerStation>();
+                if (stationScript != null)
                 {
-                    turretscript.BuffTurret(towerData.currentUpgradeLevel);
-                }
-                if (targetTower.TryGetComponent<TowerSlow>(out TowerSlow slowscript))
-                {
-                    slowscript.BuffSlower(towerData.currentUpgradeLevel);
-                }
-                if (targetTower.TryGetComponent<PowerStation>(out PowerStation stationscript))
-                {
-                    stationscript.BuffStation(towerData.currentUpgradeLevel);
+                    stationScript.AddOrUpdatePowerStationBuff(this, towerData.currentUpgradeLevel);
                 }
             }
         }
@@ -51,57 +54,109 @@ public class PowerStation : MonoBehaviour
 
         TowerData targetTower = other.GetComponentInParent<TowerData>();
 
-        if (targetTower != null && buffedTowers.Contains(targetTower))
+        if (buffedTowers.Contains(targetTower))
         {
             buffedTowers.Remove(targetTower);
-            TryDebuff(targetTower);
+
+            if (targetTower.TryGetComponent<Turret>(out Turret turretScript))
+            {
+                turretScript.RemovePowerStationBuff(this);
+            }
+            else if (targetTower.TryGetComponent<TowerSlow>(out TowerSlow slowScript))
+            {
+                slowScript.RemovePowerStationBuff(this);
+            }
+            else
+            {
+                PowerStation stationScript = targetTower.GetComponentInChildren<PowerStation>();
+                if (stationScript != null)
+                {
+                    stationScript.RemovePowerStationBuff(this);
+                }
+            }
         }
-        buffedTowers.RemoveWhere(t => t == null);
     }
     
     private void OnDisable()
     {
-        // Safety net: Clear all active buffs if the PowerStation is sold or destroyed
-        foreach (TowerData tower in buffedTowers)
+        // Safety cleanup: If this PowerStation is destroyed, sold, or disabled, 
+        // instantly remove its buff from every single tower it was currently affecting
+        foreach (TowerData targetTower in buffedTowers)
         {
-            if (tower != null)
+            if (targetTower != null)
             {
-                TryDebuff(tower);
+                if (targetTower.TryGetComponent<Turret>(out Turret turretScript))
+                {
+                    turretScript.RemovePowerStationBuff(this);
+                }
+                else if (targetTower.TryGetComponent<TowerSlow>(out TowerSlow slowScript))
+                {
+                    slowScript.RemovePowerStationBuff(this);
+                }
+                else
+                {
+                    PowerStation stationScript = targetTower.GetComponentInChildren<PowerStation>();
+                    if (stationScript != null)
+                    {
+                        stationScript.RemovePowerStationBuff(this);
+                    }
+                }
             }
         }
         buffedTowers.Clear();
     }
 
-    private void TryDebuff(TowerData targetTower)
+    public void AddOrUpdatePowerStationBuff(PowerStation station, int level)
     {
-            if (targetTower.TryGetComponent<Turret>(out Turret turretscript))
-            {
-                turretscript.DebuffTurret(towerData.currentUpgradeLevel);
-            }
-            if (targetTower.TryGetComponent<TowerSlow>(out TowerSlow slowscript))
-            {
-                slowscript.DebuffSlower(towerData.currentUpgradeLevel);
-            }
-            if (targetTower.TryGetComponent<PowerStation>(out PowerStation stationscript))
-            {
-                stationscript.DebuffStation(towerData.currentUpgradeLevel);
-            }
+        activePowerStationBuffs[station] = level;
+        ApplyHighestBuff();
+    }
+    public void RemovePowerStationBuff(PowerStation station)
+    {
+        if (activePowerStationBuffs.ContainsKey(station))
+        {
+            activePowerStationBuffs.Remove(station);
+        }
+        ApplyHighestBuff();
     }
 
-    public void BuffStation(int powerStationlevel)
+    private void ApplyHighestBuff()
     {
-        if(powerStationlevel >= 1)
+        if (activePowerStationBuffs.Count == 0)
         {
-            towerData.range *= 1.25f;
+            ResetToBaseStats();
+            return;
+        }
+
+        int highestLevel = 0;
+        foreach (var kvp in activePowerStationBuffs)
+        {
+            if (kvp.Value > highestLevel)
+            {
+                highestLevel = kvp.Value;
+            }
+        }
+        ResetToBaseStats();
+
+        BuffTurret(highestLevel);
+    }
+    public void BuffTurret(int powerStationlevel)
+    {
+        switch (powerStationlevel)
+        {
+            case 1:
+                break;
+            case 2:
+                towerData.range = baseRange * 1.20f;
+                towerData.rangescript.UpdateRange(towerData.range);
+                break;
         }
     }
 
-    public void DebuffStation(int powerStationlevel)
+    private void ResetToBaseStats()
     {
-        if(powerStationlevel >= 1)
-        {
-            towerData.range /= 1.25f;
-        }
+        towerData.range = baseRange;
+        towerData.rangescript.UpdateRange(towerData.range);
     }
 
 }

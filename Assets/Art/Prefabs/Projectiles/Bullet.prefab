@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.5105, y: 2.618, z: 0}
-  m_LocalScale: {x: 0.217226, y: 0.217226, z: 0.34}
+  m_LocalScale: {x: 0.4, y: 0.4, z: 0.6260761}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 1013503313
-  m_SortingLayer: 2
+  m_SortingLayer: 1
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 2208703988740019828, guid: 2035298f9e091044987a5635dbf0b8cc, type: 3}
@@ -171,8 +171,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.002314617, y: -0.0034721312}
-  m_Size: {x: 0.65848523, y: 1.5877644}
+  m_Offset: {x: 0.002314754, y: -0.01447078}
+  m_Size: {x: 0.18469517, y: 0.44009852}
   m_Direction: 0
 --- !u!96 &-1406687841430873912
 TrailRenderer:

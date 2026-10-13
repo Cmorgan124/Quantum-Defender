@@ -19,7 +19,7 @@ public class TowerRange : MonoBehaviour
     }
 
     //Creates the range circle
-    public void ShowRange(float radius)
+    public void UpdateRange(float radius)
     {
         float angleStep = 360f/segements;
 
@@ -32,10 +32,8 @@ public class TowerRange : MonoBehaviour
 
             lr.SetPosition(i, new Vector3(x, y, 0f));      
         }
-
-        lr.enabled = true;
     }
 
-    //Hides component
+    public void ShowRange() => lr.enabled = true;
     public void HideRange() => lr.enabled = false;
 }

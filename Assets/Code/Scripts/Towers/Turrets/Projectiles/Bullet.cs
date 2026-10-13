@@ -61,7 +61,8 @@ public class Bullet : MonoBehaviour
         if (collision.TryGetComponent(out Health enemy))
         {
             enemy.TakeDamage(bulletDamage, sourceTower);
+            Destroy(gameObject);
         }
-        Destroy(gameObject);
+
     }
 }

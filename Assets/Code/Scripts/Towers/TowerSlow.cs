@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using static UnityEngine.GraphicsBuffer;
 using UnityEditor;
+using System.Collections.Generic;
 
 //Main slowmo logic, scans its range for enemies and temporarily reduces there speed.
 
@@ -19,6 +20,15 @@ public class TowerSlow : MonoBehaviour
     [SerializeField] private int frostbite = 1;
 
     private float timeUntilFire = 0f;
+    private Dictionary<PowerStation, int> activePowerStationBuffs = new Dictionary<PowerStation, int>();
+    private float baseCooldown;
+    private float baseRange;
+
+    private void Awake()
+    {
+        baseCooldown = cooldown;
+        baseRange = towerData.range;
+    }
 
     private void Update()
     {
@@ -90,22 +100,59 @@ public class TowerSlow : MonoBehaviour
         Handles.DrawWireDisc(transform.position, transform.forward, towerData.range);
     }
 
-    public void BuffSlower(int powerStationlevel)
+     //Power Station buffs
+    public void AddOrUpdatePowerStationBuff(PowerStation station, int level)
     {
-        cooldown /= 1.1f;
-        if(powerStationlevel >= 1)
+        activePowerStationBuffs[station] = level;
+        ApplyHighestBuff();
+    }
+    public void RemovePowerStationBuff(PowerStation station)
+    {
+        if (activePowerStationBuffs.ContainsKey(station))
         {
-            towerData.range *= 1.25f;
+            activePowerStationBuffs.Remove(station);
         }
-
+        ApplyHighestBuff();
     }
 
-    public void DebuffSlower(int powerStationlevel)
+    private void ApplyHighestBuff()
     {
-        cooldown *= 1.1f;
-        if(powerStationlevel >= 1)
+        if (activePowerStationBuffs.Count == 0)
         {
-            towerData.range /= 1.25f;
+            ResetToBaseStats();
+            return;
         }
+
+        int highestLevel = 0;
+        foreach (var kvp in activePowerStationBuffs)
+        {
+            if (kvp.Value > highestLevel)
+            {
+                highestLevel = kvp.Value;
+            }
+        }
+        ResetToBaseStats();
+
+        BuffTurret(highestLevel);
+    }
+    public void BuffTurret(int powerStationlevel)
+    {
+        switch (powerStationlevel)
+        {
+            case 1:
+                cooldown = baseCooldown / 1.10f;
+                break;
+            case 2:
+                towerData.range = baseRange * 1.20f;
+                towerData.rangescript.UpdateRange(towerData.range);
+                break;
+        }
+    }
+
+    private void ResetToBaseStats()
+    {
+        cooldown = baseCooldown;
+        towerData.range = baseRange;
+        towerData.rangescript.UpdateRange(towerData.range);
     }
 }

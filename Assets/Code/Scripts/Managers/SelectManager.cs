@@ -29,7 +29,8 @@ public class SelectManager : MonoBehaviour
 
         SelectedTower = tower;
         uiMenu.ShowTowerMenu(tower);
-        SelectedTower.rangescript.ShowRange(SelectedTower.range);
+        SelectedTower.rangescript.UpdateRange(SelectedTower.range);
+        SelectedTower.rangescript.ShowRange();
     }
 
     public void Deselect()
@@ -74,7 +75,6 @@ public class SelectManager : MonoBehaviour
             SelectTower(newTowerData);
         }
         else Deselect();
-
     }
 
     public void CancelMove()

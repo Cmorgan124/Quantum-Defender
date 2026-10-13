@@ -26,7 +26,15 @@ public class Turret : MonoBehaviour
     
     public List<Transform> Muzzles = new List<Transform>();
     private int muzzleIndex = 0;
-
+    private Dictionary<PowerStation, int> activePowerStationBuffs = new Dictionary<PowerStation, int>();
+    private float baseBPS;
+    private float baseRange;
+    
+    private void Awake()
+    {
+        baseBPS = bps;
+        baseRange = towerData.range;
+    }
     //if target is in range, shoot
     private void Update()
     {
@@ -135,23 +143,58 @@ public class Turret : MonoBehaviour
     }
 
     //Power Station buffs
-    public void BuffTurret(int powerStationlevel)
+    public void AddOrUpdatePowerStationBuff(PowerStation station, int level)
     {
-        bps *= 1.1f;
-        if(powerStationlevel >= 1)
+        activePowerStationBuffs[station] = level;
+        ApplyHighestBuff();
+    }
+    public void RemovePowerStationBuff(PowerStation station)
+    {
+        if (activePowerStationBuffs.ContainsKey(station))
         {
-            towerData.range *= 1.25f;
+            activePowerStationBuffs.Remove(station);
         }
-
+        ApplyHighestBuff();
     }
 
-    public void DebuffTurret(int powerStationlevel)
+    private void ApplyHighestBuff()
     {
-        bps /= 1.1f;
-        if(powerStationlevel >= 1)
+        if (activePowerStationBuffs.Count == 0)
         {
-            towerData.range /= 1.25f;
+            ResetToBaseStats();
+            return;
         }
 
+        int highestLevel = 0;
+        foreach (var kvp in activePowerStationBuffs)
+        {
+            if (kvp.Value > highestLevel)
+            {
+                highestLevel = kvp.Value;
+            }
+        }
+        ResetToBaseStats();
+
+        BuffTurret(highestLevel);
+    }
+    public void BuffTurret(int powerStationlevel)
+    {
+        switch (powerStationlevel)
+        {
+            case 1:
+                bps = baseBPS * 1.10f;
+                break;
+            case 2:
+                towerData.range = baseRange * 1.20f;
+                towerData.rangescript.UpdateRange(towerData.range);
+                break;
+        }
+    }
+
+    private void ResetToBaseStats()
+    {
+        bps = baseBPS;
+        towerData.range = baseRange;
+        towerData.rangescript.UpdateRange(towerData.range);
     }
 }
