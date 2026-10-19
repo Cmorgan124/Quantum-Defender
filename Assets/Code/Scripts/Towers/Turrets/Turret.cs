@@ -179,15 +179,11 @@ public class Turret : MonoBehaviour
     }
     public void BuffTurret(int powerStationlevel)
     {
-        switch (powerStationlevel)
+        bps = baseBPS * 1.10f;
+        if (powerStationlevel == 1)
         {
-            case 1:
-                bps = baseBPS * 1.10f;
-                break;
-            case 2:
-                towerData.range = baseRange * 1.20f;
-                towerData.rangescript.UpdateRange(towerData.range);
-                break;
+            towerData.range = baseRange * 1.20f;
+            towerData.rangescript.UpdateRange(towerData.range);
         }
     }
 

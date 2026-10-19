@@ -8,8 +8,8 @@ public class PowerStation : MonoBehaviour
 {
     [SerializeField] private TowerData towerData; 
     [SerializeField] private LayerMask towerLayer;
-
     [SerializeField] private CircleCollider2D rangeCollider;
+
     private HashSet<TowerData> buffedTowers = new HashSet<TowerData>();
     private Dictionary<PowerStation, int> activePowerStationBuffs = new Dictionary<PowerStation, int>();
     private float baseRange;
@@ -23,12 +23,15 @@ public class PowerStation : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (((1 << other.gameObject.layer) & towerLayer) == 0) return;
-
         TowerData targetTower = other.GetComponentInParent<TowerData>();
+        if (targetTower == null) return;
 
+        if (((1 << targetTower.gameObject.layer) & towerLayer) == 0) return;
+
+        if (buffedTowers.Contains(targetTower)) return;
         if (buffedTowers.Add(targetTower))
         {
+            Debug.Log($"New tower registered: {targetTower.name} via collider {other.name}");
             if (targetTower.TryGetComponent<Turret>(out Turret turretScript))
             {
                 turretScript.AddOrUpdatePowerStationBuff(this, towerData.currentUpgradeLevel);
@@ -50,9 +53,10 @@ public class PowerStation : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (((1 << other.gameObject.layer) & towerLayer) == 0) return;
-
         TowerData targetTower = other.GetComponentInParent<TowerData>();
+    if (targetTower == null) return;
+
+        if (((1 << targetTower.gameObject.layer) & towerLayer) == 0) return;
 
         if (buffedTowers.Contains(targetTower))
         {
@@ -79,8 +83,6 @@ public class PowerStation : MonoBehaviour
     
     private void OnDisable()
     {
-        // Safety cleanup: If this PowerStation is destroyed, sold, or disabled, 
-        // instantly remove its buff from every single tower it was currently affecting
         foreach (TowerData targetTower in buffedTowers)
         {
             if (targetTower != null)
@@ -137,19 +139,14 @@ public class PowerStation : MonoBehaviour
             }
         }
         ResetToBaseStats();
-
-        BuffTurret(highestLevel);
+        BuffStation(highestLevel);
     }
-    public void BuffTurret(int powerStationlevel)
+    public void BuffStation(int powerStationlevel)
     {
-        switch (powerStationlevel)
+        if (powerStationlevel == 1)
         {
-            case 1:
-                break;
-            case 2:
-                towerData.range = baseRange * 1.20f;
-                towerData.rangescript.UpdateRange(towerData.range);
-                break;
+            towerData.range = baseRange * 1.20f;
+            towerData.rangescript.UpdateRange(towerData.range);
         }
     }
 
@@ -158,5 +155,4 @@ public class PowerStation : MonoBehaviour
         towerData.range = baseRange;
         towerData.rangescript.UpdateRange(towerData.range);
     }
-
 }
