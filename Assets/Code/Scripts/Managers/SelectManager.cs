@@ -11,6 +11,7 @@ public class SelectManager : MonoBehaviour
     [SerializeField] private Menu uiMenu;
     public TowerData SelectedTower {get; private set; }
     public bool IsMovingTower {get; private set;}
+    
 
     private void Awake()
     {
@@ -51,10 +52,13 @@ public class SelectManager : MonoBehaviour
         if (nodeIndex < 0 || nodeIndex >= SelectedTower.upgradeTree.Length) return;
 
         TowerData.UpgradeNode targetNode = SelectedTower.upgradeTree[nodeIndex];
+        int previousSmValue = SelectedTower.smValue; 
 
-        if (LevelManager.Instance != null && LevelManager.Instance.currency < targetNode.upgradeCost) return;
+        int finalUpgradeCost = Mathf.RoundToInt(targetNode.upgradeCost * SelectedTower.upgradeCostMultiplier);
 
-        LevelManager.Instance.currency -= targetNode.upgradeCost;
+        if (LevelManager.Instance != null && LevelManager.Instance.currency < finalUpgradeCost) return;
+
+        LevelManager.Instance.currency -= finalUpgradeCost;
 
         Vector3 currentPos = SelectedTower.transform.position;
         Quaternion currentRot = SelectedTower.transform.rotation;
@@ -72,6 +76,8 @@ public class SelectManager : MonoBehaviour
         {
             newTowerData.towerName = currentName;
             newTowerData.kills = currentKills;
+            newTowerData.smValue = previousSmValue + finalUpgradeCost;
+            
             SelectTower(newTowerData);
         }
         else Deselect();

@@ -12,9 +12,10 @@ public class TowerData : MonoBehaviour
     public int towerCost = 100;
     public float range = 5f;
     [System.NonSerialized] public Plot currentPlot = null;
-    public int smValue {get; private set;}
+    public int smValue;
     [System.NonSerialized] public int kills;
     [System.NonSerialized] public string towerName;
+    [System.NonSerialized] public float upgradeCostMultiplier = 1f;
 
     [Header("Upgrade Stuff")]
     public int currentUpgradeLevel = 0;
@@ -38,7 +39,7 @@ public class TowerData : MonoBehaviour
     void Awake()
     {
         Physics2D.SyncTransforms();
-        smValue = Mathf.RoundToInt(towerCost * 0.7f);
+        smValue = towerCost;
 
     }
 }

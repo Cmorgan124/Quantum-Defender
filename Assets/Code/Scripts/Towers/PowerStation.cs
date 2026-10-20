@@ -143,10 +143,14 @@ public class PowerStation : MonoBehaviour
     }
     public void BuffStation(int powerStationlevel)
     {
-        if (powerStationlevel == 1)
+        if (powerStationlevel >= 1)
         {
             towerData.range = baseRange * 1.20f;
             towerData.rangescript.UpdateRange(towerData.range);
+            if(powerStationlevel >= 2)
+            {
+                towerData.upgradeCostMultiplier = 0.8f;
+            }
         }
     }
 
@@ -154,5 +158,6 @@ public class PowerStation : MonoBehaviour
     {
         towerData.range = baseRange;
         towerData.rangescript.UpdateRange(towerData.range);
+        towerData.upgradeCostMultiplier = 1f;
     }
 }

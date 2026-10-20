@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ad9fca8a8679d4747b2e768f478ab24f
+guid: 706cecbdfe2bc144b93ff993ae7e033e
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 554897901806181039
-    second: Power Station lvl 3 (1)_0
+      213: 8250320673225994925
+    second: Power Station lvl 3 (2)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Power Station lvl 3 (1)_0
+      name: Power Station lvl 3 (2)_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: faa54c3a3b463b700800000000000000
-      internalID: 554897901806181039
+      spriteID: da272b2b0f60f7270800000000000000
+      internalID: 8250320673225994925
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Power Station lvl 3 (1)_0: 554897901806181039
+      Power Station lvl 3 (2)_0: 8250320673225994925
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
